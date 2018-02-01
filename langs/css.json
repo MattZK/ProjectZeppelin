@@ -1,0 +1,7 @@
+[
+  {
+    "name": "CSS Example",
+    "info": "Example info",
+    "content": "* { box-sizing: border-box; }"
+  }
+]

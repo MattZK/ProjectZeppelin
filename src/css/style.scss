@@ -1,0 +1,57 @@
+@import "reset";
+@import "highlight";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+$primary: #00838e;
+$light: #4fb3be;
+$dark: #005661;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #FEFEFE;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 160px auto;
+  grid-auto-rows: minmax(100vh, auto);
+  // Sidebar
+  nav {
+    //background: rgba(0, 0, 0, .1);
+    background: $primary;
+    ul {
+      width: 100%;
+      li {
+        color: rgba(255, 255, 255, .89);
+        padding: 12px 0 12px 24px;
+        &:hover {
+          background: rgba(0, 0, 0, .1);
+          cursor: pointer;
+        }
+        &:first-child {
+          padding: 24px 0 24px 24px;
+          font-size: large;
+          small {
+            font-size: small;
+            font-weight: 300;
+          }
+          // Reset hover for first child
+          &:hover {
+            background: transparent;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+  .content {
+    padding: 12px;
+    footer {
+      text-align: center;
+      background: $primary;
+      color: rgba(255, 255, 255, .85);
+      padding: 16px;
+      margin: 0 -12px -12px -12px;
+    }
+  }
+}
