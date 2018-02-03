@@ -34,21 +34,3 @@ var app = new Vue({
     });
   }
 });
-
-
-
-// Load all external json files defined in db.js
-/*content.forEach(function (lang, index) {
-  list.push(
-    fetch(lang.path).then(function (res) {
-      return res.json();
-    }).then(function (value) {
-      results[lang.name] = value;
-    })
-  )
-});
-Promise.all(list).then(function () {
-  console.log('Loaded External JSON Files.');
-  console.log('Total amount: ' + list.length);
-  this.elements = results;
-});*/
