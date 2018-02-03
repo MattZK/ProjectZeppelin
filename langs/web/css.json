@@ -2,41 +2,41 @@
   {
     "name": "Animations",
     "info": "Animaties maken in css",
-    "content": "@keyframes example {\n  0% {background-color: red;}\n 100% {background-color: yellow;}\n}\n\n/* The element to apply the animation to */\ndiv {\n\"   width: 100px;\n   height: 100px;\n    background-color: red;\n    animation-\"name\": example;\n    animation-\"name\": example,example2; //multiple keyframes\n    animation-duration: 4s;\n   animation-iteration-count: 2;\n   animation-delay: 2s;\n    animation-timing-function: cubic-bezier(.9,1.65,0,-1.15);\n   animation-direction: alternate-reverse;\n   animation-play-state:paused;//pause the play state of the animation\n   animation-play-state:running;//resume the play state of the animation\n}"
-    },
-    {
+    "content": "@keyframes example {\n  0% {\n    background-color: red;\n  }\n  100% {\n    background-color: yellow;\n  }\n}\n\n/* The element to apply the animation to */\ndiv {\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  animation-name: example;\n  animation-name: example, example2; //multiple keyframes\n  animation-duration: 4s;\n  animation-iteration-count: 2;\n  animation-delay: 2s;\n  animation-timing-function: cubic-bezier(.9,1.65,0,-1.15);\n  animation-direction: alternate-reverse;\n  animation-play-state:paused;//pause the play state of the animation\n  animation-play-state:running;//resume the play state of the animation\n}"
+  },
+  {
     "name": "Transition",
     "info": "i.p.v direct over te schakelen tussen 2 waarden kunnen we dit rustig laten verlopen.",
-    "content": ".content a:hover {\n    border 1px solid black; \n    color:#000;\n   transition:all 1s ease 0s; /* fade from the defaul color to the hover color */\n    /*possible transformations*/\n    transform: scale(); //change the scale of the element \n    transform: translate(); //move the element  \n    transform: rotate(); //rotates the element  \n    transform: skew(); \"misform a element\" \n   transform: matrix();//move scale and rotate a element by using a matrix \n}"
-    },
-    {
+    "content": ".content a:hover {\n  border: 1px solid black; \n  color: #000;\n  transition: all 1s ease 0s; /* fade from the defaul color to the hover color */\n  /* possible transformations */\n  transform: scale(); // change the scale of the element \n  transform: translate(); // move the element  \n  transform: rotate(); // rotates the element  \n  transform: skew(); // misform a element\n  transform: matrix();// move scale and rotate a element by using a matrix \n}"
+  },
+  {
     "name": "Draw a Sphere",
     "info": "Hoe een circle maken zonder een foto",
-    "content": ".wrap {\n   width: 100px; height:100px; /* this creates a cube */ \n    border-radius: 50%;\n   background: #555; /* The color */\n}"
-    },
-    {
+    "content": ".wrap {\n  width: 100px;\n  height: 100px; /* this creates a cube */ \n  border-radius: 50%;\n  background: #555; /* The color */\n}"
+  },
+  {
     "name": "CSS Grid",
     "info": "If there are more elements that there are grid lines the css grid will add new grid lines",
-    "content": ".grid-container {\n   display: grid;\n    grid-gap: 50px; //around each element there is a margin of 50px\n   grid-template-columns: auto auto auto auto;\n   grid-template-rows: 1fr 2fr;//creates 2 rows the 2nd is 2*the size of the first\n   justify-content: unset;  // multiple properties\n   align-content: unset; // multiple properties\n}\n\n.item1 {\n   grid-column-start: 1;\n   grid-column-end: 3;\n   grid-row-start: 1;\n    grid-row-end: 3;\n    grid-column: 1 / 5;\n   grid-row: 1 / 5;\n}\n\n.item2 {\n   grid-area: 1 / 2 / 5 / 6;\n}"
-    },
-    {
+    "content": ".grid-container {\n  display: grid;\n  grid-gap: 50px; //around each element there is a margin of 50px\n  grid-template-columns: auto auto auto auto;\n  grid-template-rows: 1fr 2fr;//creates 2 rows the 2nd is 2*the size of the first\n  justify-content: unset;  // multiple properties\n  align-content: unset; // multiple properties\n}\n\n.item1 {\n  grid-column-start: 1;\n  grid-column-end: 3;\n  grid-row-start: 1;\n  grid-row-end: 3;\n  grid-column: 1 / 5;\n  grid-row: 1 / 5;\n}\n\n.item2 {\n  grid-area: 1 / 2 / 5 / 6;\n}"
+},
+  {
     "name": "Flexbox",
     "info": "zoals css grid maar linear (op 1 as)",
-    "content": ".flex-container {\n   display: flex;\n    flex-direction: column;\n   flex-direction: row;\n    flex-wrap: wrap; /* this will change the position of your items based on the width of a child and the screen size */\n    justify-content: center; /* This will center the content if it is smaller than the total flexbox*/\n    justify-content: space-between; /* This will add space between the content*/\n}\n/* NOW COMES THE FLEX ITEMS*/\n.flex-item {\n    order:1; //defaul is 0 this is used to realign flexitems 1 means more in the back of the flexbox -1 is more in front\n    flex-grow:2; // default =1 this says howmuch the item can streatch relative to the other flexitems (if there is enough space) \n    flex-shrink:2; //like flex-grow but instead it gets smaller\n   flex-basis:50%; //this set the element to 50% (like width)\n    align-self:flex-end; //this set the idividual element to the end of the flexbox\n}"
-    },
-    {
+    "content": ".flex-container {\n  display: flex;\n  flex-direction: column;\n  flex-direction: row;\n  flex-wrap: wrap; /* this will change the position of your items based on the width of a child and the screen size */\n  justify-content: center; /* This will center the content if it is smaller than the total flexbox*/\n  justify-content: space-between; /* This will add space between the content*/\n}\n/* NOW COMES THE FLEX ITEMS*/\n.flex-item {\n  order:1; //defaul is 0 this is used to realign flexitems 1 means more in the back of the flexbox -1 is more in front\n  flex-grow:2; // default =1 this says howmuch the item can streatch relative to the other flexitems (if there is enough space) \n  flex-shrink:2; //like flex-grow but instead it gets smaller\n  flex-basis:50%; //this set the element to 50% (like width)\n  align-self:flex-end; //this set the idividual element to the end of the flexbox\n}"
+  },
+  {
     "name": "Selectors",
     "info": "meerdere elementen aanroepen met 1 body",
     "content": ".class{} /* select the html element with this class */\n#id{} /* Selects the element with id id */\n*{} /* selects all elements */ \np {} /* selects all <p> tags */ \ndiv, p {} /* selects all <div> and <p> tags */ \ndiv p {} /* selects all <p> tags inside div tags */ \ndiv > p {} /* selects all <p> tags where the parent is a div tag */ \ndiv  p {} /* selects all <p> tags directly after a div tag */\np ~ ul {} /* selects all <ul> tags that are preceded by a <p> tag */ \np {} /* selects all <p> tags */ \np::after {\"content\": \"this will apear after a p tag\"} /* insert something after a p tag */ \np {} /* selects all <p> tags */ \np:first-child {} /* selects all the first child of the <p> tag */ \np:nth-child(n) {} /* selects the n-th child of a element */ \np {} /* selects all <p> tags */ \n/* in most cases you can replace p with a class or id */"
-    },
-    {
+  },
+  {
     "name": "Media queries",
     "info": "Een soort if statement in css",
-    "content": "@media only screen and (min-width: 768px) {\n   /* this code only gets run when the screen is bigger than 768px */\n    /* Make a mobile site firt then enable css grid/ flexbox if you want desktop */\n   /* or alter the locations of each element in the grid / flexbox*/;\n}@media (min-width: 768px) {\n    /* this code only gets run when the screen is bigger than 768px */\n    /* Make a mobile site firt then enable css grid/ flexbox if you want desktop */\n   /* or alter the locations of each element in the grid / flexbox*/;\n}"
-    },
-    {
+    "content": "@media only screen and (min-width: 768px) {\n  /* this code only gets run when the screen is bigger than 768px */\n  /* Make a mobile site firt then enable css grid/ flexbox if you want desktop */\n  /* or alter the locations of each element in the grid / flexbox*/\n}\n@media (min-width: 768px) {\n  /* this code only gets run when the screen is bigger than 768px */\n  /* Make a mobile site firt then enable css grid/ flexbox if you want desktop */\n  /* or alter the locations of each element in the grid / flexbox*/\n}"
+  },
+  {
     "name": "positioning",
     "info": "Manier om de locatie van een element te bepalen",
-    "content": "/* This is the normal flow of a element*/\nposition: static;\n\n/* Using top,right,bottom,left will move to element from its normal position*/\nposition: relative;\n\n/* This is the normal flow of a element*/\nposition: static;\n\n/* This is the position relative to the viewport (always visible) and the location can be set by top,bottom,left or right*/\nposition: fixed;\n\n/* This is the relative to the nearest positioned ancestor (ancestor)*/\nposition: absolute;\n\n/* This is element behaves normal until it leaves the screen in which case it becomes fixed*/\nposition: sticky;\n\n/* If you place 2 elements on top of eachother us z-index to deside who stays on top*/\nz-index:10; /* default is 0 */\n\n}"
+    "content": "/* This is the normal flow of a element*/\nposition: static;\n/* Using top,right,bottom,left will move to element from its normal position*/\nposition: relative;\n/* This is the normal flow of a element*/\nposition: static;\n/* This is the position relative to the viewport (always visible) and the location can be set by top,bottom,left or right*/\nposition: fixed;\n/* This is the relative to the nearest positioned ancestor (ancestor)*/\nposition: absolute;\n/* This is element behaves normal until it leaves the screen in which case it becomes fixed*/\nposition: sticky;\n/* If you place 2 elements on top of eachother us z-index to deside who stays on top*/\nz-index: 10; /* default is 0 */"
   }
 ]

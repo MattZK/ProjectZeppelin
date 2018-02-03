@@ -1,17 +1,17 @@
 [
   {
-    "name": "template",
+    "name": "Template",
     "info": "Use this template",
-    "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n<title>Title</title>\n<link rel=\"stylesheet\" href=\"css/style.css\">\n<script src=\"js/script.js\"></script> \n</head>\n<body>\nContent\n<script src=\"js/main.js\"></script>\n</body>\n</html>"
+    "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n  <title>TITLE</title>\n  <link rel=\"stylesheet\" href=\"css/style.css\">\n</head>\n<body>\n  CONTENT\n  <script src=\"js/main.js\"></script>\n</body>\n</html>"
   },
   {
-    "name": "link",
+    "name": "External link",
     "info": "Het linken van een css bestand (doen tussen <head> en </head>)",
     "content": "<link rel=\"stylesheet\" href=\"css/style.css\">"
   },
   {
-    "name": "script",
-    "info": "Het linken van een javascript bestand (doen juist voor de </body> tag",
+    "name": "Script",
+    "info": "Het linken van een javascript bestand",
     "content": "<script src=\"js/main.js\"></script>\n"
   },
   {
@@ -20,13 +20,13 @@
     "content": "<div>elementen komen hier</div>"
   },
   {
-    "name": "Class",
+    "name": "Item Class",
     "info": "Link het element met css",
     "content": "<div class=\"divclass\">In css kan men divclass oproepen</div>"
   },
   {
-    "name": "ID",
-    "info": "Link maximaal 1 element met js/css",
+    "name": "Item ID",
+    "info": "uniek id voor 1 element",
     "content": "<div id=\"ourID\">In css en js kan men deze div selecteren, Maximaal 1 element met een id</div>"
   },
   {
@@ -37,7 +37,7 @@
   {
     "name": "Hoofding",
     "info": "Gebruik voor titels, ondertitels enz...",
-    "content": "<h1>Belangerijkste hoofding</h1>\n<h2>Tweede belangerijkste hoofding</h2>\n<h3>Derde belangerijkste hoofding</h3>\n<h4>Vierde belangerijkste hoofding</h4>\n<h5>Vijfde belangerijkste hoofding</h5><h6>Zesde belangerijkste hoofding</h6>"
+    "content": "<h1>Belangerijkste hoofding</h1>\n<h2>Tweede belangerijkste hoofding</h2>\n<h3>Derde belangerijkste hoofding</h3>\n<h4>Vierde belangerijkste hoofding</h4>\n<h5>Vijfde belangerijkste hoofding</h5>\n<h6>Zesde belangerijkste hoofding</h6>"
   },
   {
     "name": "Paragraaf",
@@ -52,12 +52,12 @@
   {
     "name": "Ongeorderede lijst",
     "info": "Dit is een lijst met elementen. Gebruik dit om een menu te maken.",
-    "content": "<ul>\n<li>Optie</li>\n<li>Optie</li>\n<li>Optie</li>\n</ul>"
+    "content": "<ul>\n  <li>Optie</li>\n  <li>Optie</li>\n  <li>Optie</li>\n</ul>"
   },
   {
     "name": "Georderede lijst",
     "info": "Dit is een lijst met elementen die automatisch genummerd is.",
-    "content": "<ol>\n<li>Optie 1</li>\n<li>Optie 2</li>\n<li>Optie 3</li>\n</ol>"
+    "content": "<ol>\n  <li>Optie 1</li>\n  <li>Optie 2</li>\n  <li>Optie 3</li>\n</ol>"
   },
   {
     "name": "Foto",
@@ -107,11 +107,11 @@
   {
     "name": "Form",
     "info": "Een form wordt gebruik zodat de gebruiker data aan een server kan geven",
-    "content": " /* Action is used to activate a script on the server that proscesses the form*/ \n/* Value is used to give the input a default value like a textbox filled with mickey*/ \n<form action=\"/action_page.php\"> \nFirst name:<br>\n<input type=\"text\" name=\"firstname\"><br> /* Text field*/\nLast name:<br>\n<input type=\"text\" name=\"lastname\"> <br> <br>\n\n<input type=\"radio\" name=\"gender\" value=\"male\" checked> Male<br> /* radio button aka checked or not checked*/\n<input type=\"radio\" name=\"gender\" value=\"female\"> Female<br> /* maximum one selectod in one form */\n<input type=\"radio\" name=\"gender\" value=\"other\"> Other\n\n/* Define a button that when clicked calls a function in javascript*/\n/* Usefull when the user needs to make something happen without the server needing to know*/\n<button type=\"button\" value=\"controle\" onclick=\"jsFunc()\">Custom Button</button> \n/* Used to submit the form (via get or post)*/\n<input type=\"submit\" value=\"Submit\"> \n</form>"
+    "content": "/* Action is used to activate a script on the server that proscesses the form*/ \n/* Value is used to give the input a default value like a textbox filled with mickey*/ \n<form action=\"/action_page.php\"> \n  First name:<br>\n  <input type=\"text\" name=\"firstname\"><br> /* Text field*/\n  Last name:<br>\n  <input type=\"text\" name=\"lastname\"> <br> <br>\n\n  <input type=\"radio\" name=\"gender\" value=\"male\" checked> Male<br> /* radio button aka checked or not checked*/\n  <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br> /* maximum one selectod in one form */\n  <input type=\"radio\" name=\"gender\" value=\"other\"> Other\n\n  /* Define a button that when clicked calls a function in javascript*/\n  /* Usefull when the user needs to make something happen without the server needing to know*/\n  <button type=\"button\" value=\"controle\" onclick=\"jsFunc()\">Custom Button</button> \n  /* Used to submit the form (via get or post)*/\n  <input type=\"submit\" value=\"Submit\"> \n</form>"
   },
   {
     "name": "Table",
     "info": "Een table wordt gebruik om data in een aangename manier te displayen",
-    "content":  "/* In css*/ \ntable { \nfont-family: arial, sans-serif; \nborder-collapse: collapse; \nwidth: 100%; \n} \n\ntd, th { \nborder: 1px solid #dddddd; \ntext-align: left; \npadding: 8px; \n}\n\ntr:nth-child(even) { \nbackground-color: #dddddd; \n} \n/* IN HTML */\n\n<table>\n<tr>\n<th>Company</th> /* table header */\n<th>Contact</th>\n<th>Country</th>\n</tr>\n<tr>\n<td>Alfreds Futterkiste</td> /* table header */\n<td>Maria Anders</td>\n<td>Germany</td>\n</tr>\n<tr>\n<td>Centro comercial Moctezuma</td> /* table header */\n<td>Francisco Chang</td>\n<td>Mexico</td>\n</tr>\n<tr>\n<td>Ernst Handel</td> /* table header */\n<td>Roland Mendel</td>\n<td>Austria</td> \n</tr>\n</table>"
+    "content":  "<!-- CSS -->\n<style>\ntable {\n  font-family: arial, sans-serif;\n  border-collapse: collapse;\n  width: 100%;\n}\n\ntd, th {\n  border: 1px solid #dddddd;\n  text-align: left;\n  padding: 8px;\n}\n\ntr:nth-child(even) {\n  background-color: #dddddd;\n}\n</style>\n\n<!-- HTML -->\n<table>\n<tr>\n<th>Company</th> /* table header */\n<th>Contact</th>\n<th>Country</th>\n</tr>\n<tr>\n<td>Alfreds Futterkiste</td> /* table header */\n<td>Maria Anders</td>\n<td>Germany</td>\n</tr>\n<tr>\n<td>Centro comercial Moctezuma</td> /* table header */\n<td>Francisco Chang</td>\n<td>Mexico</td>\n</tr>\n<tr>\n<td>Ernst Handel</td> /* table header */\n<td>Roland Mendel</td>\n<td>Austria</td> \n</tr>\n</table>"
   }
 ]
