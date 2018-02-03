@@ -87,13 +87,13 @@ var content = [
   {
     name: "JSON",
     path: "langs/data/json.json",
-    prism: "lang-html",
+    prism: "lang-json",
     enabled: false
   },
   {
     name: "XML",
     path: "langs/data/xml.json",
-    prism: "lang-html",
+    prism: "lang-xml",
     enabled: false
   },
   {
@@ -109,7 +109,7 @@ var content = [
     enabled: true
   },
   {
-    name: "CSS",
+    name: "SCSS",
     path: "langs/web/css.json",
     prism: "lang-scss",
     enabled: true
