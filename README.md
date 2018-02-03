@@ -2,7 +2,7 @@
 This repository contains a programming cheat sheet for multiple languages. It is still under heavy development. Not every language is included yet and the ones that are included might not be complete.
 
 ## Main Languages
-- C++ (CPP) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
+- C++ (CPP) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 - C# (CS) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 - Java ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 - Python (Py) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
