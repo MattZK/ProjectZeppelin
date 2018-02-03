@@ -8,102 +8,102 @@ var version = {
 var content = [
   {
     name: "C++",
-    path: "langs/Lang/cpp.json",
+    path: "langs/main/cpp.json",
     prism: "language-cpp"
   },
   {
     name: "C#",
-    path: "langs/Lang/cs.json",
+    path: "langs/main/cs.json",
     prism: "language-csharp"
   },
   {
     name: "JAVA",
-    path: "langs/Lang/java.json",
+    path: "langs/main/java.json",
     prism: "language-java"
   },
   {
     name: "PY",
-    path: "langs/Lang/py.json",
+    path: "langs/main/py.json",
     prism: "language-python"
   },
   {
     name: "ARD",
-    path: "langs/Lang/ard.json",
+    path: "langs/main/ard.json",
     prism: "language-arduino"
   },
   {
     name: "SH",
-    path: "langs/Lang/sh.json",
+    path: "langs/main/sh.json",
     prism: "language-bash"
   },
   {
     name: "GL",
-    path: "langs/Api/gl.json",
+    path: "langs/API/gl.json",
     prism: "language-cpp"
   },
   {
     name: "UE4",
-    path: "langs/Api/ue4.json",
+    path: "langs/API/ue4.json",
     prism: "language-cpp"
   },
   {
     name: "UNITY",
-    path: "langs/Api/unity.json",
+    path: "langs/API/unity.json",
     prism: "language-csharp"
   },
   {
     name: "DP",
-    path: "langs/Etc/dp.json",
+    path: "langs/etc/dp.json",
     prism: "language-cpp"
   },
   {
     name: "GIT",
-    path: "langs/Etc/git.json",
+    path: "langs/etc/git.json",
     prism: "language-git"
   },
   {
     name: "MOBILE",
-    path: "langs/Etc/mobile.json",
+    path: "langs/etc/mobile.json",
     prism: "language-java"
   },
   {
     name: "US",
-    path: "langs/Etc/US.json",
+    path: "langs/etc/US.json",
     prism: "lang-html"
   },
   {
     name: "JSON",
-    path: "langs/Data/json.json",
+    path: "langs/data/json.json",
     prism: "lang-html"
   },
   {
     name: "XML",
-    path: "langs/Data/xml.json",
+    path: "langs/data/xml.json",
     prism: "lang-html"
   },
   {
     name: "XAML",
-    path: "langs/Data/wpf.json",
+    path: "langs/data/wpf.json",
     prism: "lang-html"
   },
   {
     name: "HTML",
-    path: "langs/Web/html.json",
+    path: "langs/web/html.json",
     prism: "lang-html"
   },
   {
     name: "CSS",
-    path: "langs/Web/css.json",
+    path: "langs/web/css.json",
     prism: "lang-scss"
   },
   {
     name: "JS",
-    path: "langs/Web/js.json",
+    path: "langs/web/js.json",
     prism: "language-js"
   },
   {
     name: "TS",
-    path: "langs/Web/ts.json",
+    path: "langs/web/ts.json",
     prism: "language-typescript"
   }
 ];
