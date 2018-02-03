@@ -20,5 +20,10 @@ var content = [
     name: "JS",
     path: "langs/js.json",
     prism: "lang-js"
+  },
+  {
+    name: "C++",
+    path: "langs/cpp.json",
+    prism: "lang-cpp"
   }
 ];

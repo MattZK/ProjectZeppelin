@@ -6,7 +6,7 @@ var app = new Vue({
   data: {
     authors: [
       'Matthias Willemsen',
-      'Tomekeeeu'
+      'Tom Meyers'
     ],
     activePage: '',
     version: version,
