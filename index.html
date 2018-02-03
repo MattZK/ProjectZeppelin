@@ -15,7 +15,7 @@
           Cheat Sheet <br>
           <small>Version {{ version.build }}.{{ version.major }}.{{ version.minor }}</small>
         </li>
-        <li v-for="item in content" v-on:click="activePage = item.name">{{ item.name }}</li>
+        <li v-for="item in content" v-if="item.enabled" v-on:click="activePage = item.name">{{ item.name }}</li>
       </ul>
     </nav>
     <section class="content" v-for="item in content" v-show="activePage == item.name">
