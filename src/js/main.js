@@ -6,7 +6,7 @@ var app = new Vue({
   data: {
     authors: [
       'Matthias Willemsen',
-      'Tomekeeeu'
+      'Tom Meyers'
     ],
     activePage: '',
     version: version,
@@ -27,28 +27,10 @@ var app = new Vue({
       console.log('Loaded External JSON Files.');
       console.log('Total amount: ' + list.length);
       this.elements = results;
-      app.activePage = 'HTML';
+      app.activePage = 'C++';
       setTimeout(function () {
         Prism.highlightAll();
       }, 10);
     });
   }
 });
-
-
-
-// Load all external json files defined in db.js
-/*content.forEach(function (lang, index) {
-  list.push(
-    fetch(lang.path).then(function (res) {
-      return res.json();
-    }).then(function (value) {
-      results[lang.name] = value;
-    })
-  )
-});
-Promise.all(list).then(function () {
-  console.log('Loaded External JSON Files.');
-  console.log('Total amount: ' + list.length);
-  this.elements = results;
-});*/
