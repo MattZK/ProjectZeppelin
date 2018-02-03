@@ -9,101 +9,121 @@ var content = [
   {
     name: "C++",
     path: "langs/main/cpp.json",
-    prism: "language-cpp"
+    prism: "language-cpp",
+    enabled: true
   },
   {
     name: "C#",
     path: "langs/main/cs.json",
-    prism: "language-csharp"
+    prism: "language-csharp",
+    enabled: false
   },
   {
     name: "JAVA",
     path: "langs/main/java.json",
-    prism: "language-java"
+    prism: "language-java",
+    enabled: false
   },
   {
     name: "PY",
     path: "langs/main/py.json",
-    prism: "language-python"
+    prism: "language-python",
+    enabled: false
   },
   {
     name: "ARD",
     path: "langs/main/ard.json",
-    prism: "language-arduino"
+    prism: "language-arduino",
+    enabled: false
   },
   {
     name: "SH",
     path: "langs/main/sh.json",
-    prism: "language-bash"
+    prism: "language-bash",
+    enabled: false
   },
   {
     name: "GL",
     path: "langs/API/gl.json",
-    prism: "language-cpp"
+    prism: "language-cpp",
+    enabled: false
   },
   {
     name: "UE4",
     path: "langs/API/ue4.json",
-    prism: "language-cpp"
+    prism: "language-cpp",
+    enabled: false
   },
   {
     name: "UNITY",
     path: "langs/API/unity.json",
-    prism: "language-csharp"
+    prism: "language-csharp",
+    enabled: false
   },
   {
     name: "DP",
     path: "langs/etc/dp.json",
-    prism: "language-cpp"
+    prism: "language-cpp",
+    enabled: false
   },
   {
     name: "GIT",
     path: "langs/etc/git.json",
-    prism: "language-git"
+    prism: "language-git",
+    enabled: false
   },
   {
     name: "MOBILE",
     path: "langs/etc/mobile.json",
-    prism: "language-java"
+    prism: "language-java",
+    enabled: false
   },
   {
     name: "US",
     path: "langs/etc/US.json",
-    prism: "lang-html"
+    prism: "lang-html",
+    enabled: false
   },
   {
     name: "JSON",
     path: "langs/data/json.json",
-    prism: "lang-html"
+    prism: "lang-html",
+    enabled: false
   },
   {
     name: "XML",
     path: "langs/data/xml.json",
-    prism: "lang-html"
+    prism: "lang-html",
+    enabled: false
   },
   {
     name: "XAML",
     path: "langs/data/wpf.json",
-    prism: "lang-html"
+    prism: "lang-html",
+    enabled: false
   },
   {
     name: "HTML",
     path: "langs/web/html.json",
-    prism: "lang-html"
+    prism: "lang-html",
+    enabled: true
   },
   {
     name: "CSS",
     path: "langs/web/css.json",
-    prism: "lang-scss"
+    prism: "lang-scss",
+    enabled: true
   },
   {
     name: "JS",
     path: "langs/web/js.json",
-    prism: "language-js"
+    prism: "language-js",
+    enabled: true
   },
   {
     name: "TS",
     path: "langs/web/ts.json",
-    prism: "language-typescript"
+    prism: "language-typescript",
+    enabled: false
   }
 ];
