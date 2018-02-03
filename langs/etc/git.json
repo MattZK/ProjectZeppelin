@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Using a local repository",
+    "info": "making a repository and commiting changes to it",
+    "content": "#git local repository is a repository on your local machine\n\n#the root directory of your local repo\ncd /path/to/your/exsisting/code\n\n#initialize git to make this directory into a repo\ngit init\n\n#if you wish to get a exisiting repo in your current folder \ngit clone <repo url>\n\n#adding new files to your repo\ngit add <file>\n\n#adding all files to a repo (including subdirectories)\ngit add .\n\n#commiting your files to the repo\n#this means you add the changed content to the repo (if you change the file or you add it initially)\ngit commit \n\n#if you wish to add a message the the commit\ngit commit -m \"your message\"\n"
+  },
+  {
+    "name": "Uploading to a remote repository",
+    "info": "commiting changes to a remote repo",
+    "content": "#initial remote configurations\n\n#first you need to have a local repository of your content\n\n#then add the remote repo to your local repo\n#be sure you are in the right directory\n#the remote url is often the github link followed by .git\n#the remote name is something you give it usually origin\ngit remote add <remote_name> <remote_repo_url>\n\n#after you have made the wanted changes you need to upload your content to the remote repo\n#remote name is the name you defined earlier \n#and local branch name is the branch you currently are editing see further on how to do this\ngit push -u <remote_name> <local_branch_name>\n\n"
+  },
+  {
+    "name": "Editing user settings for git",
+    "info": "How to edit your git settings",
+    "content": "#define the author name\n#use --local for changing the author name on local repo's\ngit config --global user.name <name>\n\n#define the user e-mail\ngit config --local user.email <email>\n\n#change the default editor (standard is vim)\ngit config --system core.editor <editor>\n\n#change global settings\ngit config --global --edit"
+  },
+  {
+    "name": "Git status",
+    "info": "Get the status of your current git repo",
+    "content": "#check the status of your local repo\ngit status\n\n#this gives you information of your repo\n#like uncommited files (in case you forgot to commit them)\n\n#uefull parameters\n\n#check the status of the specified branch\ngit status -b <branch>\n\n#give a short output\n#usefull to quickly check what needs to be commited\ngit status -s\n\n#extra information is displayed\ngit status -v"
+  },
+  {
+    "name": "Git status",
+    "info": "Get the status of your current git repo",
+    "content": "#to create a new branch\ngit checkout -b <branch>\n\n#to change to the new branch\ngit checkout <branch>\n\n#to push the branch to a remote repo\ngit push <remote_name> <branch>\n\n#get a list of all the branches\ngit branch\n\n#default branch is master\n\n#delete a branch\ngit branch -D <branch>\n\n#delete a branch on github\ngit push origin :<branch>\n"
+  }
+]

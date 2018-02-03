@@ -1,0 +1,7 @@
+[
+  {
+    "name": "JS Example",
+    "info": "Example info",
+    "content": "function _(id) { document.getElementbyId(id); }"
+  }
+]
