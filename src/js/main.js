@@ -27,7 +27,7 @@ var app = new Vue({
       console.log('Loaded External JSON Files.');
       console.log('Total amount: ' + list.length);
       this.elements = results;
-      app.activePage = 'HTML';
+      app.activePage = 'C++';
       setTimeout(function () {
         Prism.highlightAll();
       }, 10);
