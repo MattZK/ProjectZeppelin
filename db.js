@@ -52,7 +52,7 @@ var content = [
     name: "UE4 API",
     path: "langs/API/ue4.json",
     prism: "language-cpp",
-    enabled: false
+    enabled: true
   },
   {
     name: "UNITY API",
