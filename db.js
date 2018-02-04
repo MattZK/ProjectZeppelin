@@ -34,7 +34,7 @@ var content = [
     name: "Arduino",
     path: "langs/main/ard.json",
     prism: "language-arduino",
-    enabled: false
+    enabled: true
   },
   {
     name: "Bash",
