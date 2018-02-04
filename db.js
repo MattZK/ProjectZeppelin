@@ -19,14 +19,14 @@ var modules = {
         abbr: 'C++',
         displayname: 'C++',
         path: 'langs/main/cpp.json',
-        defaultPrism: "language-cpp",
+        defaultPrism: "lang-cpp",
         enabled: true
       },
       CS: {
         abbr: 'C#',
         displayname: 'C#',
         path: 'langs/main/cs.json',
-        defaultPrism: "language-csharp",
+        defaultPrism: "lang-csharp",
         enabled: true
       }
     }
@@ -40,14 +40,14 @@ var modules = {
         abbr: 'HTML',
         displayname: 'HTML',
         path: 'langs/web/html.json',
-        defaultPrism: "language-html",
+        defaultPrism: "lang-html",
         enabled: true
       },
       CSS: {
         abbr: 'CSS',
         displayname: 'CSS',
         path: 'langs/web/css.json',
-        defaultPrism: "language-scss",
+        defaultPrism: "lang-scss",
         enabled: true
       }
     }
@@ -60,6 +60,13 @@ modules.langs = {
   HTML: modules.web.content.HTML,
   CSS: modules.web.content.CSS
 };
+
+modules.list = [
+  'CPP',
+  'CS',
+  'HTML',
+  'CSS'
+];
 
 var content = [
   {

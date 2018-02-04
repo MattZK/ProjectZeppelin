@@ -41,16 +41,18 @@
   </aside>
   <div class="mdc-toolbar-fixed-adjust"></div>
   <section class="content">
-    <div class="code-item-container" v-for="element in activePageContent">
-      <h2>{{ element.name }}</h2>
-      <p>{{ element.info }}</p>
-      <pre><code v-bind:class="modules.langs[activePage].defaultPrism">{{ element.content }}</code></pre>
+    <div v-for="lang in modules.list">
+      <div class="code-item-container" v-for="element in allPageContent[lang]">
+        <h2>{{ element.name }}</h2>
+        <p>{{ element.info }}</p>
+        <pre><code v-bind:class="modules.langs[lang].defaultPrism">{{ element.content }}</code></pre>
+      </div>
     </div>
 
     <!--<footer>
-      Made with &hearts; by {{ authors[0] + ' & ' + authors[1] }}
-    </footer>
-  </section>-->
+      Made with &hearts; by {{ authors[0] + ' &amp; ' + authors[1] }}
+    </footer>-->
+  </section>
 </div>
 <script src="src/js/vue.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/material-components-web@0.29.0/dist/material-components-web.min.js"></script>

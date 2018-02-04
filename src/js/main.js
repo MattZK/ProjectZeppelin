@@ -1,4 +1,4 @@
-var list = [], results = [];
+var list = [];
 
 // Initiate Vue app
 var app = new Vue({
@@ -11,27 +11,45 @@ var app = new Vue({
     activePage: undefined,
     activePageName: 'Home |',
     activePageContent: undefined,
+    allPageContent: [],
     version: version
   },
   methods: {},
   watch: {
     activePage: function () {
       this.activePageName = modules.langs[this.activePage].displayname;
-      fetch(modules.langs[this.activePage].path).then(function (res) {
+      /*fetch(modules.langs[this.activePage].path).then(function (res) {
         return res.json();
       }).then(function (value) {
+        app.activePageContent = [];
         app.activePageContent = value;
         setTimeout(function () {
           Prism.highlightAll();
         }, 10);
-      });
+      });*/
     }
   },
   mounted: function(){
     modules.subdevs.forEach(function (subdev) {
-      modules[subdev].contains.forEach(function (value) {
-        console.log(subdev + '.' + value);
+      modules[subdev].contains.forEach(function (lang) {
+        list.push(
+          fetch(modules.langs[lang].path).then(function (res) {
+            return res.json();
+          }).then(function (value) {
+            list[lang] = value;
+          })
+        )
       });
+    });
+    Promise.all(list).then(function () {
+      console.log('Loaded External JSON Files.');
+      console.log('Total amount: ' + list.length);
+      allPageContent = list;
+      app.activePage = 'CPP';
+      
+      setTimeout(function () {
+        Prism.highlightAll();
+      }, 10);
     });
   }
 });
