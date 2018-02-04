@@ -20,10 +20,11 @@
       <div class="nav-overlay" v-on:click="toggleSidebar(null)"></div>
     </nav>
     <section class="content" v-for="item in content" v-show="activePage == item.name">
-      <header>
+      <div id="header-holder"></div>
+      <header id="header">
         <i class="material-icons" v-on:click="toggleSidebar(null)">menu</i>
+        <span id="title-large">{{ item.name }} Cheat Sheet</span>
         <i class="material-icons">search</i>
-        {{ item.name }} Cheat Sheet
       </header>
       <div class="code-item-container" v-for="element in results[item.name]">
         <h2>{{ element.name }}</h2>

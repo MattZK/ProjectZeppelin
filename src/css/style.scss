@@ -54,6 +54,11 @@ body {
     }
   }
   .content {
+    #header-holder {
+      height: 256px;
+      width: 100%;
+      display: none;
+    }
     header {
       i {
         font-size: 28px;
@@ -70,12 +75,19 @@ body {
           cursor: not-allowed;
         }
       }
+      span {
+        font-size: 56px;
+        line-height: 320px;
+        transition: font-size .15s linear;
+      }
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 256px;
       padding: 0 0 0 128px;
       background: $primary;
-      line-height: 320px;
       color: #ffffff;
-      font-size: 56px;
+      z-index: 888;
     }
     .code-item-container {
       padding: 20px;
