@@ -44,11 +44,7 @@
     <div class="code-item-container" v-for="element in activePageContent">
       <h2>{{ element.name }}</h2>
       <p>{{ element.info }}</p>
-      <pre>
-        <code v-bind:class="element.defaultPrism">
-          {{ element.content }}
-        </code>
-      </pre>
+      <pre><code v-bind:class="modules.langs[activePage].defaultPrism">{{ element.content }}</code></pre>
     </div>
 
     <!--<footer>

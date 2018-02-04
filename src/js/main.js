@@ -8,26 +8,23 @@ var app = new Vue({
       'Matthias Willemsen',
       'Tom Meyers'
     ],
-    activePage: '',
+    activePage: undefined,
     activePageName: 'Home |',
-    activePageContent: [],
+    activePageContent: undefined,
     version: version
   },
   methods: {},
   watch: {
     activePage: function () {
       this.activePageName = modules.langs[this.activePage].displayname;
-      console.log(modules.langs[this.activePage].path);
-      
       fetch(modules.langs[this.activePage].path).then(function (res) {
         return res.json();
       }).then(function (value) {
-        console.log('Fetch Success');
-        this.activePageContent = value;
+        app.activePageContent = value;
         setTimeout(function () {
           Prism.highlightAll();
         }, 10);
-      })
+      });
     }
   },
   mounted: function(){
