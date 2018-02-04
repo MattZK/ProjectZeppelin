@@ -12,7 +12,7 @@ This repository contains a programming cheat sheet for multiple languages. It is
 
 #### Semi
 - Arduino (INO) [MOD-C] ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
-- Bash (SH) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
+- Bash (SH) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 
 #### Data Languages
 - XML ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
@@ -25,7 +25,7 @@ This repository contains a programming cheat sheet for multiple languages. It is
 - OpenGL using the glfw wrapper ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 
 ### GIT
-- git (GIT) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
+- git (GIT) ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
 
 ## Mobile
 - Android Studio (Java) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
