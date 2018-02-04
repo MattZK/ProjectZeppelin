@@ -1,6 +1,6 @@
 var version = {
   build: 0,
-  major: 1,
+  major: 2,
   minor: 0,
   revision: 0
 };
