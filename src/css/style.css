@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons");
 * {
   margin: 0;
   padding: 0;
@@ -197,18 +198,18 @@ template {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  color: black;
+  color: #abb2bf;
   background: none;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -224,17 +225,12 @@ pre[class*="language-"] {
 
 pre[class*="language-"] > code {
   position: relative;
-  border-left: 4px solid #4fb3be;
-  box-shadow: 0 0 0 1px #dfdfdf;
-  background-color: #fdfdfd;
-  background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-  background-size: 2.95em 2.95em;
-  background-origin: content-box;
-  background-attachment: local; }
+  border-left: 5px solid #21252B;
+  background-color: #282c34; }
 
 code[class*="language"] {
   max-height: inherit;
-  padding: 0 1em;
+  padding: 1em;
   display: block;
   overflow: auto; }
 
@@ -289,10 +285,10 @@ pre[class*="language-"]:after {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #7D8B99; }
+  color: #5c6370; }
 
 .token.punctuation {
-  color: #5F6364; }
+  color: #abb2bf; }
 
 .token.property,
 .token.tag,
@@ -302,7 +298,7 @@ pre[class*="language-"]:after {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #c92c2c; }
+  color: #61afef; }
 
 .token.selector,
 .token.attr-name,
@@ -311,29 +307,28 @@ pre[class*="language-"]:after {
 .token.function,
 .token.builtin,
 .token.inserted {
-  color: #2f9c0a; }
+  color: #98c379; }
 
 .token.operator,
 .token.entity,
 .token.url,
-.token.variable {
-  color: #a67f59;
-  background: rgba(255, 255, 255, 0.5); }
+.token.variable,
+.token.macro.property {
+  color: #c678dd; }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword,
 .token.class-name {
-  color: #1990b8; }
+  color: #c678dd; }
 
 .token.regex,
 .token.important {
-  color: #e90; }
+  color: #e5c07b; }
 
 .language-css .token.string,
 .style .token.string {
-  color: #a67f59;
-  background: rgba(255, 255, 255, 0.5); }
+  color: #d19a66; }
 
 .token.important {
   font-weight: normal; }
@@ -386,38 +381,24 @@ pre .line-highlight {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #FEFEFE; }
+  text-rendering: optimizeLegibility; }
 
-#app {
-  display: grid;
-  grid-template-columns: 160px auto;
-  grid-auto-rows: minmax(100vh, auto); }
-  #app nav {
-    background: #00838e; }
-    #app nav ul {
-      width: 100%; }
-      #app nav ul li {
-        color: rgba(255, 255, 255, 0.89);
-        padding: 12px 0 12px 24px; }
-        #app nav ul li:hover {
-          background: rgba(0, 0, 0, 0.1);
-          cursor: pointer; }
-        #app nav ul li:first-child {
-          padding: 24px 0 24px 24px;
-          font-size: large; }
-          #app nav ul li:first-child small {
-            font-size: small;
-            font-weight: 300; }
-          #app nav ul li:first-child:hover {
-            background: transparent;
-            cursor: default; }
-  #app .content {
-    padding: 12px; }
-    #app .content footer {
-      text-align: center;
-      background: #00838e;
-      color: rgba(255, 255, 255, 0.85);
-      padding: 16px;
-      margin: 0 -12px -12px -12px; }
+#app header.mdc-toolbar {
+  background: #00BCD4; }
+#app .mdc-drawer__header-content {
+  background: #00BCD4;
+  color: white; }
+#app .content #header-holder {
+  height: 256px;
+  width: 100%;
+  display: none; }
+#app .content .code-item-container {
+  padding: 20px; }
+#app .content footer {
+  text-align: center;
+  background: #00BCD4;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 16px;
+  margin: 0; }
 
 /*# sourceMappingURL=style.css.map */

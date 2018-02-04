@@ -5,35 +5,61 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Universal Cheat Sheet</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-components-web@0.29.0/dist/material-components-web.min.css">
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-  <div id="app">
-    <nav>
-      <ul>
-        <li>
-          Cheat Sheet <br>
-          <small>Version {{ version.build }}.{{ version.major }}.{{ version.minor }}</small>
-        </li>
-        <li v-for="item in content" v-if="item.enabled" v-on:click="activePage = item.name">{{ item.name }}</li>
-      </ul>
+<div id="app">
+  <header class="mdc-toolbar mdc-toolbar--fixed mdc-toolbar--waterfall">
+    <div class="mdc-toolbar__row">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+        <a href="#" class="material-icons mdc-toolbar__menu-icon menu">menu</a>
+        <span class="mdc-toolbar__title">{{ activePage }} Cheat Sheet</span>
+      </section>
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+        <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Search this page" alt="Search this page">search</a>
+      </section>
+    </div>
+  </header>
+  <aside class="mdc-drawer mdc-drawer--temporary mdc-typography">
+    <nav class="mdc-drawer__drawer">
+      <header class="mdc-drawer__header">
+        <div class="mdc-drawer__header-content">
+          UCS - v{{ version.build }}.{{ version.major }}.{{ version.minor }}
+        </div>
+      </header>
+      <nav id="icon-with-text-demo" class="mdc-drawer__content mdc-list">
+        <!-- TODO: 'mdc-list-item--activated' -->
+        <a class="mdc-list-item" href="#" v-for="item in content" v-if="item.enabled" v-on:click="activePage = item.name">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>{{ item.name }}
+        </a>
+      </nav>
     </nav>
-    <section class="content" v-for="item in content" v-show="activePage == item.name">
-      <h1>{{ item.name }}</h1>
-      <div v-for="element in results[item.name]">
-        <h2>{{ element.name }}</h2>
-        <p>{{ element.info }}</p>
-        <pre><code v-bind:class="item.prism">{{ element.content }}</code></pre>
-      </div>
+  </aside>
+  <div class="mdc-toolbar-fixed-adjust"></div>
+  <section class="content" v-for="item in content" v-show="activePage == item.name">
+    <div class="code-item-container" v-for="element in results[item.name]">
+      <h2>{{ element.name }}</h2>
+      <p>{{ element.info }}</p>
+      <pre><code v-bind:class="item.prism">{{ element.content }}</code></pre>
+    </div>
 
-      <footer>
-        Made with &hearts; by {{ authors[0] + ' & ' + authors[1] }}
-      </footer>
-    </section>
-  </div>
-  <script src="src/js/vue.min.js"></script>
-  <script src="db.js"></script>
-  <script src="src/js/prism.js"></script>
-  <script src="src/js/main.js"></script>
+    <footer>
+      Made with &hearts; by {{ authors[0] + ' & ' + authors[1] }}
+    </footer>
+  </section>
+</div>
+<script src="src/js/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/material-components-web@0.29.0/dist/material-components-web.min.js"></script>
+<script src="db.js"></script>
+<script src="src/js/prism.js"></script>
+<script src="src/js/main.js"></script>
+<script>
+  var toolbar = mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
+  toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
+
+  var drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-drawer--temporary'));
+  document.querySelector('.menu').addEventListener('click', function () { drawer.open = true });
+</script>
 </body>
 </html>
