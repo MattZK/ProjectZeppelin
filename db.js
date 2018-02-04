@@ -40,7 +40,7 @@ var content = [
     name: "SH",
     path: "langs/main/sh.json",
     prism: "language-bash",
-    enabled: false
+    enabled: true
   },
   {
     name: "GL",
@@ -70,7 +70,7 @@ var content = [
     name: "GIT",
     path: "langs/etc/git.json",
     prism: "language-git",
-    enabled: false
+    enabled: true
   },
   {
     name: "MOBILE",
