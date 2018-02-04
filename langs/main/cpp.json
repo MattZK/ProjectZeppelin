@@ -47,7 +47,7 @@
   {
     "name": "If",
     "info": "A statement for defining logic",
-    "content": "int main{\n\n    if(condition1){\n        //Only runs when condition1 == true\n    }else if (condition2){\n    //only runs when condition1 == false && condition2 == true\n    }else{\n        runs when every condition is false\n    }\n}"
+    "content": "int main{\n\n    if(condition1){\n        //Only runs when condition1 == true\n    }else if (condition2){\n    //only runs when condition1 == false && condition2 == true\n    }else{\n        //runs when every condition is false\n    }\n}"
   },
   {
     "name": "Tenary operator",
@@ -67,7 +67,7 @@
   {
     "name": "Functions",
     "info": "Blocks of code which you can repeat",
-    "content": "#include <iostream>\n\n/* Static because we only want one instance of this function (no objects)*/\nstatic void func(std::string name){\n    std::cout << \"your name is \" << name << std::endl;\n}\n\n/* a and b are passed by value */\nstatic int add(int a, int b){\n    return a+b; //gives this back to the function caller\n}\n\n\n/* a and b are passed by value (see pointers) this function is quicker because we don't copy variables*/\nstatic int addRef(int &a, int &b) {\n    return a + b; //gives this back to the function caller\n}\n\nint main{\n    func(\"tom\"); //prints your name is tom\n\n    add(4,5); // returns 9\n\n    func(add(5,6)); // prints your name is 11\n}"
+    "content": "#include <iostream>\n\n/* Static because we only want one instance of this function (no objects)*/\nstatic void func(std::string name){\n    std::cout << \"your name is \" << name << std::endl;\n}\n\n/* a and b are passed by value */\nstatic int add(int a, int b){\n    return a+b; //gives this back to the function caller\n}\n\n\n/* a and b are passed by reference (see pointers) this function is quicker because we don't copy variables*/\nstatic int addRef(int &a, int &b) {\n    return a + b; //gives this back to the function caller\n}\n\nint main{\n    func(\"tom\"); //prints your name is tom\n\n    add(4,5); // returns 9\n\n    func(add(5,6)); // prints your name is 11\n}"
   },
   {
     "name": "Function return types",
@@ -149,6 +149,11 @@
     "name": "Virtual functions (aka polymorphism)",
     "info": "Virtual functions are used when needing different behavior from a subclass while using the same function",
     "content": "// virtual functions are used when you want different code running from the same function but from different subclasses\n#include <iostream>\nusing namespace std; //using std:: as a default namespace\n\n/* This is our parent class*/\nclass Polygon {\n  protected:\n    int width, height;\n  public:\n    virtual void PrintArea(); // by declaring this virual we can override the function in subclasses\n    void set_values (int a, int b)\n      { width=a; height=b;}\n };\n\n\n\nclass Rectangle: public Polygon {\n  public:\n    int area ()\n      { return width * height; }\n    void PrintArea()\n        {cout<<\"Rectangle area is: \" << this->area() << endl; }\n };\n\n/* The same applies for a triangle*/\nclass Triangle: public Polygon {\n  public:\n    int area ()\n      { return width * height / 2; }\n    void PrintArea()\n        {    cout<<\"Triangle area is: \" << this->area() << endl; }\n  };\n  \nint main () {\n\n  Rectangle rect;\n  Triangle trgl;\n  rect.set_values (4,5);\n  trgl.set_values (4,5);\n  cout << rect.PrintArea() << '\n';//this is normal behavior as expected\n  cout << trgl.PrintArea() << '\n';//this is normal behavior as expected\n\n  Polygon pol;\n  pol = rect;\n  pol.PrintArea(); //because it is declared virtual it will perform the function of the subclass rectangle\n  pol = trgl;\n   pol.PrintArea(); // same function as before but now it uses the one from the triangle class (thanks to virtual functions)\n\n  return 0;\n}"
+  },
+  {
+    "name": "Interface",
+    "info": "An interface is a template for a subclass on how to use it",
+    "content": "#Interfaces are abstract classes where the subclasses must use the pure virtual functions\n\n#include <iostream>\n \nusing namespace std;\n \n// Base class should never be used because it is an interface\n//it is a template for subclasses\nclass Shape {\n   public:\n      // pure virtual function providing interface framework.\n      virtual int getArea() = 0;\n      void setWidth(int w) {\n         width = w;\n      }\n   \n      void setHeight(int h) {\n         height = h;\n      }\n   \n   protected:\n      int width;\n      int height;\n};\n \n// Derived classes\n//these should you the interface declared functions\n//all we have to do is implement them\n//this looks a lot like virtual functions only with a twist\nclass Rectangle: public Shape {\n   public:\n      int getArea() { \n         return (width * height); \n      }\n};"
   },
   {
     "name": "operator overloading",

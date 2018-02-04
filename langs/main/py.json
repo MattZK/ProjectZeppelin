@@ -1,7 +1,72 @@
 [
   {
-    "name": "JS Example",
-    "info": "Example info",
-    "content": "function _(id) { document.getElementbyId(id); }"
+    "name": "Main and normal modules",
+    "info": "How to use modules in python",
+    "content": "#modules in python are the different python files\n#you can import other python files (.py) by using import\n\nimport hello\nimport Mathlib.Math.integral as integral\nfrom Mathlib.Math import differential\n\n#using imported files\n\nhello.print() #print method in the hello module\n\nintegral.solve(x^2) #instead of saying Mathlib.Math.integral.solve() we give it a smaller name\ndifferential.solve(x^2) #another notation to make a name smaller\n\n\n#normal modules consist of classes\n#only one modules should ever use no classes\n#this is the main module your entry point\n\nif __name__ == \"__main__\":\n    main() #do logic in this function"
+  },
+  {
+    "name": "Variables",
+    "info": "How to use basic variables",
+    "content": "myint = 7 #python automatically gives the variable a class in this case it is an int\nmyfloat = 7.0 #now it is a float\n\nmystring = 'hello' # and a string\n\none = 1\ntwo = 2\nthree = one + two #basic math\n\nnewfloat = float(myint) #cast myint to a float\nint() #constructor for an int used for casting\nfloat() #constructor for a float usefull for casting\nstring() #same for a string\n\n# Arithmetic\n a + b\n a - b\n a * b\n a / b\n a % b\n a ** b #power\n a // b #division and floor\n"
+  },
+  {
+    "name": "Tuples lists and dictionaries",
+    "info": "variables that look a lot like an array",
+    "content": "#tupel lists and dictionaries \n\n#a list is like an array\n\n#all list items can be different types\nlist1 = ['physics', 'chemistry', 1997, 2000];\nlist2 = [1, 2, 3, 4, 5 ];\nlist3 = [\"a\", \"b\", \"c\", \"d\"]\n\nprint(list1[0]) #print the list index 0\n\n#tuples are like lists but you cannot change them\ntup1 = ('physics', 'chemistry', 1997, 2000);\ntup2 = (1, 2, 3, 4, 5 );\ntup3 = \"a\", \"b\", \"c\", \"d\";\n\nprint tup1[0]; #you can access them in the same way\n\ntup4 = tup1 + tup2 + tup3 #you can add tuples :)\n\n#dictionaries are like the thing in real life\n#you have a word that you can lookup and have the corresponding output\ndict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}\ndict['Age'] = 8; # update existing entry\ndict['School'] = \"DPS School\"; # Add new entry"
+  },
+  {
+    "name": "If statement",
+    "info": "perform conditional logic",
+    "content": "#an if statement is a logical block to route your codeflow\n\nif statement :\n    #you need to use the indent here\n    print(\"we did the statement\")\nelif statement2 :\n    print(\"statement was false and statement2 is true\")\nelse:\n    print(\"nothing was true\")\n\n#comparison\n a == b #equals\n a != b #not equals\n a > b #greater than\n a < b #smaller than\n a >= #greater than or equal\n a <= #less than or equal\n\n a & b #binary and\n a | b #binary or\n a ^ b #binary xor\n ~a #ones complement\n and #and between 2 statements\n or #or between 2 statements\n not #invers between 2 statements"
+  },
+  {
+    "name": "While loop",
+    "info": "Loop until a condition is met",
+    "content": "#!/usr/bin/python\n\ncount = 0\n#from 0 to 8 (9loops)\nwhile (count < 9):\n   print 'The count is:', count\n   count = count + 1\n\nprint \"Good bye!\""
+  },
+  {
+    "name": "For loop",
+    "info": "Loop x times over your code",
+    "content": "#!/usr/bin/python\n\n#can be used with lists\nfruits = ['banana', 'apple',  'mango']\nfor fruit in fruits:        # Second Example\n   print 'Current fruit :', fruit\n\nfor num in range(10,20):     #to iterate between 10 to 20\n    print(num)\n\n"
+  },
+  {
+    "name": "Methods",
+    "info": "Define a method to group code together",
+    "content": "#!/usr/bin/python\n\n#def is the keyword\n#the method docstring is used to document the method\ndef methodname( parameters ):\n   \"method_docstring\"\n   #body\n   return [expression]"
+  },
+  {
+    "name": "Lambdas",
+    "info": "Define an anonymous function",
+    "content": "#f is now a lambda function\n# x, y : are your parameters\n#after the : is your function body\nf = lambda x, y : x + y\n\nf(5,10) #we call the lambda function"
+  },
+  {
+    "name": "Exceptions",
+    "info": "If an error happens how to deal with it",
+    "content": "#how to handle exceptions\n\ntry:\n    #if an errors occurs in the try block trow the exception\nexcept: Exception1:\n    #excecute based on exception1\nexcept Exception2:\n    #excecute based on exception2\nelse:\n    #if there is no exception block found excecute this\n\n\n#basic exeptions\n\ntry:\nexcept ArithmeticError:\n    #explains itself\nexcept ZeroDivisionError:\n    #divided by zero\nexcept AssertionError:\n    #called when sombody does an assertion\nexcept ImportError:\n    #raised when an import failed\nexcept IndexError:\n    #raised when you try to access a non existing index\nexcept IOError:\n    #exception with failed input/ouput operations\nexcept SyntaxError:\n    #raised when you have a syntactical error\nexcept Exception:\n    #every exception ever xD"
+  },
+  {
+    "name": "Python 2.x vs Python 3.x",
+    "info": "Difference between python 2 and 3 (mostly python 3 is more consistent",
+    "content": "#python 2\n\nprint 'Python', python_version()\nprint 'Hello, World!'\nprint('Hello, World!')\nprint \"text\", ; print 'print more text on the same line'\n\n\n#python 3\n\nprint('Python', python_version())\nprint('Hello, World!')\n\nprint(\"some text,\", end=\"\")\nprint(' print more text on the same line')\n"
+  },
+  {
+    "name": "Indentation",
+    "info": "Python doesn't use {} but instead indents to define how to code flows",
+    "content": "#python doesn't work with {} but instead with indentation\n#this is done to make the code more readable\n\nif \"hello\" == \"hi\" :\n    #one tab == inside the if statement\n#on the same line as the if means outside of the if\n\nif \"hello\" == \"hi\":\n    if \"hi\" != \"ho\":\n        #nesting happens with more indents\n    else:\n        #same for an else\n#back to code afer the first if"
+  },
+  {
+    "name": "Classes",
+    "info": "How to define a class in python",
+    "content": "class Employee:\n    #documentation\n   'Common base class for all employees'\n   #empcount is a variable shared between all class instances\n   empCount = 0\n\n   #__init__ is the constructor\n   def __init__(self, name, salary):\n      self.name = name\n      self.salary = salary\n      Employee.empCount += 1\n   \n   #member methods must include self as a parameter\n   def displayCount(self):\n     print \"Total Employee %d\" % Employee.empCount\n\n   def displayEmployee(self):\n      print \"Name : \", self.name,  \", Salary: \", self.salaryrst if\n\n\n#main module\n\nif name == \"__main__\":\n    #create the first object\n    empl1 = Employee(\"tom\",4500) #I wish that was my salary\n    empl2 = Employee(\"Matthias\",4500) #I wish that was my salary\n    empl2.displayEmployee()#call the methode of empl2"
+  },
+  {
+    "name": "Inheritance",
+    "info": "How to make a class inherit another class",
+    "content": "class Person:\n\n    def __init__(self, first, last):\n        self.firstname = first\n        self.lastname = last\n\n    def Name(self):\n        return self.firstname + \" \" + self.lastname\n\nclass Employee(Person): #inherits from Person\n\n    def __init__(self, first, last, staffnum):\n        Person.__init__(self,first, last)\n        self.staffnumber = staffnum\n\n    def GetEmployee(self):\n        return self.Name() + \", \" +  self.staffnumber\n\nif name == \"__main__\":\n    x = Person(\"Marge\", \"Simpson\")\n    y = Employee(\"Homer\", \"Simpson\", \"1007\") #homer is an employee but also a person\n\n    print(x.Name())\n    print(y.GetEmployee())"
+  },
+  {
+    "name": "Multithreading",
+    "info": "Example",
+    "content": "#!/usr/bin/python\n\nimport threading\nimport time\n\nclass myThread (threading.Thread):\n   def __init__(self, threadID, name, counter):\n      threading.Thread.__init__(self)\n      self.threadID = threadID\n      self.name = name\n      self.counter = counter\n   def run(self):\n      print \"Starting \" + self.name\n      # Get lock to synchronize threads\n      threadLock.acquire()\n      print_time(self.name, self.counter, 3)\n      # Free lock to release next thread\n      threadLock.release()\n\ndef print_time(threadName, delay, counter):\n   while counter:\n      time.sleep(delay)\n      print \"%s: %s\" % (threadName, time.ctime(time.time()))\n      counter -= 1\n\nthreadLock = threading.Lock()\nthreads = []\n\n# Create new threads\nthread1 = myThread(1, \"Thread-1\", 1)\nthread2 = myThread(2, \"Thread-2\", 2)\n\n# Start new Threads\nthread1.start()\nthread2.start()\n\n# Add threads to thread list\nthreads.append(thread1)\nthreads.append(thread2)\n\n# Wait for all threads to complete\nfor t in threads:\n    t.join()\nprint \"Exiting Main Thread\""
   }
 ]

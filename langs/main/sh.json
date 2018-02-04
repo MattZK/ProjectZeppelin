@@ -1,7 +1,57 @@
 [
   {
-    "name": "JS Example",
-    "info": "Example info",
-    "content": "function _(id) { document.getElementbyId(id); }"
+    "name": "Bin/bash",
+    "info": "Basic script",
+    "content": "#comments start with the # symbol\n#bin bash is used to tell the terminal that default commands are located in bin/bash \n#!/bin/bash\n\necho \"Hello\" #Send hello to cout\n\n"
+  },
+  {
+    "name": "variables",
+    "info": "Usage of variables in bash",
+    "content": "#!/bin/bash\n\n#variables passed via the command line\n$1 - $9\n\n#declare a variable\n\nvar=Hello\n\n#use a var\n\necho $var\n\n#use a var in a command\nls ($var)\n\n#export the variable outside the script\nexport var\n\n#math with vars\n\nnum1=5\nnum2=10\n\necho $(($num1+$num2))"
+  },
+  {
+    "name": "Arrays",
+    "info": "Basic array usage",
+    "content": "#!/bin/bash\n\n#declaration of arrays\n\narray=(value1 value2 value3)\n\n#indexing arrays\n\necho ${array[0]} ${array[1]} ${array[2]} #arrays start at index 0\n\narray[3] = `expr ${array[0]} + ${array[1]}` #assign an array variable"
+  },
+  {
+    "name": "If statement",
+    "info": "If statement for file IO",
+    "content": "#!/bin/bash\n\n# -eq -ne equal / not equal\n# -gt -lt greater than / less than\n# -ge -le greater than or equal to / less than or equal to\n\n# u can also use\n# == <= >= < > !\n\n#file expressions\n# -a if a file exists\n# -d if the given file is a directory\n# -e true if a file exists\n# -f if a file exists and is a regular file\n# -h a symbolic link\n# -r is readable\n# -w is writable\n# -x is executable\n\n\n\nif [ 5 -eq 6 ]; then\n    echo \"First argument equals the second\"\nelif [ 5 -ne 6 ]; then\n    echo \"this is the most useless if statement ever\"\nelse\n    echo \"like I said useless\"\nfi\n\n#boolean operations \n\n#logical and\nif [ 5 -eq 6 ] && [ 6 -eq 5 ]; then\nfi\n\n#logical or\nif [ 5 -eq 6 ] || [ 6 -eq 5 ]; then\nfi"
+  },
+  {
+    "name": "Case",
+    "info": "Use case instead of an if",
+    "content": "#!/bin/bash\n\ncase expression in\n    [x - y]*)\n        #mutiple patterns in one line\n        ;;\n    pattern1 )\n        statements ;;\n    pattern2 )\n        statements ;;\n    *)\n    #everything else\n    ;;\nesac"
+  },
+  {
+    "name": "While",
+    "info": "loop while a condition is true",
+    "content": "#!/bin/bash\n\n#you can use the same expressions as with an if\n#print hello 4 times\n\ni=\"0\"\n\nwhile [ $i -lt 4 ]\n    do\n    echo \"hello\"\n    i=$[$i+1]\ndone\n\n#endless loop\nwhile true; do \n    echo \"lol\"\ndone"
+  },
+  {
+    "name": "Until",
+    "info": "loop until a condition is true",
+    "content": "#!/bin/bash\n\n#you can use the same expressions as with an if\n#print hello 4 times\n#runs until the condition is true\n\ni=\"0\"\n\nuntil  [ $i -gt 4 ]\n    do\n    echo \"hello\"\n    i=$[$i+1]\ndone\n\n#endless loop\nuntil  true; do \n    echo \"lol\"\ndone"
+  },
+  {
+    "name": "For",
+    "info": "A loop that we know howmany times will loop and some examples",
+    "content": "#!/bin/bash\n\n#prints out the planets one by one\nfor planet in \"Mercury 36\" \"Venus 67\" \"Earth 93\"  \"Mars 142\" \"Jupiter 483\"\ndo\n    echo $planet\ndone\n\n#print current dir files one by one\nfor files in ls\ndo\n    echo $files\ndone\n\n#regular for loop like we are used to\nfor ((i=0; i < 10; i++))\ndo\n    echo $i\ndone"
+  },
+  {
+    "name": "Function",
+    "info": "Used to only write code once instead of repeating it",
+    "content": "#!/bin/bash\n\n#functions must be defined before use since it is a scripting language\nprint_something () {\n    echo \"Hello I am a function\"\n}\n\nprint_something_param () {\n    echo $1 $2 #first parst parameter and second\n}\n\n#return values are echo's\n\nprint_something # prints Hello I am a function\n\nprint_something \"tom\" \"tim\" #prints tom tim\n\nval=printsomething\n\necho $val #prints Hello I am a function\n\n\nlocalVal(){\n    local var=1 #only accesable in this function\n    echo \"hello \" $var\n}"
+  },
+  {
+    "name": "grep",
+    "info": "Collect specific data from a set of data",
+    "content": "#!/bin/bash\n\ngrep ^root /etc/passwd\n#returns root:x:0:0:root:/root:/bin/bash\n\ncat text\n#returns\n#hello\n#hi\n#tom\n\ngrep tom text\n#returns tom"
+  },
+  {
+    "name": "Basic Commands",
+    "info": "For more information about a command use the man page",
+    "content": "ls #prints a list of the working directory\n\nsu <user> #change user\n\ncat <file> #print a file\n\nnano <file> #basic editor\n\nvi <file> #advanced editor\n\nman <commando> #prints info about a commando\n\n#1 is execute\n#2 is write\n#4 is read\nchmod 124 <file> #change modifications about a file\n\ncd <path> #change directory\n\ncp <original> <new> #copy a file\n\ncron #timed processes\n\ndf #disk information\n\necho <message> #print the message via cout\n\nfind #find something specific\n\nifconfig ifup ifdown #ip information /interface up/down\n\nnetstate #information about hostname and corresponding protocol\n\nnslookup #hostname to ip \n\nping #send a ping packet\n\nrsync #sync files\n\nshutdown #shuts the computer down\n\nsudo #give administration rights\n\nssh #gain a secure shell\n\ntar #archiving\n\nwget #retrieve files from the web"
   }
 ]
