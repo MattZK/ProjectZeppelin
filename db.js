@@ -25,43 +25,43 @@ var content = [
     enabled: false
   },
   {
-    name: "PY",
+    name: "Python",
     path: "langs/main/py.json",
     prism: "language-python",
     enabled: true
   },
   {
-    name: "ARD",
+    name: "Arduino",
     path: "langs/main/ard.json",
     prism: "language-arduino",
     enabled: false
   },
   {
-    name: "SH",
+    name: "Bash",
     path: "langs/main/sh.json",
     prism: "language-bash",
     enabled: true
   },
   {
-    name: "GL",
+    name: "OpenGL",
     path: "langs/API/gl.json",
     prism: "language-cpp",
     enabled: false
   },
   {
-    name: "UE4",
+    name: "UE4 API",
     path: "langs/API/ue4.json",
     prism: "language-cpp",
     enabled: false
   },
   {
-    name: "UNITY",
+    name: "UNITY API",
     path: "langs/API/unity.json",
     prism: "language-csharp",
     enabled: false
   },
   {
-    name: "DP",
+    name: "Design Patterns",
     path: "langs/etc/dp.json",
     prism: "language-cpp",
     enabled: false
@@ -73,13 +73,13 @@ var content = [
     enabled: true
   },
   {
-    name: "MOBILE",
+    name: "MOBILE Development",
     path: "langs/etc/mobile.json",
     prism: "language-java",
     enabled: false
   },
   {
-    name: "US",
+    name: "Usefull Sites",
     path: "langs/etc/US.json",
     prism: "lang-html",
     enabled: false
@@ -115,13 +115,13 @@ var content = [
     enabled: true
   },
   {
-    name: "JS",
+    name: "Javascript",
     path: "langs/web/js.json",
     prism: "language-js",
     enabled: true
   },
   {
-    name: "TS",
+    name: "Typescript",
     path: "langs/web/ts.json",
     prism: "language-typescript",
     enabled: false
