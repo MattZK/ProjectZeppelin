@@ -9,7 +9,7 @@
 </head>
 <body>
   <div id="app">
-    <nav>
+    <nav id="navigation">
       <ul>
         <li>
           Cheat Sheet <br>
@@ -17,10 +17,15 @@
         </li>
         <li v-for="item in content" v-if="item.enabled" v-on:click="activePage = item.name">{{ item.name }}</li>
       </ul>
+      <div class="nav-overlay" v-on:click="toggleSidebar(null)"></div>
     </nav>
     <section class="content" v-for="item in content" v-show="activePage == item.name">
-      <h1>{{ item.name }}</h1>
-      <div v-for="element in results[item.name]">
+      <header>
+        <i class="material-icons" v-on:click="toggleSidebar(null)">menu</i>
+        <i class="material-icons">search</i>
+        {{ item.name }} Cheat Sheet
+      </header>
+      <div class="code-item-container" v-for="element in results[item.name]">
         <h2>{{ element.name }}</h2>
         <p>{{ element.info }}</p>
         <pre><code v-bind:class="item.prism">{{ element.content }}</code></pre>

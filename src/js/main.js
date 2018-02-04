@@ -9,9 +9,22 @@ var app = new Vue({
       'Tom Meyers'
     ],
     activePage: '',
+    navbarState: true, // True = Open
     version: version,
     content: content,
     elements: []
+  },
+  methods: {
+    toggleSidebar: function (force) {
+      if(force === null) {
+        if (this.navbarState) {
+          document.getElementById('navigation').style.display = 'none';
+        } else {
+          document.getElementById('navigation').style.display = 'grid';
+        }
+        this.navbarState = !this.navbarState;
+      }
+    }
   },
   mounted: function(){
     content.forEach(function (lang, index) {
