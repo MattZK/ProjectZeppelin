@@ -1,7 +1,52 @@
 [
   {
-    "name": "JS Example",
-    "info": "Example info",
-    "content": "function _(id) { document.getElementbyId(id); }"
+    "name": "Entry point",
+    "info": "The location where a c/c++ program starts",
+    "content": "static void Main(string[] args){\n    //entry point\n}"
+  },
+  {
+    "name": "Variables",
+    "info": "C++ primitieve variabelen",
+    "content":  "static void Main(string[] args){\n    int i =5; //integer\n    float f= 3.5f;\n    double d = 5.0;\n    char c= 'C';\n    string = \"This is a string\";\n}"
+  },
+  {
+    "name": "For Loop",
+    "info": "A for loop can be run x amount of times",
+    "content": "static void Main(string[] args){\n\n    for(int i=0;i<5;i++){\n        //this gets run 5 times\n        Console.WriteLine( i );\n    }\n}"
+  },
+  {
+    "name": "While",
+    "info": "A loop that keeps running until a condition is true",
+    "content": "static void Main(string[] args){\n\n    int i = 0;\n    while(i<5){\n        //do logic here\n        //this runs 5 times\n        i++;\n    }\n}"
+  },
+  {
+    "name": "If",
+    "info": "A statement for defining logic",
+    "content": "static void Main(string[] args){\n\n    if(condition1){\n        //Only runs when condition1 == true\n    }else if (condition2){\n    //only runs when condition1 == false && condition2 == true\n    }else{\n        //runs when every condition is false\n    }\n}"
+  },
+  {
+    "name": "Tenary operator",
+    "info": "This operator is a short hand notation of an if statement",
+    "content": "int a = 0;\ntrue == false ? a = 1 : a = 2; // a = 2 since true == false is false\n\n//tenary operator is like an if statement\ncondition ? statemen1 : statement2;\n\n//comparible if statement\nif(condition){\n    statement1\n}else{\n    statement2\n}"
+  },
+  {
+    "name": "Logic Operators",
+    "info": "used for boolean expressions",
+    "content": "<  //smaller than\n>  //greater than\n<=  //smaller than or equal to\n>=  //greater than or equal to\n!=  //not equal to\n==  //same value\nx && y  //and gate between X and Y\nx && y  //and gate between X and Y\nx & y  //and gate between X and Y (bitwise)\nx | y  //and gate between X and Y (bitwise)\n~x //first compliment of x"
+  },
+  {
+    "name": "Switch",
+    "info": "Short hand notation for an if statement (only ==)",
+    "content": "static void Main(string[] args){\n\n    switch ('A')\n    {\n        case 'A':\n            Console.WriteLine( \"it's A\" );\n            break;\n        case 'B':\n            Console.WriteLine( \"it's B\" );\n            break;\n        default:\n            Console.WriteLine( \"It's neither A nor B\" );\n            break;\n    }\n}"
+  },
+  {
+    "name": "Methods",
+    "info": "Blocks of code which you can repeat",
+    "content": "/* Static because we only want one instance of this Method (no objects)*/\nstatic void func(string name){\n    Console.WriteLine( \"your name is \" + name );\n}\n\n/* a and b are passed by value objects would be passed by reference */\nstatic int add(int a, int b){\n    return a + b; //gives this back to the Method caller\n}\n\n\nstatic void Main(string[] args){\n    func(\"tom\"); //prints your name is tom\n\n    add(4,5); // returns 9\n\n    func(add(5,6)); // prints your name is 11\n}"
+  },
+  {
+    "name": "Method return types",
+    "info": "What we can return from Methods",
+    "content": "void //returns void aka nothing\nint //returns an integer\ndecimal //returns a deciaml number\ndouble //returns a double\nchar //retunrs a characther\nstring //returns a string\nclass //returns a class instance\nstruct //returns a struct instance"
   }
 ]

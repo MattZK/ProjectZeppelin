@@ -16,7 +16,7 @@ var content = [
     name: "C#",
     path: "langs/main/cs.json",
     prism: "language-csharp",
-    enabled: false
+    enabled: true
   },
   {
     name: "JAVA",
