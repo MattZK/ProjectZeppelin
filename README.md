@@ -5,13 +5,13 @@ This repository contains a programming cheat sheet for multiple languages. It is
 - C++ (CPP) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 - C# (CS) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 - Java ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
-- Python (Py) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
+- Python (Py) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 
 #### Common Design Patterns
 - Design patterns [c++] ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 
 #### Semi
-- Arduino (INO) [MOD-C] ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
+- Arduino (INO) [MOD-C] ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 - Bash (SH) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 
 #### Data Languages
