@@ -20,8 +20,28 @@
     "content": "#check the status of your local repo\ngit status\n\n#this gives you information of your repo\n#like uncommited files (in case you forgot to commit them)\n\n#uefull parameters\n\n#check the status of the specified branch\ngit status -b <branch>\n\n#give a short output\n#usefull to quickly check what needs to be commited\ngit status -s\n\n#extra information is displayed\ngit status -v"
   },
   {
-    "name": "Git status",
-    "info": "Get the status of your current git repo",
+    "name": "Git branch",
+    "info": "Create a new branch for your git repo",
     "content": "#to create a new branch\ngit checkout -b <branch>\n\n#to change to the new branch\ngit checkout <branch>\n\n#to push the branch to a remote repo\ngit push <remote_name> <branch>\n\n#get a list of all the branches\ngit branch\n\n#default branch is master\n\n#delete a branch\ngit branch -D <branch>\n\n#delete a branch on github\ngit push origin :<branch>\n"
+  },
+  {
+    "name": "Git remote branch",
+    "info": "Fetch , work and upload a remote branch",
+    "content": "#fetch a remote repo\n\ncd /path/to/dir/where/you/save/remote/repo\ngit init\n\n#add remote repo\ngit remote add <remote_name> <remote_repo_url>\n\n#fetch remote branch\n#remote name is the name u used before\n#remote branch is the branch you wish to fetch\ngit fetch <remote_name> <remote_branch>:<local_branch_name>\n\n#check if it worked\n#the branch should appear in the list\ngit branch\n\n#select barnch as current working branch\ngit checkout <local_branch_name>\n\n#work with the updated branch and us it like a local branch\n\n#push branch to remote repo\n\ngit push -u <remote_name> <remote_branch>\n\n\n"
+  },
+  {
+    "name": "Git merging",
+    "info": "Merge a branch into another one",
+    "content": "#merging \n\n#go to the receiving branch that will get the merge\ngit checkout <receiver>\n\n#Make sure the branches are up-to-date with git fetch\ngit merge <branch_to_merge_to_the_reciever>"
+  },
+  {
+    "name": "Git pull",
+    "info": "A combination of git fetch and git merge",
+    "content": "#git pull is usefull for fetching the repo and the merging it\n\ngit pull <remote_name> <remote_branch_to_pull_in_the_current_branch>\n#is the same as\ngit fetch\ngit merge <remote_name> <remote_branch>"
+  },
+  {
+    "name": "Working together",
+    "info": "Resolve merge conflicts and general working with multiple people",
+    "content": "#working together\n#this shows the differens between the last commit and the current situations\ngit diff --changed <file>\n\n#to see merge conflicts \ngit mergetool\n\n#check either version of the file\n#and either alter the file or us one of them\n#the last checkout u us will be commited\ngit checkout --ours <file>\ngit checkout --theirs <file>\n\n#add the file first\ngit add <file>\n#then commit it\ngit commit -m \"message\"\n\n#now you can merge \n"
   }
 ]
