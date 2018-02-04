@@ -8,7 +8,7 @@ This repository contains a programming cheat sheet for multiple languages. It is
 - Python (Py) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 
 #### Common Design Patterns
-- Design patterns [c++] ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
+- Design patterns [c++] ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
 
 #### Semi
 - Arduino (INO) [MOD-C] ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
@@ -20,7 +20,7 @@ This repository contains a programming cheat sheet for multiple languages. It is
 - JSON ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
 
 ### API's
-- UE4 ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
+- UE4 ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
 - Unity ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 - OpenGL using the glfw wrapper ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 
@@ -33,7 +33,7 @@ This repository contains a programming cheat sheet for multiple languages. It is
 
 ## Web
 - HTML ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
-- CSS ![alt text](https://mattwill.be/assets/universalcheatsheet/semi.png "Predicated, use SCSS instead")
+- CSS ![alt text](https://mattwill.be/assets/universalcheatsheet/semi.png "Depricated, use SCSS instead")
 - SCSS ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 - Javascript (JS) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 - Typescript (TS) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Working on this")
