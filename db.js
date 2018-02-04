@@ -28,7 +28,7 @@ var content = [
     name: "PY",
     path: "langs/main/py.json",
     prism: "language-python",
-    enabled: false
+    enabled: true
   },
   {
     name: "ARD",
