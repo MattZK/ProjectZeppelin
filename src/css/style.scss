@@ -8,86 +8,24 @@ $dark: #005661;
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #FEFEFE;
   text-rendering: optimizeLegibility;
 }
 
 #app {
-  // Sidebar
-  nav {
-    width: 100%;
-    display: none;
-    grid: 100% / 256px auto;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    z-index: 999;
-    ul {
-      box-shadow: 0 2px 5px rgba(0,0,0,.26);
-      background: #ffffff;
-      width: 100%;
-      li {
-        color: rgba(0, 0, 0, .89);
-        padding: 12px 0 12px 24px;
-        &:hover {
-          background: rgba(0, 0, 0, .1);
-          cursor: pointer;
-        }
-        &:first-child {
-          padding: 24px 0 24px 24px;
-          font-size: large;
-          small {
-            font-size: small;
-            font-weight: 300;
-          }
-          // Reset hover for first child
-          &:hover {
-            background: transparent;
-            cursor: default;
-          }
-        }
-      }
-    }
-    .nav-overlay {
-      background: rgba(0, 0, 0, .35);
-    }
+  header.mdc-toolbar {
+    background: $primary;
   }
+  .mdc-drawer__header-content {
+    background: $primary;
+    color: white;
+  }
+  ////// OLD
+  // Sidebar
   .content {
     #header-holder {
       height: 256px;
       width: 100%;
       display: none;
-    }
-    header {
-      i {
-        font-size: 28px;
-        &:first-child {
-          position: fixed;
-          left: 24px;
-          top: 24px;
-          cursor: pointer;
-        }
-        &:last-child {
-          position: fixed;
-          right: 24px;
-          top: 24px;
-          cursor: not-allowed;
-        }
-      }
-      span {
-        font-size: 56px;
-        line-height: 320px;
-        transition: font-size .15s linear;
-      }
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 256px;
-      padding: 0 0 0 128px;
-      background: $primary;
-      color: #ffffff;
-      z-index: 888;
     }
     .code-item-container {
       padding: 20px;

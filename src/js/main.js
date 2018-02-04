@@ -28,7 +28,7 @@ var app = new Vue({
       }
     },
     handleScroll: function () {
-      var header = document.getElementById('header').style;
+      /*var header = document.getElementById('header').style;
       var holder = document.getElementById('header-holder').style;
       var hero = document.getElementById('title-large').style;
       if (window.scrollY > 180) {
@@ -44,7 +44,7 @@ var app = new Vue({
         hero.display = 'inline-block';
         hero.lineHeight = '320px';
         hero.fontSize = '56px';
-      }
+      }*/
     }
   },
   mounted: function(){
