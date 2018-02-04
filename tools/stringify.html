@@ -39,11 +39,12 @@
 <textarea type="text" id="result" placeholder="Code generates here" contenteditable="false"></textarea>
 <script>
   // TODO: cannot escape '/"/g', fix in the future
-  document.getElementById('go').addEventListener('click', function (ev) {
-    var stage1 = document.getElementById('string').value.replace(/\r?\n/g, "\\n");
-    var stage2 = stage1.replace(/"/g, '\\"');
-    document.getElementById('result').innerText = '"' + stage2 + '"';
+  document.getElementById('go').addEventListener('click', function () {
+    document.getElementById('result').innerText = '"' + stringify(document.getElementById('string').value) + '"';
   });
+  function stringify (input) {
+    return input.replace(/\r?\n/g, "\\n").replace(/"/g, '\\"').replace(/\s\s\s\s+/g, '  ').replace(';//', '; //');
+  }
 </script>
 </body>
 </html>
