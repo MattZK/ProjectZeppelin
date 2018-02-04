@@ -64,7 +64,7 @@ var content = [
     name: "Design Patterns",
     path: "langs/etc/dp.json",
     prism: "language-cpp",
-    enabled: false
+    enabled: true
   },
   {
     name: "GIT",
@@ -82,7 +82,7 @@ var content = [
     name: "Usefull Sites",
     path: "langs/etc/US.json",
     prism: "lang-html",
-    enabled: false
+    enabled: true
   },
   {
     name: "JSON",
