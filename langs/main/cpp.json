@@ -47,7 +47,7 @@
   {
     "name": "If",
     "info": "A statement for defining logic",
-    "content": "int main{\n\n    if(condition1){\n        //Only runs when condition1 == true\n    }else if (condition2){\n    //only runs when condition1 == false && condition2 == true\n    }else{\n        runs when every condition is false\n    }\n}"
+    "content": "int main{\n\n    if(condition1){\n        //Only runs when condition1 == true\n    }else if (condition2){\n    //only runs when condition1 == false && condition2 == true\n    }else{\n        //runs when every condition is false\n    }\n}"
   },
   {
     "name": "Tenary operator",
@@ -67,7 +67,7 @@
   {
     "name": "Functions",
     "info": "Blocks of code which you can repeat",
-    "content": "#include <iostream>\n\n/* Static because we only want one instance of this function (no objects)*/\nstatic void func(std::string name){\n    std::cout << \"your name is \" << name << std::endl;\n}\n\n/* a and b are passed by value */\nstatic int add(int a, int b){\n    return a+b; //gives this back to the function caller\n}\n\n\n/* a and b are passed by value (see pointers) this function is quicker because we don't copy variables*/\nstatic int addRef(int &a, int &b) {\n    return a + b; //gives this back to the function caller\n}\n\nint main{\n    func(\"tom\"); //prints your name is tom\n\n    add(4,5); // returns 9\n\n    func(add(5,6)); // prints your name is 11\n}"
+    "content": "#include <iostream>\n\n/* Static because we only want one instance of this function (no objects)*/\nstatic void func(std::string name){\n    std::cout << \"your name is \" << name << std::endl;\n}\n\n/* a and b are passed by value */\nstatic int add(int a, int b){\n    return a+b; //gives this back to the function caller\n}\n\n\n/* a and b are passed by reference (see pointers) this function is quicker because we don't copy variables*/\nstatic int addRef(int &a, int &b) {\n    return a + b; //gives this back to the function caller\n}\n\nint main{\n    func(\"tom\"); //prints your name is tom\n\n    add(4,5); // returns 9\n\n    func(add(5,6)); // prints your name is 11\n}"
   },
   {
     "name": "Function return types",
