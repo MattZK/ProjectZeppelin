@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons");
 * {
   margin: 0;
   padding: 0;
@@ -225,7 +225,7 @@ pre[class*="language-"] {
 
 pre[class*="language-"] > code {
   position: relative;
-  border-left: 4px solid #4fb3be;
+  border-left: 5px solid #21252B;
   background-color: #282c34; }
 
 code[class*="language"] {
@@ -381,38 +381,75 @@ pre .line-highlight {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #FEFEFE; }
+  background: #FEFEFE;
+  text-rendering: optimizeLegibility; }
 
-#app {
-  display: grid;
-  grid-template-columns: 160px auto;
-  grid-auto-rows: minmax(100vh, auto); }
-  #app nav {
-    background: #00838e; }
-    #app nav ul {
-      width: 100%; }
-      #app nav ul li {
-        color: rgba(255, 255, 255, 0.89);
-        padding: 12px 0 12px 24px; }
-        #app nav ul li:hover {
-          background: rgba(0, 0, 0, 0.1);
-          cursor: pointer; }
-        #app nav ul li:first-child {
-          padding: 24px 0 24px 24px;
-          font-size: large; }
-          #app nav ul li:first-child small {
-            font-size: small;
-            font-weight: 300; }
-          #app nav ul li:first-child:hover {
-            background: transparent;
-            cursor: default; }
-  #app .content {
-    padding: 12px; }
-    #app .content footer {
-      text-align: center;
-      background: #00838e;
-      color: rgba(255, 255, 255, 0.85);
-      padding: 16px;
-      margin: 0 -12px -12px -12px; }
+#app nav {
+  width: 100%;
+  display: none;
+  grid: 100% / 256px auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 999; }
+  #app nav ul {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    background: #ffffff;
+    width: 100%; }
+    #app nav ul li {
+      color: rgba(0, 0, 0, 0.89);
+      padding: 12px 0 12px 24px; }
+      #app nav ul li:hover {
+        background: rgba(0, 0, 0, 0.1);
+        cursor: pointer; }
+      #app nav ul li:first-child {
+        padding: 24px 0 24px 24px;
+        font-size: large; }
+        #app nav ul li:first-child small {
+          font-size: small;
+          font-weight: 300; }
+        #app nav ul li:first-child:hover {
+          background: transparent;
+          cursor: default; }
+  #app nav .nav-overlay {
+    background: rgba(0, 0, 0, 0.35); }
+#app .content #header-holder {
+  height: 256px;
+  width: 100%;
+  display: none; }
+#app .content header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 256px;
+  padding: 0 0 0 128px;
+  background: #00BCD4;
+  color: #ffffff;
+  z-index: 888; }
+  #app .content header i {
+    font-size: 28px; }
+    #app .content header i:first-child {
+      position: fixed;
+      left: 24px;
+      top: 24px;
+      cursor: pointer; }
+    #app .content header i:last-child {
+      position: fixed;
+      right: 24px;
+      top: 24px;
+      cursor: not-allowed; }
+  #app .content header span {
+    font-size: 56px;
+    line-height: 320px;
+    transition: font-size .15s linear; }
+#app .content .code-item-container {
+  padding: 20px; }
+#app .content footer {
+  text-align: center;
+  background: #00BCD4;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 16px;
+  margin: 0; }
 
 /*# sourceMappingURL=style.css.map */

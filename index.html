@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Universal Cheat Sheet</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-components-web@0.29.0/dist/material-components-web.min.css">
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
   <div id="app">
-    <nav>
+    <nav id="navigation">
       <ul>
         <li>
           Cheat Sheet <br>
@@ -17,10 +18,16 @@
         </li>
         <li v-for="item in content" v-if="item.enabled" v-on:click="activePage = item.name">{{ item.name }}</li>
       </ul>
+      <div class="nav-overlay" v-on:click="toggleSidebar(null)"></div>
     </nav>
     <section class="content" v-for="item in content" v-show="activePage == item.name">
-      <h1>{{ item.name }}</h1>
-      <div v-for="element in results[item.name]">
+      <div id="header-holder"></div>
+      <header id="header">
+        <i class="material-icons" v-on:click="toggleSidebar(null)">menu</i>
+        <span id="title-large">{{ item.name }} Cheat Sheet</span>
+        <i class="material-icons">search</i>
+      </header>
+      <div class="code-item-container" v-for="element in results[item.name]">
         <h2>{{ element.name }}</h2>
         <p>{{ element.info }}</p>
         <pre><code v-bind:class="item.prism">{{ element.content }}</code></pre>
@@ -32,6 +39,7 @@
     </section>
   </div>
   <script src="src/js/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/material-components-web@0.29.0/dist/material-components-web.min.js"></script>
   <script src="db.js"></script>
   <script src="src/js/prism.js"></script>
   <script src="src/js/main.js"></script>
