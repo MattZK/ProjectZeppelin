@@ -9,7 +9,7 @@ var app = new Vue({
       'Tom Meyers'
     ],
     activePage: '',
-    navbarState: true, // True = Open
+    navbarState: false, // True = Open
     version: version,
     content: content,
     elements: []

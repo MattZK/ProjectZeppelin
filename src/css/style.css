@@ -386,7 +386,7 @@ body {
 
 #app nav {
   width: 100%;
-  display: grid;
+  display: none;
   grid: 100% / 256px auto;
   position: fixed;
   left: 0;
