@@ -1,8 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400');
+
+$syntax-hue:          220;
+$syntax-saturation:   13%;
+$syntax-brightness:   18%;
+
+// Monochrome -----------------------------------
+$mono-1: hsl($syntax-hue, 14%, 71%); // default text
+$mono-2: hsl($syntax-hue,  9%, 55%);
+$mono-3: hsl($syntax-hue, 10%, 40%);
+
+// Colors -----------------------------------
+$hue-1:   hsl(187, 47%, 55%); // <-cyan
+$hue-2:   hsl(207, 82%, 66%); // <-blue
+$hue-3:   hsl(286, 60%, 67%); // <-purple
+$hue-4:   hsl( 95, 38%, 62%); // <-green
+
+$hue-5:   hsl(355, 65%, 65%); // <-red 1
+$hue-5-2: hsl(  5, 48%, 51%); // <-red 2
+
+$hue-6:   hsl( 29, 54%, 61%); // <-orange 1
+$hue-6-2: hsl( 39, 67%, 69%); // <-orange 2
+
+// Base colors -----------------------------------
+$syntax-fg:     $mono-1;
+$syntax-bg:     hsl($syntax-hue, $syntax-saturation, $syntax-brightness);
+$syntax-gutter: darken($syntax-fg, 26%);
+$syntax-guide:  fade($syntax-fg, 15%);
+$syntax-accent: hsl($syntax-hue, 100%, 66% );
+
 code[class*="language-"],
 pre[class*="language-"] {
-    color: black;
+    color: $syntax-fg;
     background: none;
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    //font-family: Menlo, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -10,9 +41,9 @@ pre[class*="language-"] {
     word-wrap: normal;
     line-height: 1.5;
 
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
 
     -webkit-hyphens: none;
     -moz-hyphens: none;
@@ -31,17 +62,17 @@ pre[class*="language-"] {
 pre[class*="language-"]>code {
     position: relative;
     border-left: 4px solid #4fb3be;
-    box-shadow: 0 0 0 1px #dfdfdf;
-    background-color: #fdfdfd;
-    background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
-    background-size: 2.95em 2.95em;
-    background-origin: content-box;
-    background-attachment: local;
+    //box-shadow: 0 0 0 1px #dfdfdf;
+    background-color: $syntax-bg;
+    //background-image: linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+    //background-size: 2.95em 2.95em;
+    //background-origin: content-box;
+    //background-attachment: local;
 }
 
 code[class*="language"] {
     max-height: inherit;
-    padding: 0 1em;
+    padding: 1em;
     display: block;
     overflow: auto;
 }
@@ -101,11 +132,11 @@ pre[class*="language-"]:after {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: #7D8B99;
+  color: $mono-3;
 }
 
 .token.punctuation {
-    color: #5F6364;
+  color: $mono-1;
 }
 
 .token.property,
@@ -116,7 +147,7 @@ pre[class*="language-"]:after {
 .token.constant,
 .token.symbol,
 .token.deleted {
-    color: #c92c2c;
+  color: $hue-2;
 }
 
 .token.selector,
@@ -126,33 +157,32 @@ pre[class*="language-"]:after {
 .token.function,
 .token.builtin,
 .token.inserted {
-    color: #2f9c0a;
+    color: $hue-4;
 }
 
 .token.operator,
 .token.entity,
 .token.url,
-.token.variable {
-    color: #a67f59;
-    background: rgba(255, 255, 255, 0.5);
+.token.variable,
+.token.macro.property {
+    color: $hue-3;
 }
 
 .token.atrule,
 .token.attr-value,
 .token.keyword,
 .token.class-name {
-    color: #1990b8;
+    color: $hue-3;
 }
 
 .token.regex,
 .token.important {
-    color: #e90;
+    color: $hue-6-2;
 }
 
 .language-css .token.string,
 .style .token.string {
-    color: #a67f59;
-    background: rgba(255, 255, 255, 0.5);
+    color: $hue-6;
 }
 
 .token.important {
