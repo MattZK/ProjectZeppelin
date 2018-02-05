@@ -1,12 +1,12 @@
 [
   {
     "name": "Entry point",
-    "info": "The location where a c/c++ program starts",
+    "info": "The location where a c# program starts",
     "content": "static void Main(string[] args){\n    //entry point\n}"
   },
   {
     "name": "Variables",
-    "info": "C++ primitieve variabelen",
+    "info": "C# primitieve variabelen",
     "content":  "static void Main(string[] args){\n    int i =5; //integer\n    float f= 3.5f;\n    double d = 5.0;\n    char c= 'C';\n    string = \"This is a string\";\n}"
   },
   {
@@ -32,7 +32,7 @@
   {
     "name": "Logic Operators",
     "info": "used for boolean expressions",
-    "content": "<  //smaller than\n>  //greater than\n<=  //smaller than or equal to\n>=  //greater than or equal to\n!=  //not equal to\n==  //same value\nx && y  //and gate between X and Y\nx && y  //and gate between X and Y\nx & y  //and gate between X and Y (bitwise)\nx | y  //and gate between X and Y (bitwise)\n~x //first compliment of x"
+    "content": "<  //smaller than\n>  //greater than\n<=  //smaller than or equal to\n>=  //greater than or equal to\n!=  //not equal to\n==  //same value\nx && y  //and gate between X and Y\nx && y  //and gate between X and Y\nx & y  //and gate between X and Y (bitwise)\nx | y  //and gate between X and Y (bitwise)"
   },
   {
     "name": "Switch",
