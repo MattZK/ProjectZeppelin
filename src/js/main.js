@@ -34,15 +34,19 @@ var app = new Vue({
   },
   mounted: function(){
     for(var key in modules) {
-      this.allLangsSections.push(key);
+      if (modules.hasOwnProperty(key)) {
+        this.allLangsSections.push(key);
+      }
     }
-    var langs = [];
+    var langs = [], paths = [];
     this.allLangsSections.forEach(function (section) {
-      console.log(Object.keys(modules[section].content));
-      langs.concat(Object.keys(modules[section].content));
+      langs = langs.concat(Object.keys(modules[section].content));
+      Object.keys(modules[section].content).forEach(function (lang) {
+        paths[lang] = modules[section].content[lang];
+      })
     });
     this.allLangs = langs;
-    //app.allLangsSections = keys;
+    this.allLangsPaths = paths;
     
   }
 });
@@ -96,7 +100,8 @@ var y = {
   }
 };
 
-console.log('------------------');
+console.log('------- DEV START -------');
 console.log(app.allLangs);
 console.log(app.allLangsSections);
 console.log(app.allLangsPaths);
+console.log('-------- DEV END --------');

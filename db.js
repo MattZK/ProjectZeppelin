@@ -9,9 +9,9 @@ var modules = {
   main: {
     name: 'Main Languages',
     info: 'Universal Languages used for PC',
-    contains: ['CPP', 'CS'],
     content: {
       CPP: {
+        name: 'CPP',
         abbr: 'C++',
         displayname: 'C++',
         path: 'langs/main/cpp.json',
@@ -19,6 +19,7 @@ var modules = {
         enabled: true
       },
       CS: {
+        name: 'CS',
         abbr: 'C#',
         displayname: 'C#',
         path: 'langs/main/cs.json',
@@ -30,9 +31,9 @@ var modules = {
   web: {
     name: 'Web Languages',
     info: 'Web Languages used for Online Development',
-    contains: ['HTML', 'CSS'],
     content: {
       HTML: {
+        name: 'HTML',
         abbr: 'HTML',
         displayname: 'HTML',
         path: 'langs/web/html.json',
@@ -40,6 +41,7 @@ var modules = {
         enabled: true
       },
       CSS: {
+        name: 'CSS',
         abbr: 'CSS',
         displayname: 'CSS',
         path: 'langs/web/css.json',
