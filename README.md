@@ -33,7 +33,7 @@ This repository contains a programming cheat sheet for multiple languages. It is
 
 ## Web
 - HTML ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
-- CSS ![alt text](https://mattwill.be/assets/universalcheatsheet/semi.png "Predicated, use SCSS instead")
+- CSS ![alt text](https://mattwill.be/assets/universalcheatsheet/semi.png "Depricated, use SCSS instead")
 - SCSS ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 - Javascript (JS) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 - Typescript (TS) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Working on this")
@@ -46,3 +46,11 @@ This repository contains a programming cheat sheet for multiple languages. It is
 - mySQL ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 - mongoDB ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 - rethinkDB ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
+
+# Usage
+-Select in the navigation bar the language you wish to read about
+-Scroll until you find the subject you wish to read about
+
+##TODO
+-Explain search functionality when added
+-Explain favorite system
