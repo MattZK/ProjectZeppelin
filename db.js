@@ -30,9 +30,9 @@ var modules = {
         id: 'JAVA',
         abbr: 'Java',
         displayname: 'Java',
-        path: 'langs/main/cs.json',
-        defaultPrism: "lang-csharp",
-        enabled: false
+        path: 'langs/main/java.json',
+        defaultPrism: "lang-java",
+        enabled: true
       },
       PY: {
         id: 'PY',
@@ -40,7 +40,7 @@ var modules = {
         displayname: 'Paython',
         path: 'langs/main/py.json',
         defaultPrism: "lang-python",
-        enabled: false
+        enabled: true
       },
       ARD: {
         id: 'ARD',
@@ -108,7 +108,7 @@ var modules = {
         displayname: 'Design Patterns',
         path: 'langs/etc/dp.json',
         defaultPrism: "lang-cpp",
-        enabled: false
+        enabled: true
       },
       GIT: {
         id: 'GIT',
@@ -132,7 +132,7 @@ var modules = {
         displayname: 'Useful Sites',
         path: 'langs/etc/us.json',
         defaultPrism: "lang-html",
-        enabled: false
+        enabled: true
       }
     }
   },
