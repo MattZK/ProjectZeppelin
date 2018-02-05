@@ -41,7 +41,7 @@
   </aside>
   <div class="mdc-toolbar-fixed-adjust"></div>
   <section class="content">
-    <div v-for="lang in allLangsList" v-if="activePage == lang">
+    <div v-for="lang in allLangsList" v-show="activePage == lang">
       <div v-for="items in [allPageContent[lang]]">
         <div v-for="element in items">
           <div class="code-item-container">
