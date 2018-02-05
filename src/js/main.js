@@ -14,6 +14,7 @@ var app = new Vue({
     activePageContent: undefined,
     allPageContent: [],
     allLangs: [],
+    allLangsList: [],
     allLangsSections: []
   },
   methods: {},
@@ -22,18 +23,20 @@ var app = new Vue({
       this.activePageName = this.allLangs[this.activePage].displayname;
     }
   },
-  created: function(){
+  mounted: function(){
     for(var key in modules) {
       if (modules.hasOwnProperty(key)) {
         this.allLangsSections.push(key);
       }
     }
-    var paths = [];
+    var paths = [], langs = [];
     this.allLangsSections.forEach(function (section) {
+      langs = langs.concat(Object.keys(modules[section].content));
       Object.keys(modules[section].content).forEach(function (lang) {
         paths[lang] = modules[section].content[lang];
       })
     });
+    this.allLangsList = langs;
     this.allLangs = paths;
     var list = [], results = [];
     Object.keys(this.allLangs).forEach(function (lang) {
@@ -41,9 +44,18 @@ var app = new Vue({
         fetch(paths[lang].path).then(function (res) {
           return res.json();
         }).then(function (value) {
-          results[lang.name] = value;
+          results[lang] = value;
         })
       )
+    });
+    Promise.all(list).then(function () {
+      console.log('Loaded External JSON Files.');
+      console.log('Total amount: ' + list.length);
+      app.allPageContent = results;
+      app.activePage = 'CPP';
+      setTimeout(function () {
+        //Prism.highlightAll();
+      }, 10);
     });
   }
 });

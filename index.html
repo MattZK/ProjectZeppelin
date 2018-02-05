@@ -41,17 +41,16 @@
   </aside>
   <div class="mdc-toolbar-fixed-adjust"></div>
   <section class="content">
-    {{ allLangs }}
-    <div v-for="lang in allLangs">
-      {{allLangs[lang]}}
-      <div class="code-item-container" v-for="element in allLangs[lang]">
-        <h2>{{ element.name }}</h2>
-        <p>{{ element.info }}</p>
-        <pre><code v-bind:class="modules.langs[lang].defaultPrism">{{ element.content }}</code></pre>
-      </div>
+    <div v-for="lang in allLangsList" v-if="activePage == lang">
+      {{lang}}
     </div>
 
-    <!--<footer>
+    <!--<div class="code-item-container" v-for="element in allPageContent">
+      <h2>{{ element.name }}</h2>
+      <p>{{ element.info }}</p>
+      <pre><code v-bind:class="modules.langs[lang].defaultPrism">{{ element.content }}</code></pre>
+    </div>
+    <footer>
       Made with &hearts; by {{ authors[0] + ' &amp; ' + authors[1] }}
     </footer>-->
   </section>
