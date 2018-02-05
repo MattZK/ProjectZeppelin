@@ -3,8 +3,8 @@ This repository contains a programming cheat sheet for multiple languages. It is
 
 ## Main Languages
 - C++ (CPP) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
-- C# (CS) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
-- Java ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
+- C# (CS) ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
+- Java ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
 - Python (Py) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 
 #### Common Design Patterns
