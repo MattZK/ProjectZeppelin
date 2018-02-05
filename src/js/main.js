@@ -21,6 +21,9 @@ var app = new Vue({
   watch: {
     activePage: function () {
       this.activePageName = this.allLangs[this.activePage].displayname;
+      setTimeout(function () {
+        Prism.highlightAll();
+      }, 10);
     }
   },
   mounted: function(){
