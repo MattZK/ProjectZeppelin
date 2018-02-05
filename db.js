@@ -37,7 +37,7 @@ var modules = {
       PY: {
         id: 'PY',
         abbr: 'Python',
-        displayname: 'Paython',
+        displayname: 'Python',
         path: 'langs/main/py.json',
         defaultPrism: "lang-python",
         enabled: true
