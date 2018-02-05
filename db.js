@@ -22,7 +22,7 @@ var content = [
     name: "JAVA",
     path: "langs/main/java.json",
     prism: "language-java",
-    enabled: false
+    enabled: true
   },
   {
     name: "Python",
