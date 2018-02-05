@@ -15,7 +15,8 @@ var app = new Vue({
     allPageContent: [],
     allLangs: [],
     allLangsList: [],
-    allLangsSections: []
+    allLangsSections: [],
+    loading: true
   },
   methods: {},
   watch: {
@@ -58,6 +59,9 @@ var app = new Vue({
       app.activePage = 'CPP';
       setTimeout(function () {
         Prism.highlightAll();
+        setTimeout(function () {
+          app.loading = false;
+        }, 1000);
       }, 10);
     });
   }
