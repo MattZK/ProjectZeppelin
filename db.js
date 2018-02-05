@@ -52,13 +52,6 @@ var modules = {
   }
 };
 
-var langs = {
-  CPP: modules.main.content.CPP,
-  CS: modules.main.content.CS,
-  HTML: modules.web.content.HTML,
-  CSS: modules.web.content.CSS
-};
-
 var content = [
   {
     name: "C++",
