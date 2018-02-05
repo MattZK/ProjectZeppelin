@@ -67,7 +67,13 @@ var app = new Vue({
   }
 });
 
+if (typeof(Storage)) {
+  // Storage
+}
+
+/*
 console.log('------- DEV START -------');
 console.log(app.allLangs);
 console.log(app.allLangsSections);
 console.log('-------- DEV END --------');
+*/
