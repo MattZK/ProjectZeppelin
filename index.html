@@ -30,9 +30,9 @@
       </header>
       <nav id="icon-with-text-demo" class="mdc-drawer__content mdc-list">
         <!-- TODO: 'mdc-list-item--activated' -->
-        <div v-for="subdev in modules.subdevs">
-          <a class="mdc-list-item" href="#" v-for="lang in modules[subdev].contains" v-if="true" v-on:click="activePage = lang">
-            {{ modules[subdev].content[lang].displayname }}
+        <div v-for="subdev in allLangsSections">
+          <a class="mdc-list-item" href="#" v-for="lang in modules[subdev].content" v-if="lang.enabled" v-on:click="activePage = lang.id">
+            {{ lang.displayname }}
           </a>
           <hr class="mdc-list-divider">
         </div>

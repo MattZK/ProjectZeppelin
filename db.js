@@ -11,7 +11,7 @@ var modules = {
     info: 'Universal Languages used for PC',
     content: {
       CPP: {
-        name: 'CPP',
+        id: 'CPP',
         abbr: 'C++',
         displayname: 'C++',
         path: 'langs/main/cpp.json',
@@ -19,7 +19,7 @@ var modules = {
         enabled: true
       },
       CS: {
-        name: 'CS',
+        id: 'CS',
         abbr: 'C#',
         displayname: 'C#',
         path: 'langs/main/cs.json',
@@ -33,7 +33,7 @@ var modules = {
     info: 'Web Languages used for Online Development',
     content: {
       HTML: {
-        name: 'HTML',
+        id: 'HTML',
         abbr: 'HTML',
         displayname: 'HTML',
         path: 'langs/web/html.json',
@@ -41,7 +41,7 @@ var modules = {
         enabled: true
       },
       CSS: {
-        name: 'CSS',
+        id: 'CSS',
         abbr: 'CSS',
         displayname: 'CSS',
         path: 'langs/web/css.json',
