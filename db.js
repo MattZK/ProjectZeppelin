@@ -5,6 +5,53 @@ var version = {
   revision: 0
 };
 
+var modules = {
+  main: {
+    name: 'Main Languages',
+    info: 'Universal Languages used for PC',
+    content: {
+      CPP: {
+        id: 'CPP',
+        abbr: 'C++',
+        displayname: 'C++',
+        path: 'langs/main/cpp.json',
+        defaultPrism: "lang-cpp",
+        enabled: true
+      },
+      CS: {
+        id: 'CS',
+        abbr: 'C#',
+        displayname: 'C#',
+        path: 'langs/main/cs.json',
+        defaultPrism: "lang-csharp",
+        enabled: true
+      }
+    }
+  },
+  web: {
+    name: 'Web Languages',
+    info: 'Web Languages used for Online Development',
+    content: {
+      HTML: {
+        id: 'HTML',
+        abbr: 'HTML',
+        displayname: 'HTML',
+        path: 'langs/web/html.json',
+        defaultPrism: "lang-html",
+        enabled: true
+      },
+      CSS: {
+        id: 'CSS',
+        abbr: 'CSS',
+        displayname: 'CSS',
+        path: 'langs/web/css.json',
+        defaultPrism: "lang-scss",
+        enabled: true
+      }
+    }
+  }
+};
+
 var content = [
   {
     name: "C++",

@@ -14,7 +14,7 @@
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
         <a href="#" class="material-icons mdc-toolbar__menu-icon menu">menu</a>
-        <span class="mdc-toolbar__title">{{ activePage }} Cheat Sheet</span>
+        <span class="mdc-toolbar__title">{{ activePageName }} Cheat Sheet</span>
       </section>
       <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
         <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Search this page" alt="Search this page">search</a>
@@ -30,23 +30,37 @@
       </header>
       <nav id="icon-with-text-demo" class="mdc-drawer__content mdc-list">
         <!-- TODO: 'mdc-list-item--activated' -->
-        <a class="mdc-list-item" href="#" v-for="item in content" v-if="item.enabled" v-on:click="activePage = item.name">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">star</i>{{ item.name }}
-        </a>
+        <div v-for="subdev in allLangsSections">
+          <a class="mdc-list-item" href="#" v-for="lang in modules[subdev].content" v-if="lang.enabled" v-on:click="activePage = lang.id">
+            {{ lang.displayname }}
+          </a>
+          <hr class="mdc-list-divider">
+        </div>
       </nav>
     </nav>
   </aside>
   <div class="mdc-toolbar-fixed-adjust"></div>
-  <section class="content" v-for="item in content" v-show="activePage == item.name">
-    <div class="code-item-container" v-for="element in results[item.name]">
-      <h2>{{ element.name }}</h2>
-      <p>{{ element.info }}</p>
-      <pre><code v-bind:class="item.prism">{{ element.content }}</code></pre>
+  <section class="content">
+    <div v-for="lang in allLangsList" v-show="activePage == lang">
+      <div v-for="items in [allPageContent[lang]]">
+        <div v-for="element in items">
+          <div class="code-item-container">
+            <h2>{{ element.name }}</h2>
+            <p>{{ element.info }}</p>
+            <pre><code v-bind:class="allLangs[lang].defaultPrism">{{ element.content }}</code></pre>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!--<div class="code-item-container" v-for="element in allPageContent">
+      <h2>{{ element.name }}</h2>
+      <p>{{ element.info }}</p>
+      <pre><code v-bind:class="modules.langs[lang].defaultPrism">{{ element.content }}</code></pre>
+    </div>
     <footer>
-      Made with &hearts; by {{ authors[0] + ' & ' + authors[1] }}
-    </footer>
+      Made with &hearts; by {{ authors[0] + ' &amp; ' + authors[1] }}
+    </footer>-->
   </section>
 </div>
 <script src="src/js/vue.min.js"></script>

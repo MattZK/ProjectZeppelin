@@ -1,4 +1,4 @@
-var list = [], results = [];
+var list = [];
 
 // Initiate Vue app
 var app = new Vue({
@@ -8,45 +8,62 @@ var app = new Vue({
       'Matthias Willemsen',
       'Tom Meyers'
     ],
-    activePage: '',
-    navbarState: false, // True = Open
     version: version,
-    content: content,
-    elements: []
+    activePage: undefined,
+    activePageName: 'Home |',
+    activePageContent: undefined,
+    allPageContent: [],
+    allLangs: [],
+    allLangsList: [],
+    allLangsSections: []
   },
-  methods: {
-    toggleSidebar: function (force) {
-      if(force === null) {
-        if (this.navbarState) {
-          document.getElementById('navigation').style.display = 'none';
-        } else {
-          document.getElementById('navigation').style.display = 'grid';
-        }
-        this.navbarState = !this.navbarState;
-      } else {
-        // TODO: Handle forced
-      }
-    },
-    handleScroll: function () {
-      /*var header = document.getElementById('header').style;
-      var holder = document.getElementById('header-holder').style;
-      var hero = document.getElementById('title-large').style;
-      if (window.scrollY > 180) {
-        header.height = '76px';
-        header.position = 'fixed';
-        holder.display = 'block';
-        hero.lineHeight = '76px';
-        hero.fontSize = '24px';
-      } else {
-        header.height = '256px';
-        header.position = 'relative';
-        holder.display = 'none';
-        hero.display = 'inline-block';
-        hero.lineHeight = '320px';
-        hero.fontSize = '56px';
-      }*/
+  methods: {},
+  watch: {
+    activePage: function () {
+      this.activePageName = this.allLangs[this.activePage].displayname;
+      setTimeout(function () {
+        Prism.highlightAll();
+      }, 10);
     }
   },
+  mounted: function(){
+    for(var key in modules) {
+      if (modules.hasOwnProperty(key)) {
+        this.allLangsSections.push(key);
+      }
+    }
+    var paths = [], langs = [];
+    this.allLangsSections.forEach(function (section) {
+      langs = langs.concat(Object.keys(modules[section].content));
+      Object.keys(modules[section].content).forEach(function (lang) {
+        paths[lang] = modules[section].content[lang];
+      })
+    });
+    this.allLangsList = langs;
+    this.allLangs = paths;
+    var list = [], results = [];
+    Object.keys(this.allLangs).forEach(function (lang) {
+      list.push(
+        fetch(paths[lang].path).then(function (res) {
+          return res.json();
+        }).then(function (value) {
+          results[lang] = value;
+        })
+      )
+    });
+    Promise.all(list).then(function () {
+      console.log('Loaded External JSON Files.');
+      console.log('Total amount: ' + list.length);
+      app.allPageContent = results;
+      app.activePage = 'CPP';
+      setTimeout(function () {
+        Prism.highlightAll();
+      }, 10);
+    });
+  }
+});
+
+var x = {
   mounted: function(){
     window.addEventListener('scroll', this.handleScroll);
     content.forEach(function (lang, index) {
@@ -68,4 +85,34 @@ var app = new Vue({
       }, 10);
     });
   }
-});
+};
+var y = {
+  y: function () {
+    keys.forEach(function (subdev) {
+      modules[subdev].contains.forEach(function (lang) {
+        list.push(
+          fetch(modules.langs[lang].path).then(function (res) {
+            return res.json();
+          }).then(function (value) {
+            list[lang] = value;
+          })
+        )
+      });
+    });
+    Promise.all(list).then(function () {
+      console.log('Loaded External JSON Files.');
+      console.log('Total amount: ' + list.length);
+      allPageContent = list;
+      app.activePage = 'CPP';
+
+      setTimeout(function () {
+        Prism.highlightAll();
+      }, 10);
+    });
+  }
+};
+
+console.log('------- DEV START -------');
+console.log(app.allLangs);
+console.log(app.allLangsSections);
+console.log('-------- DEV END --------');
