@@ -42,7 +42,15 @@
   <div class="mdc-toolbar-fixed-adjust"></div>
   <section class="content">
     <div v-for="lang in allLangsList" v-if="activePage == lang">
-      {{lang}}
+      <div v-for="items in [allPageContent[lang]]">
+        <div v-for="element in items">
+          <div class="code-item-container">
+            <h2>{{ element.name }}</h2>
+            <p>{{ element.info }}</p>
+            <pre><code v-bind:class="app.allPageContent[lang].defaultPrism">{{ element.content }}</code></pre>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!--<div class="code-item-container" v-for="element in allPageContent">

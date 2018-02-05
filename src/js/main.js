@@ -54,7 +54,7 @@ var app = new Vue({
       app.allPageContent = results;
       app.activePage = 'CPP';
       setTimeout(function () {
-        //Prism.highlightAll();
+        Prism.highlightAll();
       }, 10);
     });
   }
