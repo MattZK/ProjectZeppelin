@@ -25,7 +25,39 @@ var modules = {
         path: 'langs/main/cs.json',
         defaultPrism: "lang-csharp",
         enabled: true
-      }
+      },
+        Java: {
+            id: 'JAVA',
+            abbr: 'java',
+            displayname: 'JAVA',
+            path: 'langs/main/java.json',
+            defaultPrism: "lang-java",
+            enabled: true
+        },
+        Arduino: {
+            id: 'ARDUINO',
+            abbr: 'ARDUINO',
+            displayname: 'ARDUINO',
+            path: 'langs/main/ard.json',
+            defaultPrism: "lang-arduino",
+            enabled: true
+        },
+        Python: {
+            id: 'Python',
+            abbr: 'Python',
+            displayname: 'PYTHON',
+            path: 'langs/main/py.json',
+            defaultPrism: "lang-python",
+            enabled: true
+        },
+        Bash: {
+            id: 'BASH',
+            abbr: 'BASH',
+            displayname: 'BASH',
+            path: 'langs/main/sh.json',
+            defaultPrism: "lang-bash",
+            enabled: true
+        }
     }
   },
   web: {
@@ -47,9 +79,47 @@ var modules = {
         path: 'langs/web/css.json',
         defaultPrism: "lang-scss",
         enabled: true
-      }
+      },
+        JS: {
+            id: 'JS',
+            abbr: 'JS',
+            displayname: 'JS',
+            path: 'langs/web/js.json',
+            defaultPrism: "lang-javascript",
+            enabled: true
+        }
     }
-  }
+  },
+    etc: {
+        name: 'Extra',
+        info: '',
+        content: {
+            HTML: {
+                id: 'HTML',
+                abbr: 'HTML',
+                displayname: 'HTML',
+                path: 'langs/web/html.json',
+                defaultPrism: "lang-html",
+                enabled: true
+            },
+            CSS: {
+                id: 'CSS',
+                abbr: 'CSS',
+                displayname: 'CSS',
+                path: 'langs/web/css.json',
+                defaultPrism: "lang-scss",
+                enabled: true
+            },
+            JS: {
+                id: 'JS',
+                abbr: 'JS',
+                displayname: 'JS',
+                path: 'langs/web/js.json',
+                defaultPrism: "lang-javascript",
+                enabled: true
+            }
+        }
+    }
 };
 
 var content = [
