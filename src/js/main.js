@@ -8,11 +8,14 @@ var app = new Vue({
       'Matthias Willemsen',
       'Tom Meyers'
     ],
+    version: version,
     activePage: undefined,
     activePageName: 'Home |',
     activePageContent: undefined,
     allPageContent: [],
-    version: version
+    allLangs: [],
+    allLangsSections: [],
+    allLangsPaths: []
   },
   methods: {},
   watch: {
@@ -30,27 +33,17 @@ var app = new Vue({
     }
   },
   mounted: function(){
-    modules.subdevs.forEach(function (subdev) {
-      modules[subdev].contains.forEach(function (lang) {
-        list.push(
-          fetch(modules.langs[lang].path).then(function (res) {
-            return res.json();
-          }).then(function (value) {
-            list[lang] = value;
-          })
-        )
-      });
+    for(var key in modules) {
+      this.allLangsSections.push(key);
+    }
+    var langs = [];
+    this.allLangsSections.forEach(function (section) {
+      console.log(Object.keys(modules[section].content));
+      langs.concat(Object.keys(modules[section].content));
     });
-    Promise.all(list).then(function () {
-      console.log('Loaded External JSON Files.');
-      console.log('Total amount: ' + list.length);
-      allPageContent = list;
-      app.activePage = 'CPP';
-      
-      setTimeout(function () {
-        Prism.highlightAll();
-      }, 10);
-    });
+    this.allLangs = langs;
+    //app.allLangsSections = keys;
+    
   }
 });
 
@@ -77,3 +70,33 @@ var x = {
     });
   }
 };
+var y = {
+  y: function () {
+    keys.forEach(function (subdev) {
+      modules[subdev].contains.forEach(function (lang) {
+        list.push(
+          fetch(modules.langs[lang].path).then(function (res) {
+            return res.json();
+          }).then(function (value) {
+            list[lang] = value;
+          })
+        )
+      });
+    });
+    Promise.all(list).then(function () {
+      console.log('Loaded External JSON Files.');
+      console.log('Total amount: ' + list.length);
+      allPageContent = list;
+      app.activePage = 'CPP';
+
+      setTimeout(function () {
+        Prism.highlightAll();
+      }, 10);
+    });
+  }
+};
+
+console.log('------------------');
+console.log(app.allLangs);
+console.log(app.allLangsSections);
+console.log(app.allLangsPaths);

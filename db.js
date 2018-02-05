@@ -6,10 +6,6 @@ var version = {
 };
 
 var modules = {
-  subdevs: [
-    'main',
-    'web'
-  ],
   main: {
     name: 'Main Languages',
     info: 'Universal Languages used for PC',
@@ -54,19 +50,12 @@ var modules = {
   }
 };
 
-modules.langs = {
+var langs = {
   CPP: modules.main.content.CPP,
   CS: modules.main.content.CS,
   HTML: modules.web.content.HTML,
   CSS: modules.web.content.CSS
 };
-
-modules.list = [
-  'CPP',
-  'CS',
-  'HTML',
-  'CSS'
-];
 
 var content = [
   {
