@@ -22,6 +22,9 @@ var app = new Vue({
   watch: {
     activePage: function () {
       this.activePageName = this.allLangs[this.activePage].displayname;
+      if (typeof(Storage)) {
+        localStorage.setItem('activePage', this.activePage);
+      }
       setTimeout(function () {
         Prism.highlightAll();
       }, 10);
@@ -56,20 +59,18 @@ var app = new Vue({
       console.log('Loaded External JSON Files.');
       console.log('Total amount: ' + list.length);
       app.allPageContent = results;
-      app.activePage = 'CPP';
+      if (typeof(Storage) && localStorage.getItem('activePage')) {
+        app.activePage = localStorage.getItem('activePage');
+      }
       setTimeout(function () {
         Prism.highlightAll();
         setTimeout(function () {
           app.loading = false;
-        }, 1000);
+        }, 500);
       }, 10);
     });
   }
 });
-
-if (typeof(Storage)) {
-  // Storage
-}
 
 /*
 console.log('------- DEV START -------');
