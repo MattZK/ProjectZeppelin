@@ -41,8 +41,10 @@
   </aside>
   <div class="mdc-toolbar-fixed-adjust"></div>
   <section class="content">
-    <div v-for="lang in modules.list">
-      <div class="code-item-container" v-for="element in allPageContent[lang]">
+    {{ allLangs }}
+    <div v-for="lang in allLangs">
+      {{allLangs[lang]}}
+      <div class="code-item-container" v-for="element in allLangs[lang]">
         <h2>{{ element.name }}</h2>
         <p>{{ element.info }}</p>
         <pre><code v-bind:class="modules.langs[lang].defaultPrism">{{ element.content }}</code></pre>

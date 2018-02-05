@@ -14,40 +14,37 @@ var app = new Vue({
     activePageContent: undefined,
     allPageContent: [],
     allLangs: [],
-    allLangsSections: [],
-    allLangsPaths: []
+    allLangsSections: []
   },
   methods: {},
   watch: {
     activePage: function () {
-      this.activePageName = modules.langs[this.activePage].displayname;
-      /*fetch(modules.langs[this.activePage].path).then(function (res) {
-        return res.json();
-      }).then(function (value) {
-        app.activePageContent = [];
-        app.activePageContent = value;
-        setTimeout(function () {
-          Prism.highlightAll();
-        }, 10);
-      });*/
+      this.activePageName = this.allLangs[this.activePage].displayname;
     }
   },
-  mounted: function(){
+  created: function(){
     for(var key in modules) {
       if (modules.hasOwnProperty(key)) {
         this.allLangsSections.push(key);
       }
     }
-    var langs = [], paths = [];
+    var paths = [];
     this.allLangsSections.forEach(function (section) {
-      langs = langs.concat(Object.keys(modules[section].content));
       Object.keys(modules[section].content).forEach(function (lang) {
         paths[lang] = modules[section].content[lang];
       })
     });
-    this.allLangs = langs;
-    this.allLangsPaths = paths;
-    
+    this.allLangs = paths;
+    var list = [], results = [];
+    Object.keys(this.allLangs).forEach(function (lang) {
+      list.push(
+        fetch(paths[lang].path).then(function (res) {
+          return res.json();
+        }).then(function (value) {
+          results[lang.name] = value;
+        })
+      )
+    });
   }
 });
 
@@ -103,5 +100,4 @@ var y = {
 console.log('------- DEV START -------');
 console.log(app.allLangs);
 console.log(app.allLangsSections);
-console.log(app.allLangsPaths);
 console.log('-------- DEV END --------');
