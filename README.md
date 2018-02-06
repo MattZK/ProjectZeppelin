@@ -52,5 +52,5 @@ This repository contains a programming cheat sheet for multiple languages. It is
 -Scroll until you find the subject you wish to read about
 
 ##TODO
--Explain search functionality when added
--Explain favorite system
+-Explain search functionality when added (search bar)
+-Explain how to navigate the menu (with menu I mean the selection of all explanations of a language)
