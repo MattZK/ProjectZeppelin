@@ -20,12 +20,12 @@ This repository contains a programming cheat sheet for multiple languages. It is
 - JSON ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
 
 ### API's
-- UE4 ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
+- UE4 ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 - Unity ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 - OpenGL using the glfw wrapper ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
 
 ### GIT
-- git (GIT) ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
+- git (GIT) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 
 ## Mobile
 - Android Studio (Java) ![alt text](https://mattwill.be/assets/universalcheatsheet/red.png "Not included yet")
