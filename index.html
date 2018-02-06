@@ -81,7 +81,9 @@
   toolbar.fixedAdjustElement = document.querySelector('.mdc-toolbar-fixed-adjust');
 
   var drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-drawer--temporary'));
-  document.querySelector('.menu').addEventListener('click', function () { drawer.open = true });
+  document.querySelector('.menu').addEventListener('click', function () {drawer.open = true;});
+
+  document.querySelector('.mdc-drawer__drawer').addEventListener('click', function () {drawer.open = false;});
   var determinates = document.querySelectorAll('.mdc-linear-progress');
   for (var i = 0, determinate; determinate = determinates[i]; i++) {
     var linearProgress = mdc.linearProgress.MDCLinearProgress.attachTo(determinate);
