@@ -184,7 +184,7 @@ var modules = {
         displayname: 'UE4 API',
         path: 'langs/api/UE4.json',
         defaultPrism: "lang-cpp",
-        enabled: false
+        enabled: true
       },
       UNITY: {
         id: 'UNITY',
