@@ -8,7 +8,7 @@ This repository contains a programming cheat sheet for multiple languages. It is
 - Python (Py) ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 
 #### Common Design Patterns
-- Design patterns [c++] ![alt text](https://mattwill.be/assets/universalcheatsheet/orange.png "Working on this")
+- Design patterns [c++] ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
 
 #### Semi
 - Arduino (INO) [MOD-C] ![alt text](https://mattwill.be/assets/universalcheatsheet/green.png "Solid content available")
