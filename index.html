@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Universal Cheat Sheet</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/material-components-web@0.29.0/dist/material-components-web.min.css">
+  <link rel="stylesheet" href="src/css/mcw.min.css">
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
@@ -29,9 +29,8 @@
         </div>
       </header>
       <nav id="icon-with-text-demo" class="mdc-drawer__content mdc-list">
-        <!-- TODO: 'mdc-list-item--activated' -->
         <div v-for="subdev in allLangsSections">
-          <a class="mdc-list-item" href="#" v-for="lang in modules[subdev].content" v-if="lang.enabled" v-on:click="activePage = lang.id">
+          <a class="mdc-list-item" v-bind:class="{ 'mdc-list-item--activated': (activePage == lang.id) }" href="#" v-for="lang in modules[subdev].content" v-if="lang.enabled" v-on:click="activePage = lang.id">
             {{ lang.displayname }}
           </a>
           <hr class="mdc-list-divider">
@@ -52,19 +51,28 @@
         </div>
       </div>
     </div>
-
-    <!--<div class="code-item-container" v-for="element in allPageContent">
-      <h2>{{ element.name }}</h2>
-      <p>{{ element.info }}</p>
-      <pre><code v-bind:class="modules.langs[lang].defaultPrism">{{ element.content }}</code></pre>
-    </div>
     <footer>
       Made with &hearts; by {{ authors[0] + ' &amp; ' + authors[1] }}
-    </footer>-->
+    </footer>
   </section>
+  <div class="load-overlay" v-if="loading">
+    <div class="middle">
+      <h1>Loading</h1>
+      <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">
+        <div class="mdc-linear-progress__buffering-dots"></div>
+        <div class="mdc-linear-progress__buffer"></div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+          <span class="mdc-linear-progress__bar-inner"></span>
+        </div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+          <span class="mdc-linear-progress__bar-inner"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <script src="src/js/vue.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/material-components-web@0.29.0/dist/material-components-web.min.js"></script>
+<script src="src/js/mcw.min.js"></script>
 <script src="db.js"></script>
 <script src="src/js/prism.js"></script>
 <script src="src/js/main.js"></script>
@@ -74,6 +82,14 @@
 
   var drawer = new mdc.drawer.MDCTemporaryDrawer(document.querySelector('.mdc-drawer--temporary'));
   document.querySelector('.menu').addEventListener('click', function () { drawer.open = true });
+  var determinates = document.querySelectorAll('.mdc-linear-progress');
+  for (var i = 0, determinate; determinate = determinates[i]; i++) {
+    var linearProgress = mdc.linearProgress.MDCLinearProgress.attachTo(determinate);
+    linearProgress.progress = 0.5;
+    if (determinate.dataset.buffer) {
+      linearProgress.buffer = 0.75;
+    }
+  }
 </script>
 </body>
 </html>

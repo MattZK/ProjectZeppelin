@@ -38,4 +38,36 @@ body {
       margin: 0;
     }
   }
+  .load-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    text-align: center;
+    color: $primary;
+    background: white;
+    .middle {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 40%;
+      h1 {
+        font-weight: 300;
+      }
+      .mdc-linear-progress {
+        max-width: 600px;
+        margin: auto;
+      }
+      .mdc-linear-progress .mdc-linear-progress__bar-inner {
+        background-color: $primary;
+        left: -25%;
+      }
+      .mdc-linear-progress--indeterminate .mdc-linear-progress__primary-bar {
+        left: -50%;
+      }
+    }
+  }
 }
