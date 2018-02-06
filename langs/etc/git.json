@@ -27,7 +27,7 @@
   {
     "name": "Git remote branch",
     "info": "Fetch , work and upload a remote branch",
-    "content": "#fetch a remote repo\n\ncd /path/to/dir/where/you/save/remote/repo\ngit init\n\n#add remote repo\ngit remote add <remote_name> <remote_repo_url>\n\n#fetch remote branch\n#remote name is the name u used before\n#remote branch is the branch you wish to fetch\ngit fetch <remote_name> <remote_branch>:<local_branch_name>\n\n#check if it worked\n#the branch should appear in the list\ngit branch\n\n#select barnch as current working branch\ngit checkout <local_branch_name>\n\n#work with the updated branch and us it like a local branch\n\n#push branch to remote repo\n\ngit push -u <remote_name> <remote_branch>"
+    "content": "#fetch a remote repo\n\ncd /path/to/dir/where/you/save/remote/repo\ngit init\n\n#add remote repo\ngit remote add <remote_name> <remote_repo_url>\n\n#fetch remote branch\n#remote name is the name u used before\n#remote branch is the branch you wish to fetch\ngit fetch <remote_name> <remote_branch>:<local_branch_name>\n\n#check if it worked\n#the branch should appear in the list\ngit branch\n\n#select barnch as current working branch\ngit checkout <local_branch_name>\n\n#work with the updated branch and us it like a local branch\n\n#push branch to remote repo\n\ngit push -u <remote_name> <remote_branch>\n\n#push all branches\ngit push <remote_name> '*:*'\ngit push <remote_name> --all"
   },
   {
     "name": "Git merging",
@@ -37,7 +37,7 @@
   {
     "name": "Git pull",
     "info": "A combination of git fetch and git merge",
-    "content": "#git pull is usefull for fetching the repo and the merging it\n\ngit pull <remote_name> <remote_branch_to_pull_in_the_current_branch>\n#is the same as\ngit fetch\ngit merge <remote_name> <remote_branch>"
+    "content": "#git pull is usefull for fetching the repo and the merging it\n\ngit pull <remote_name> <remote_branch_to_pull_in_the_current_branch>\n#is the same as\ngit fetch\ngit merge <remote_name> <remote_branch>\n\n#git pull all remote branches\ngit branch -r | grep -v '\\->' | while read remote; do git branch --track \"${remote#origin/}\" \"$remote\"; done\ngit fetch --all\ngit pull --all"
   },
   {
     "name": "Working together",
