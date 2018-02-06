@@ -7,7 +7,7 @@
   {
     "name": "Variables",
     "info": "How to use basic variables",
-    "content": "myint = 7 #python automatically gives the variable a class in this case it is an int\nmyfloat = 7.0 #now it is a float\n\nmystring = 'hello' # and a string\n\none = 1\ntwo = 2\nthree = one + two #basic math\n\nnewfloat = float(myint) #cast myint to a float\nint() #constructor for an int used for casting\nfloat() #constructor for a float usefull for casting\nstring() #same for a string\n\n# Arithmetic\n a + b\n a - b\n a * b\n a / b\n a % b\n a ** b #power\n a // b #division and floor\n"
+    "content": "myint = 7 #python automatically gives the variable a class in this case it is an int\nmyfloat = 7.0 #now it is a float\n\nmystring = 'hello' # and a string\n\none = 1\ntwo = 2\nthree = one + two #basic math\n\nnewfloat = float(myint) #cast myint to a float\nint() #constructor for an int used for casting\nfloat() #constructor for a float usefull for casting\nstring() #same for a string\n\n# Arithmetic\n a + b\n a - b\n a * b\n a / b\n a % b\n a ** b #power\n a // b #division and floor"
   },
   {
     "name": "Tuples lists and dictionaries",
@@ -27,7 +27,7 @@
   {
     "name": "For loop",
     "info": "Loop x times over your code",
-    "content": "#!/usr/bin/python\n\n#can be used with lists\nfruits = ['banana', 'apple',  'mango']\nfor fruit in fruits:        # Second Example\n   print 'Current fruit :', fruit\n\nfor num in range(10,20):     #to iterate between 10 to 20\n    print(num)\n\n"
+    "content": "#!/usr/bin/python\n\n#can be used with lists\nfruits = ['banana', 'apple',  'mango']\nfor fruit in fruits:        # Second Example\n   print 'Current fruit :', fruit\n\nfor num in range(10,20):     #to iterate between 10 to 20\n    print(num)"
   },
   {
     "name": "Methods",
@@ -47,7 +47,7 @@
   {
     "name": "Python 2.x vs Python 3.x",
     "info": "Difference between python 2 and 3 (mostly python 3 is more consistent",
-    "content": "#python 2\n\nprint 'Python', python_version()\nprint 'Hello, World!'\nprint('Hello, World!')\nprint \"text\", ; print 'print more text on the same line'\n\n\n#python 3\n\nprint('Python', python_version())\nprint('Hello, World!')\n\nprint(\"some text,\", end=\"\")\nprint(' print more text on the same line')\n"
+    "content": "#python 2\n\nprint 'Python', python_version()\nprint 'Hello, World!'\nprint('Hello, World!')\nprint \"text\", ; print 'print more text on the same line'\n\n\n#python 3\n\nprint('Python', python_version())\nprint('Hello, World!')\n\nprint(\"some text,\", end=\"\")\nprint(' print more text on the same line')"
   },
   {
     "name": "Indentation",
