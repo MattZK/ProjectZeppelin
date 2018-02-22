@@ -130,7 +130,7 @@ var modules = {
         id: 'US',
         abbr: 'Useful Sites',
         displayname: 'Useful Sites',
-        path: 'langs/etc/us.json',
+        path: 'langs/etc/US.json',
         defaultPrism: "lang-html",
         enabled: true
       }
@@ -174,7 +174,7 @@ var modules = {
         id: 'UE4',
         abbr: 'UE4 API',
         displayname: 'UE4 API',
-        path: 'langs/api/UE4.json',
+        path: 'langs/API/UE4.json',
         defaultPrism: "lang-cpp",
         enabled: true
       },
@@ -182,7 +182,7 @@ var modules = {
         id: 'UNITY',
         abbr: 'UNITY API',
         displayname: 'UNITY API',
-        path: 'langs/api/unity.json',
+        path: 'langs/API/unity.json',
         defaultPrism: "lang-csharp",
         enabled: false
       }
