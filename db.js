@@ -138,7 +138,7 @@ var modules = {
   },
   data: {
     name: 'Data Languages',
-    info: '',
+    info: 'Data formats',
     content: {
       JSON: {
         id: 'JSON',
@@ -168,23 +168,15 @@ var modules = {
   },
   API: {
     name: 'API',
-    info: '',
+    info: 'General API\'s',
     content: {
-      GL: {
-        id: 'GL',
-        abbr: 'OpenGL',
-        displayname: 'OpenGL',
-        path: 'langs/API/gl.json',
-        defaultPrism: "lang-cpp",
-        enabled: false
-      },
       UE4: {
         id: 'UE4',
         abbr: 'UE4 API',
         displayname: 'UE4 API',
         path: 'langs/API/UE4.json',
         defaultPrism: "lang-cpp",
-        enabled: false
+        enabled: true
       },
       UNITY: {
         id: 'UNITY',
@@ -195,5 +187,35 @@ var modules = {
         enabled: false
       }
     }
-  }
+  },
+    RENDERER: {
+        name: 'RENDERER',
+        info: 'Rendering API\'s including graphics card support',
+        content: {
+            GL: {
+                id: 'GL',
+                abbr: 'OpenGL',
+                displayname: 'OpenGL',
+                path: 'langs/Render/gl.json',
+                defaultPrism: "lang-cpp",
+                enabled: true
+            },
+            GLSL: {
+                id: 'GLSL',
+                abbr: 'GLSL',
+                displayname: 'Graphics Library Shading Language',
+                path: 'langs/Render/glsl.json',
+                defaultPrism: "lang-glsl",
+                enabled: true
+            },
+            DIRECTX: {
+                id: 'DIRECTX',
+                abbr: 'DIRECTX API',
+                displayname: 'DIRECTX API',
+                path: 'langs/Render/DirectX.json',
+                defaultPrism: "lang-cpp",
+                enabled: false
+            }
+        }
+    }
 };

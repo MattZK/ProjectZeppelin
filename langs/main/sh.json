@@ -2,7 +2,7 @@
   {
     "name": "Bin/bash",
     "info": "Basic script",
-    "content": "#comments start with the # symbol\n#bin bash is used to tell the terminal that default commands are located in bin/bash \n#!/bin/bash\n\necho \"Hello\" #Send hello to cout\n\n"
+    "content": "#comments start with the # symbol\n#bin bash is used to tell the terminal that default commands are located in bin/bash \n#!/bin/bash\n\necho \"Hello\" #Send hello to cout"
   },
   {
     "name": "variables",

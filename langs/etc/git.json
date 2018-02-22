@@ -2,12 +2,12 @@
   {
     "name": "Using a local repository",
     "info": "making a repository and commiting changes to it",
-    "content": "#git local repository is a repository on your local machine\n\n#the root directory of your local repo\ncd /path/to/your/exsisting/code\n\n#initialize git to make this directory into a repo\ngit init\n\n#if you wish to get a exisiting repo in your current folder \ngit clone <repo url>\n\n#adding new files to your repo\ngit add <file>\n\n#adding all files to a repo (including subdirectories)\ngit add .\n\n#commiting your files to the repo\n#this means you add the changed content to the repo (if you change the file or you add it initially)\ngit commit \n\n#if you wish to add a message the the commit\ngit commit -m \"your message\"\n"
+    "content": "#git local repository is a repository on your local machine\n\n#the root directory of your local repo\ncd /path/to/your/exsisting/code\n\n#initialize git to make this directory into a repo\ngit init\n\n#if you wish to get a exisiting repo in your current folder \ngit clone <repo url>\n\n#adding new files to your repo\ngit add <file>\n\n#adding all files to a repo (including subdirectories)\ngit add .\n\n#commiting your files to the repo\n#this means you add the changed content to the repo (if you change the file or you add it initially)\ngit commit \n\n#if you wish to add a message the the commit\ngit commit -m \"your message\""
   },
   {
     "name": "Uploading to a remote repository",
     "info": "commiting changes to a remote repo",
-    "content": "#initial remote configurations\n\n#first you need to have a local repository of your content\n\n#then add the remote repo to your local repo\n#be sure you are in the right directory\n#the remote url is often the github link followed by .git\n#the remote name is something you give it usually origin\ngit remote add <remote_name> <remote_repo_url>\n\n#after you have made the wanted changes you need to upload your content to the remote repo\n#remote name is the name you defined earlier \n#and local branch name is the branch you currently are editing see further on how to do this\ngit push -u <remote_name> <local_branch_name>\n\n"
+    "content": "#initial remote configurations\n\n#first you need to have a local repository of your content\n\n#then add the remote repo to your local repo\n#be sure you are in the right directory\n#the remote url is often the github link followed by .git\n#the remote name is something you give it usually origin\ngit remote add <remote_name> <remote_repo_url>\n\n#after you have made the wanted changes you need to upload your content to the remote repo\n#remote name is the name you defined earlier \n#and local branch name is the branch you currently are editing see further on how to do this\ngit push -u <remote_name> <local_branch_name>"
   },
   {
     "name": "Editing user settings for git",
@@ -22,12 +22,12 @@
   {
     "name": "Git branch",
     "info": "Create a new branch for your git repo",
-    "content": "#to create a new branch\ngit checkout -b <branch>\n\n#to change to the new branch\ngit checkout <branch>\n\n#to push the branch to a remote repo\ngit push <remote_name> <branch>\n\n#get a list of all the branches\ngit branch\n\n#default branch is master\n\n#delete a branch\ngit branch -D <branch>\n\n#delete a branch on github\ngit push origin :<branch>\n"
+    "content": "#to create a new branch\ngit checkout -b <branch>\n\n#to change to the new branch\ngit checkout <branch>\n\n#to push the branch to a remote repo\ngit push <remote_name> <branch>\n\n#get a list of all the branches\ngit branch\n\n#default branch is master\n\n#delete a branch\ngit branch -D <branch>\n\n#delete a branch on github\ngit push origin :<branch>"
   },
   {
     "name": "Git remote branch",
     "info": "Fetch , work and upload a remote branch",
-    "content": "#fetch a remote repo\n\ncd /path/to/dir/where/you/save/remote/repo\ngit init\n\n#add remote repo\ngit remote add <remote_name> <remote_repo_url>\n\n#fetch remote branch\n#remote name is the name u used before\n#remote branch is the branch you wish to fetch\ngit fetch <remote_name> <remote_branch>:<local_branch_name>\n\n#check if it worked\n#the branch should appear in the list\ngit branch\n\n#select barnch as current working branch\ngit checkout <local_branch_name>\n\n#work with the updated branch and us it like a local branch\n\n#push branch to remote repo\n\ngit push -u <remote_name> <remote_branch>\n\n\n"
+    "content": "#fetch a remote repo\n\ncd /path/to/dir/where/you/save/remote/repo\ngit init\n\n#add remote repo\ngit remote add <remote_name> <remote_repo_url>\n\n#fetch remote branch\n#remote name is the name u used before\n#remote branch is the branch you wish to fetch\ngit fetch <remote_name> <remote_branch>:<local_branch_name>\n\n#check if it worked\n#the branch should appear in the list\ngit branch\n\n#select barnch as current working branch\ngit checkout <local_branch_name>\n\n#work with the updated branch and us it like a local branch\n\n#push branch to remote repo\n\ngit push -u <remote_name> <remote_branch>\n\n#push all branches\ngit push <remote_name> '*:*'\ngit push <remote_name> --all"
   },
   {
     "name": "Git merging",
@@ -37,11 +37,16 @@
   {
     "name": "Git pull",
     "info": "A combination of git fetch and git merge",
-    "content": "#git pull is usefull for fetching the repo and the merging it\n\ngit pull <remote_name> <remote_branch_to_pull_in_the_current_branch>\n#is the same as\ngit fetch\ngit merge <remote_name> <remote_branch>"
+    "content": "#git pull is usefull for fetching the repo and the merging it\n\ngit pull <remote_name> <remote_branch_to_pull_in_the_current_branch>\n#is the same as\ngit fetch\ngit merge <remote_name> <remote_branch>\n\n#git pull all remote branches\ngit branch -r | grep -v '\\->' | while read remote; do git branch --track \"${remote#origin/}\" \"$remote\"; done\ngit fetch --all\ngit pull --all"
   },
   {
     "name": "Working together",
     "info": "Resolve merge conflicts and general working with multiple people",
-    "content": "#working together\n#this shows the differens between the last commit and the current situations\ngit diff --changed <file>\n\n#to see merge conflicts \ngit mergetool\n\n#check either version of the file\n#and either alter the file or us one of them\n#the last checkout u us will be commited\ngit checkout --ours <file>\ngit checkout --theirs <file>\n\n#add the file first\ngit add <file>\n#then commit it\ngit commit -m \"message\"\n\n#now you can merge \n"
+    "content": "#working together\n#this shows the differens between the last commit and the current situations\ngit diff --changed <file>\n\n#to see merge conflicts \ngit mergetool\n\n#check either version of the file\n#and either alter the file or us one of them\n#the last checkout u us will be commited\ngit checkout --ours <file>\ngit checkout --theirs <file>\n\n#add the file first\ngit add <file>\n#then commit it\ngit commit -m \"message\"\n\n#now you can merge "
+  },
+  {
+    "name": "Forking",
+    "info": "Forking a remote repo from another dev",
+    "content": "#Updating a local fork\n\ngit init\n\n#clone your fork the the current dir\ngit clone https://github.com/YOUR_USERNAME/YOUR_FORK.git\n\n#add a remote upstream\ngit remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git\n\n#fetch the original-dev repo\ngit fetch upstream\n\n#update your fork with the original dev's work\ngit pull upstream <branch>\n\n#upload your fork to your own repo\ngit remote add origin <remote_repo_url>\n\ngit push -u origin <branch>\n\n#push all branches\ngit push <remote_repo> '*:*'\ngit push <remote_repo> --all"
   }
 ]
