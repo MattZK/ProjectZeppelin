@@ -1,3 +1,6 @@
+#### NOTE: This repo is pending major changes. As part of those changes this repo will be renamed, however a redirect will be in place.
+***
+
 # Universal Cheat Sheet
 This repository contains a programming cheat sheet for multiple languages. It is still under heavy development. Not every language is included yet and the ones that are included might not be complete.
 
