@@ -1,5 +1,6 @@
-# Universal Cheat Sheet
-This repository contains a programming cheat sheet for multiple languages. It is still under heavy development. Not every language is included yet and the ones that are included might not be complete.
+# Project Zeppelin
+This repository contains a programming cheat sheet for multiple languages.
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 ## Main Languages
 - C++ (CPP) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/success.png "Solid content available")
@@ -46,12 +47,3 @@ This repository contains a programming cheat sheet for multiple languages. It is
 - mySQL ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
 - mongoDB ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
 - rethinkDB ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
-
-# Usage
-- Select in the navigation bar the language you wish to read about
-- Scroll until you find the subject you wish to read about
-
-##TODO
--Explain search functionality when added (search bar)
--Explain how to navigate the menu (with menu I mean the selection of all explanations of a language)
-

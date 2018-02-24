@@ -1,0 +1,26 @@
+{
+  "name": "project-zepplin",
+  "version": "0.1.0",
+  "description": "A big universal cheatsheet holding knowledge about many programming languages. Formerly known as MattZK/UniversalCheatSheet",
+  "license": "CC-BY-NC-SA-4.0",
+  "repository": "https://github.com/MattZK/UniversalCheatSheet",
+  "authors": [
+    "Matthias Willemsen",
+    "Tom Meyers"
+  ],
+  "devDependencies": {
+    "babel-core": "",
+    "babel-preset-env": "",
+    "browser-sync": "",
+    "gulp": "",
+    "gulp-babel": "",
+    "gulp-concat": "",
+    "gulp-imagemin": "",
+    "gulp-sass": "",
+    "gulp-sourcemaps": "",
+    "gulp-typescript": "",
+    "gulp-uglify": "",
+    "gulp-plumber": "",
+    "typescript": ""
+  }
+}
