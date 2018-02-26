@@ -1,5 +1,11 @@
 var list = [];
-
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 2) {
+    document.querySelector('header').classList.add('shadow');
+  } else {
+    document.querySelector('header').classList.remove('shadow');
+  }
+});
 // Initiate Vue app
 var app = new Vue({
   el: '#app',
@@ -71,6 +77,8 @@ var app = new Vue({
     });
   }
 });
+
+app = null;
 
 /*
 console.log('------- DEV START -------');

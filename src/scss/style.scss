@@ -9,65 +9,38 @@ $dark: #005661;
 body {
   font-family: 'Roboto', sans-serif;
   text-rendering: optimizeLegibility;
+  min-height: 3000px;
 }
 
 #app {
-  header.mdc-toolbar {
-    background: $primary;
-  }
-  .mdc-drawer__header-content {
-    background: $primary;
-    color: white;
-  }
-  ////// OLD
-  // Sidebar
-  .content {
-    #header-holder {
-      height: 256px;
-      width: 100%;
-      display: none;
-    }
-    .code-item-container {
-      padding: 20px;
-    }
-    footer {
-      text-align: center;
-      background: $primary;
-      color: rgba(255, 255, 255, .85);
-      padding: 16px;
-      margin: 0;
-    }
-  }
-  .load-overlay {
+  header {
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
     width: 100%;
-    z-index: 9999;
-    text-align: center;
-    color: $primary;
-    background: white;
-    .middle {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      min-width: 40%;
-      h1 {
-        font-weight: 300;
+    height: 56px;
+    background: $primary;
+    line-height: 56px;
+    padding: 0 24px;
+    &.shadow {
+      box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    }
+    .material-icons {
+      line-height: 56px !important;
+      color: white;
+      cursor: pointer;
+      vertical-align: top;
+      &.search {
+        float: right;
       }
-      .mdc-linear-progress {
-        max-width: 600px;
-        margin: auto;
-      }
-      .mdc-linear-progress .mdc-linear-progress__bar-inner {
-        background-color: $primary;
-        left: -25%;
-      }
-      .mdc-linear-progress--indeterminate .mdc-linear-progress__primary-bar {
-        left: -50%;
-      }
+    }
+    .title {
+      font-family: 'Roboto', sans-serif;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-size: 1.25rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+      padding-left: 24px;
+      color: white;
     }
   }
 }
