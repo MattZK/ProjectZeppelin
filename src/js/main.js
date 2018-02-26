@@ -1,4 +1,4 @@
-var list = [];
+let list = [];
 window.addEventListener('scroll', () => {
   if (window.scrollY > 2) {
     document.querySelector('header').classList.add('shadow');
@@ -6,8 +6,37 @@ window.addEventListener('scroll', () => {
     document.querySelector('header').classList.remove('shadow');
   }
 });
+
+let menu = {
+  init: () => {
+    document.querySelector('aside .dimmer').addEventListener('click', () => { menu.close() });
+    document.querySelector('nav .header').addEventListener('click', () => { menu.close() });
+    document.querySelector('header .menu').addEventListener('click', () => { menu.open() });
+  },
+  close: () => {
+    document.querySelector('aside .dimmer').style.opacity = 0;
+    document.querySelector('aside .dimmer').style.pointerEvents = 'none';
+    document.querySelector('aside nav').style.transform = 'translate(-100%, 0)';
+    setTimeout(() => {
+      document.querySelector('aside').style.display = 'none';
+    }, 500);
+    document.body.classList.remove('noscroll');
+  },
+  open: () => {
+    document.querySelector('aside .dimmer').style.opacity = 1;
+    document.querySelector('aside .dimmer').style.pointerEvents = 'visible';
+    document.querySelector('aside nav').style.transform = 'translate(0, 0)';
+    document.querySelector('aside').style.display = 'block';
+    document.body.classList.add('noscroll');
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  //menu.close();
+  menu.init();
+});
 // Initiate Vue app
-var app = new Vue({
+/*var app = new Vue({
   el: '#app',
   data: {
     authors: [
@@ -78,7 +107,7 @@ var app = new Vue({
   }
 });
 
-app = null;
+app = null;*/
 
 /*
 console.log('------- DEV START -------');

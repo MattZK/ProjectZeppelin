@@ -10,6 +10,9 @@ body {
   font-family: 'Roboto', sans-serif;
   text-rendering: optimizeLegibility;
   min-height: 3000px;
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 #app {
@@ -22,6 +25,7 @@ body {
     padding: 0 24px;
     &.shadow {
       box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+      transition: box-shadow .3s ease-in-out;
     }
     .material-icons {
       line-height: 56px !important;
@@ -41,6 +45,63 @@ body {
       letter-spacing: .02em;
       padding-left: 24px;
       color: white;
+    }
+  }
+  aside {
+    display: none;
+    .dimmer {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,.6);
+      z-index: 9;
+      transition: all .2s ease-in-out;
+      opacity: 0;
+      pointer-events: none;
+    }
+    nav {
+      transition: transform .2s ease-in-out;
+      position: fixed;
+      height: 100%;
+      width: 320px;
+      background: white;
+      box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
+      z-index: 10;
+      transform: translate(-100%, 0);
+      .header {
+        display: flex;
+        height: 180px;
+        background: $primary;
+        line-height: 56px;
+        padding: 0 16px;
+        align-items: flex-end;
+        color: white;
+      }
+      .items {
+        height: calc(100vh - 180px);
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        padding: 8px 0;
+        ul {
+          height: calc(100vh - 180px);
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: -15px;
+          overflow: auto;
+          li {
+            height: 48px;
+            line-height: 48px;
+            padding: 0 16px;
+            &:hover {
+              background: rgba(0,0,0,.05);
+              cursor: pointer;
+            } 
+          }
+        }
+      }
     }
   }
 }
