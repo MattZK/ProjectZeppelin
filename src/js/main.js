@@ -19,14 +19,16 @@ let menu = {
     document.querySelector('aside nav').style.transform = 'translate(-100%, 0)';
     setTimeout(() => {
       document.querySelector('aside').style.display = 'none';
-    }, 500);
+    }, 200);
     document.body.classList.remove('noscroll');
   },
   open: () => {
-    document.querySelector('aside .dimmer').style.opacity = 1;
-    document.querySelector('aside .dimmer').style.pointerEvents = 'visible';
-    document.querySelector('aside nav').style.transform = 'translate(0, 0)';
     document.querySelector('aside').style.display = 'block';
+    setTimeout(() => {
+      document.querySelector('aside .dimmer').style.opacity = 1;
+      document.querySelector('aside .dimmer').style.pointerEvents = 'visible';
+      document.querySelector('aside nav').style.transform = 'translate(0, 0)';
+    }, 50);
     document.body.classList.add('noscroll');
   }
 }
