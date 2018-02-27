@@ -1,117 +1,163 @@
 [
   {
     "name": "Template",
-    "info": "Use this template",
+    "info": "Always use this template",
+    "tag": "Template",
+    "tagColor": "red",
     "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n  <title>TITLE</title>\n  <link rel=\"stylesheet\" href=\"css/style.css\">\n</head>\n<body>\n  CONTENT\n  <script src=\"js/main.js\"></script>\n</body>\n</html>"
   },
   {
-    "name": "External link",
-    "info": "Het linken van een css bestand (doen tussen <head> en </head>)",
+    "name": "External CSS",
+    "tag": "External",
+    "tagColor": "orange",
+    "info": "Link an external css file",
     "content": "<link rel=\"stylesheet\" href=\"css/style.css\">"
   },
   {
-    "name": "Script",
-    "info": "Het linken van een javascript bestand",
+    "name": "External Script",
+    "tag": "External",
+    "tagColor": "orange",
+    "info": "Link an external js file",
     "content": "<script src=\"js/main.js\"></script>\n"
   },
   {
-    "name": "Div",
-    "info": "Een container voor andere elementen",
-    "content": "<div>elementen komen hier</div>"
-  },
-  {
-    "name": "Item Class",
-    "info": "Link het element met css",
+    "name": "Class",
+    "tag": "Attribute",
+    "tagColor": "blue",
+    "info": "A non-unique class for an element, used to target multiple elements in css",
     "content": "<div class=\"divclass\">In css kan men divclass oproepen</div>"
   },
   {
-    "name": "Item ID",
-    "info": "uniek id voor 1 element",
+    "name": "Id",
+    "tag": "Attribute",
+    "tagColor": "blue",
+    "info": "A unique id for an element",
     "content": "<div id=\"ourID\">In css en js kan men deze div selecteren, Maximaal 1 element met een id</div>"
   },
   {
+    "name": "Div",
+    "tag": "",
+    "tagColor": "",
+    "info": "A container for multiple child elements",
+    "content": "<div>elementen komen hier</div>"
+  },
+  {
     "name": "Span",
-    "info": "Een div-like element om 1 of meerdere woorden in een tekst een andere stijl te geven. Display is default inline",
+    "tag": "",
+    "tagColor": "",
+    "info": "A div like element for inline text",
     "content": "<p>Ik ben een <span>stuk</span> van een text</p>"
   },
   {
-    "name": "Hoofding",
-    "info": "Gebruik voor titels, ondertitels enz...",
+    "name": "Heading",
+    "info": "Display titles, subtitles...",
+    "tag": "",
+    "tagColor": "",
     "content": "<h1>Belangerijkste hoofding</h1>\n<h2>Tweede belangerijkste hoofding</h2>\n<h3>Derde belangerijkste hoofding</h3>\n<h4>Vierde belangerijkste hoofding</h4>\n<h5>Vijfde belangerijkste hoofding</h5>\n<h6>Zesde belangerijkste hoofding</h6>"
   },
   {
-    "name": "Paragraaf",
-    "info": "Dit is een tag die bedoelt is voor informatieve langere teksten",
+    "name": "Paragraph",
+    "info": "This tag is ment for longer pieces of text",
+    "tag": "",
+    "tagColor": "",
     "content": "<p>Lorem ipsum dolor sit amet, consectetur.</p>"
   },
   {
     "name": "Anchor",
-    "info": "Dit is een link naar een andere pagina",
+    "info": "This tag links to an other page",
+    "tag": "",
+    "tagColor": "",
     "content": "<a href=\"pagina2.html\" target=\"_self\">Ga naar pagina 2 in dit venster</a>\n<a href=\"pagina2.html\" target=\"_blank\">Ga naar pagina 2 in een nieuw venster</a>"
   },
   {
-    "name": "Ongeorderede lijst",
-    "info": "Dit is een lijst met elementen. Gebruik dit om een menu te maken.",
+    "name": "Unorderd list",
+    "info": "This makes an unordered list, use this when making menus",
+    "tag": "",
+    "tagColor": "",
     "content": "<ul>\n  <li>Optie</li>\n  <li>Optie</li>\n  <li>Optie</li>\n</ul>"
   },
   {
-    "name": "Georderede lijst",
-    "info": "Dit is een lijst met elementen die automatisch genummerd is.",
+    "name": "Orderd list",
+    "info": "This makes an orderd list with auto incrementing numbers",
+    "tag": "",
+    "tagColor": "",
     "content": "<ol>\n  <li>Optie 1</li>\n  <li>Optie 2</li>\n  <li>Optie 3</li>\n</ol>"
   },
   {
-    "name": "Foto",
-    "info": "Een foto inladen.",
+    "name": "Picture",
+    "info": "Load a picture into an HTML page.",
+    "tag": "",
+    "tagColor": "",
     "content": "<img src=\"img/foto.png\" alt=\"beschrijving\" />"
   },
   {
     "name": "Header",
-    "info": "Top sectie van de pagina",
+    "info": "This indicates the top of a page",
+    "tag": "",
+    "tagColor": "",
     "content": "<header>Hoofd sectie van de pagina</header>"
   },
   {
     "name": "Main",
-    "info": "Voornaamste content-gebied van een pagina",
+    "info": "This indicates the main section of a page",
+    "tag": "",
+    "tagColor": "",
     "content": "<main>Hoofd sectie van de pagina</main>"
   },
   {
     "name": "Footer",
-    "info": "Voet sectie van de pagina",
+    "info": "This indicates the foot section of a page",
+    "tag": "",
+    "tagColor": "",
     "content": "<footer>Hoofd sectie van de pagina</footer>"
   },
   {
-    "name": "Navigatie",
-    "info": "Duid aan dat dit element de navigatie bevat",
+    "name": "Navigation",
+    "info": "This indicates the navigation of a page",
+    "tag": "",
+    "tagColor": "",
     "content": "<nav>Zet hierin een ul -> li -> a structuur</nav>"
   },
   {
-    "name": "Vet",
-    "info": "Dient om tekst vet te drukken",
+    "name": "Bold",
+    "info": "Prints text bold",
+    "tag": "",
+    "tagColor": "",
     "content": "<b>Ik ben vet</b>"
   },
   {
-    "name": "Cursief",
-    "info": "Dient om tekst cursief te drukken",
+    "name": "Cursive",
+    "info": "Prints text cursive",
+    "tag": "",
+    "tagColor": "",
     "content": "<i>Ik ben cursief</i>"
   },
   {
-    "name": "Scheider",
-    "info": "Dit is een verticale lijn over heel de breedte van het parent element",
+    "name": "Devider",
+    "info": "Draws a horizontal ruler over the width of it's parent element",
+    "tag": "",
+    "tagColor": "",
     "content": "<hr/>"
   },
   {
     "name": "Input",
-    "info": "Een textinput voor de gerbruiker",
+    "info": "Let's users input text",
+    "tag": "",
+    "tagColor": "",
     "content": "<input type=\"text\">"
   },
   {
     "name": "Form",
-    "info": "Een form wordt gebruik zodat de gebruiker data aan een server kan geven",
+    "info": "Groups inputs together. When a form is submitted, all inputs within this form will be sent.",
+    "tag": "",
+    "tagColor": "",
     "content": "/* Action is used to activate a script on the server that proscesses the form*/ \n/* Value is used to give the input a default value like a textbox filled with mickey*/ \n<form action=\"/action_page.php\"> \n  First name:<br>\n  <input type=\"text\" name=\"firstname\"><br> /* Text field*/\n  Last name:<br>\n  <input type=\"text\" name=\"lastname\"> <br> <br>\n\n  <input type=\"radio\" name=\"gender\" value=\"male\" checked> Male<br> /* radio button aka checked or not checked*/\n  <input type=\"radio\" name=\"gender\" value=\"female\"> Female<br> /* maximum one selectod in one form */\n  <input type=\"radio\" name=\"gender\" value=\"other\"> Other\n\n  /* Define a button that when clicked calls a function in javascript*/\n  /* Usefull when the user needs to make something happen without the server needing to know*/\n  <button type=\"button\" value=\"controle\" onclick=\"jsFunc()\">Custom Button</button> \n  /* Used to submit the form (via get or post)*/\n  <input type=\"submit\" value=\"Submit\"> \n</form>"
   },
   {
     "name": "Table",
-    "info": "Een table wordt gebruik om data in een aangename manier te displayen",
+    "info": "This displays a table.",
+    "tag": "",
+    "tagColor": "",
     "content":  "<!-- CSS -->\n<style>\ntable {\n  font-family: arial, sans-serif;\n  border-collapse: collapse;\n  width: 100%;\n}\n\ntd, th {\n  border: 1px solid #dddddd;\n  text-align: left;\n  padding: 8px;\n}\n\ntr:nth-child(even) {\n  background-color: #dddddd;\n}\n</style>\n\n<!-- HTML -->\n<table>\n    <tr>  \n        <th> Company</th> /* table header */\n        <th> Contact</th>\n        <th> Country</th>\n    </tr>\n    <tr>  \n        <td>Alfreds Futterkiste</td> /* table header */\n        <td>Maria Anders</td>\n        <td>Germany</td>\n    </tr>\n    <tr>  \n        <td>Centro comercial Moctezuma</td> /* table header */\n        <td>Francisco Chang</td>\n        <td>Mexico</td>\n    </tr>\n    <tr>  \n        <td>Ernst Handel</td> /* table header */\n        <td>Roland Mendel</td>\n        <td>Austria</td> \n    </tr>\n</table>"
   }
 ]

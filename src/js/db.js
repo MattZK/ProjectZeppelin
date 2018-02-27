@@ -15,12 +15,12 @@ const modules = [
     enabled: true
   },
   {
-  id: 'CSS',
-  abbr: 'CSS',
-  displayname: 'CSS',
-  path: 'langs/web/css.json',
-  defaultPrism: "lang-scss",
-  enabled: true
+    id: 'CSS',
+    abbr: 'CSS',
+    displayname: 'CSS',
+    path: 'langs/web/css.json',
+    defaultPrism: "lang-scss",
+    enabled: true
   },
   {
     id: 'JS',
@@ -52,7 +52,7 @@ const modules = [
     displayname: 'C++',
     path: 'langs/main/cpp.json',
     defaultPrism: "lang-cpp",
-    enabled: true
+    enabled: false
   },
   {
     id: 'JAVA',
@@ -60,7 +60,7 @@ const modules = [
     displayname: 'Java',
     path: 'langs/main/java.json',
     defaultPrism: "lang-java",
-    enabled: true
+    enabled: false
   },
   {
     id: 'PY',
@@ -68,7 +68,7 @@ const modules = [
     displayname: 'Python',
     path: 'langs/main/py.json',
     defaultPrism: "lang-python",
-    enabled: true
+    enabled: false
   },
   {
     id: 'ARD',
@@ -76,7 +76,7 @@ const modules = [
     displayname: 'Arduino',
     path: 'langs/main/ard.json',
     defaultPrism: "lang-arduino",
-    enabled: true
+    enabled: false
   },
   {
     id: 'SH',
@@ -92,7 +92,7 @@ const modules = [
     displayname: 'Design Patterns',
     path: 'langs/etc/dp.json',
     defaultPrism: "lang-cpp",
-    enabled: true
+    enabled: false
   },
   {
     id: 'GIT',
@@ -100,7 +100,7 @@ const modules = [
     displayname: 'GIT',
     path: 'langs/etc/git.json',
     defaultPrism: "lang-git",
-    enabled: true
+    enabled: false
   },
   {
     id: 'MOBILE',
@@ -116,7 +116,7 @@ const modules = [
     displayname: 'Useful Sites',
     path: 'langs/etc/US.json',
     defaultPrism: "lang-html",
-    enabled: true
+    enabled: false
   },
   {
     id: 'JSON',
@@ -124,7 +124,7 @@ const modules = [
     displayname: 'JSON',
     path: 'langs/data/json.json',
     defaultPrism: "lang-json",
-    enabled: true
+    enabled: false
   },
   {
     id: 'XML',
@@ -148,7 +148,7 @@ const modules = [
     displayname: 'UE4 API',
     path: 'langs/API/UE4.json',
     defaultPrism: "lang-cpp",
-    enabled: true
+    enabled: false
   },
   {
     id: 'UNITY',
@@ -164,7 +164,7 @@ const modules = [
     displayname: 'OpenGL',
     path: 'langs/Render/gl.json',
     defaultPrism: "lang-cpp",
-    enabled: true
+    enabled: false
   },
   {
     id: 'GLSL',
@@ -172,7 +172,7 @@ const modules = [
     displayname: 'Graphics Library Shading Language',
     path: 'langs/Render/glsl.json',
     defaultPrism: "lang-glsl",
-    enabled: true
+    enabled: false
   },
   {
     id: 'DIRECTX',

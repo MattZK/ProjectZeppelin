@@ -9,7 +9,7 @@ var app = new Vue({
   },
   methods: {
     loadmodule: (module) => {
-      app.$forceUpdate();
+      //app.$forceUpdate();
       fetch(module.path).then(function (res) {
         return res.json();
       }).then(function (value) {
@@ -19,9 +19,29 @@ var app = new Vue({
       app.page = 'module-' + module.id;
     }
   },
-  mounted: () => {},
+  mounted: () => {
+    setTimeout(function () {
+      if (typeof(Storage) && localStorage.getItem('currentModuleId')) {
+        modules.forEach(module => {
+          if(module.id == localStorage.getItem('currentModuleId')) {
+            fetch(module.path).then(function (res) {
+              return res.json();
+            }).then(function (value) {
+              app.currentModule = module;
+              app.currentModule.snippets = value;
+            });
+            app.page = 'module-' + module.id;
+          }
+        });
+      }
+    }, 100);
+    
+  },
   watch: {
     currentModule: () => {
+      if (typeof(Storage)) {
+        localStorage.setItem('currentModuleId', app.currentModule.id);
+      }
       setTimeout(function () {
         Prism.highlightAll();
       }, 10);
