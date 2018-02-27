@@ -1,17 +1,23 @@
-let list = [];
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 2) {
-    document.querySelector('header').classList.add('shadow');
-  } else {
-    document.querySelector('header').classList.remove('shadow');
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    page: 'home'
   }
-});
+})
 
 let menu = {
   init: () => {
     document.querySelector('aside .dimmer').addEventListener('click', () => { menu.close() });
     document.querySelector('nav .header').addEventListener('click', () => { menu.close() });
     document.querySelector('header .menu').addEventListener('click', () => { menu.open() });
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 2) {
+        document.querySelector('header').classList.add('shadow');
+      } else {
+        document.querySelector('header').classList.remove('shadow');
+      }
+    });
   },
   close: () => {
     document.querySelector('aside .dimmer').style.opacity = 0;
@@ -34,7 +40,6 @@ let menu = {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-  //menu.close();
   menu.init();
 });
 // Initiate Vue app
