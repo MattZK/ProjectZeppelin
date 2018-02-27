@@ -2,7 +2,30 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Vue!',
-    page: 'home'
+    page: 'home',
+    currentModule: {
+      displayname: 'Project Zeppelin'
+    }
+  },
+  methods: {
+    loadmodule: (module) => {
+      app.$forceUpdate();
+      fetch(module.path).then(function (res) {
+        return res.json();
+      }).then(function (value) {
+        app.currentModule = module;
+        app.currentModule.snippets = value;
+      });
+      app.page = 'module-' + module.id;
+    }
+  },
+  mounted: () => {},
+  watch: {
+    currentModule: () => {
+      setTimeout(function () {
+        Prism.highlightAll();
+      }, 10);
+    }
   }
 })
 
