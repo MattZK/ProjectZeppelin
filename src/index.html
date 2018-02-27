@@ -33,10 +33,17 @@
     <i class="material-icons" v-on:click="menu.open();">menu</i>
   </section>
   <section v-for="module in modules" class="lang" v-if="page == 'module-' + module.id">
-    <div v-for="snippet in currentModule.snippets" class="code-item-container">
-      <h2>{{ snippet.name }} <span class="itag" v-if="snippet.tag" v-bind:class="snippet.tagColor">{{ snippet.tag }}</span></h2>
-      <p>{{ snippet.info }}</p>
-      <pre><code v-bind:class="currentModule.defaultPrism">{{ snippet.content }}</code></pre>
+    <div class="tree">
+      <ul>
+        <li v-for="snippet in currentModule.snippets">{{ snippet.name }}</li>
+      </ul>
+    </div>
+    <div>
+      <div v-for="snippet in currentModule.snippets" class="code-item-container">
+        <h2>{{ snippet.name }} <span class="itag" v-if="snippet.tag" v-bind:class="snippet.tagColor">{{ snippet.tag }}</span></h2>
+        <p>{{ snippet.info }}</p>
+        <pre><code v-bind:class="currentModule.defaultPrism">{{ snippet.content }}</code></pre>
+      </div>-
     </div>
   </section>
 </div>

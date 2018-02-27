@@ -122,7 +122,6 @@ body {
     }
   }
   section {
-    padding: 20px;
     padding-top: 64px;
     &.welcome {
       padding: 64px 16px;
@@ -160,43 +159,60 @@ body {
         }
       }
     }
-    .code-item-container {
-      padding-top: 16px;
-      h2 {
-        line-height: 24px;
-        margin: 0 0 6px 0;
-        span.itag {
-          vertical-align: top;
-          color: white;
-          border-radius: 4px;
-          background: $gray;
-          padding: 3px 6px;
-          margin: 0 0 0 4px;
-          font-size: 14px;
-          font-weight: 400;
-          &.red {
-            background: $red;
+    &.lang {
+      display: grid;
+      grid-template-columns: 200px auto;
+      width: 100vw;
+      .tree {
+        padding: 32px 0 0 16px;
+        ul {
+          list-style: none;
+          li {
+            cursor: pointer;
           }
-          &.green {
-            background: $green;
-            color: black;
+        }
+      }
+      .code-item-container {
+        padding: 16px 16px 0 16px;
+        h2 {
+          line-height: 24px;
+          margin: 0 0 6px 0;
+          span.itag {
+            vertical-align: top;
+            color: white;
+            border-radius: 4px;
+            background: $gray;
+            padding: 3px 6px;
+            margin: 0 0 0 4px;
+            font-size: 14px;
+            font-weight: 400;
+            &.red {
+              background: $red;
+            }
+            &.green {
+              background: $green;
+              color: black;
+            }
+            &.blue {
+              background: $blue;
+            }
+            &.indigo {
+              background: $indigo;
+            }
+            &.purple {
+              background: $purple;
+            }
+            &.orange {
+              background: $orange;
+            }
+            &.gray {
+              background: $purple;
+              color: black;
+            }
           }
-          &.blue {
-            background: $blue;
-          }
-          &.indigo {
-            background: $indigo;
-          }
-          &.purple {
-            background: $purple;
-          }
-          &.orange {
-            background: $orange;
-          }
-          &.gray {
-            background: $purple;
-            color: black;
-          }
+        }
+        pre {
+          width: calc(100vw - 232px) !important;
         }
       }
     }
