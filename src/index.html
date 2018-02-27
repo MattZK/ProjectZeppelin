@@ -21,7 +21,7 @@
       <div class="header">Project Zeppelin</div>
       <div class="items">
         <ul>
-          <li v-for="module in modules" v-if="module.enabled" v-on:click="loadmodule(module)">{{ module.displayname }}</li>
+          <li v-for="module in modules" v-if="module.enabled" v-on:click="loadmodule(module); menu.close();">{{ module.displayname }}</li>
         </ul>
       </div>
     </nav>
