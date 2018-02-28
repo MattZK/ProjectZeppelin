@@ -169,6 +169,12 @@ body {
           list-style: none;
           li {
             cursor: pointer;
+            padding: 0 0 0 4px;
+            margin: 4px 0;
+            border-left: 3px solid transparent;
+            &:hover {
+              border-left: 3px solid $primary;
+            }
           }
         }
       }

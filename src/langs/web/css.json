@@ -1,5 +1,23 @@
 [
   {
+    "name": "Selectors",
+    "tag": {
+      "text": "Selectors",
+      "color": "orange"
+    },
+    "info": "Use these selectors to target html elements",
+    "content": ".class {} /* select the html element with this class */\n#id {} /* Selects the element with id id */\n* {} /* selects all elements */ \np {} /* selects all <p> tags */ \ndiv, p {} /* selects all <div> and <p> tags */ \ndiv p {} /* selects all <p> tags inside div tags */ \ndiv > p {} /* selects all <p> tags where the parent is a div tag */ \ndiv  p {} /* selects all <p> tags directly after a div tag */\np ~ ul {} /* selects all <ul> tags that are preceded by a <p> tag */ "
+  },
+  {
+    "name": "Pseudo Selectors",
+    "tag": {
+      "text": "Selectors",
+      "color": "orange"
+    },
+    "info": "Use these selectors to target html elements",
+    "content": "p::after {content: \"This will appear after a p tag\"} /* Inserts something after <p> tag */\np:first-child {} /* Selects the first <p> child of the parent element */\np:nth-child(n) {} /* Selects the n-th <p> child child of the parent element */\np:first-child {} /* Selects the last <p> child of the parent element */\n\na:hover {} /* Selects element on mouseover */\na:active {} /* Selects element when active */\na:visited {} /* Selects link when visited */"
+  },
+  {
     "name": "Animations",
     "info": "Animaties maken in css",
     "content": "@keyframes example {\n  0% {\n    background-color: red;\n  }\n  100% {\n    background-color: yellow;\n  }\n}\n\n/* The element to apply the animation to */\ndiv {\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  animation-name: example;\n  animation-name: example, example2; //multiple keyframes\n  animation-duration: 4s;\n  animation-iteration-count: 2;\n  animation-delay: 2s;\n  animation-timing-function: cubic-bezier(.9,1.65,0,-1.15);\n  animation-direction: alternate-reverse;\n  animation-play-state:paused;//pause the play state of the animation\n  animation-play-state:running;//resume the play state of the animation\n}"

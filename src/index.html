@@ -40,7 +40,7 @@
     </div>
     <div>
       <div v-for="snippet in currentModule.snippets" class="code-item-container">
-        <h2>{{ snippet.name }} <span class="itag" v-if="snippet.tag" v-bind:class="snippet.tagColor">{{ snippet.tag }}</span></h2>
+        <h2>{{ snippet.name }} <span class="itag" v-if="snippet.tag" v-bind:class="snippet.tag.color">{{ snippet.tag.text }}</span></h2>
         <p>{{ snippet.info }}</p>
         <pre><code v-bind:class="currentModule.defaultPrism">{{ snippet.content }}</code></pre>
       </div>-
