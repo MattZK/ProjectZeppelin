@@ -5,181 +5,185 @@ const version = {
   revision: 0
 };
 
-const modules = [
-  {
+const sections = [
+
+]
+
+const modules = {
+  HTML: {
     id: 'HTML',
     abbr: 'HTLM',
     displayname: 'HTML',
-    path: 'langs/web/html.json',
+    path: 'langs/html.json',
     defaultPrism: "lang-html",
     enabled: true
   },
-  {
+  CSS: {
     id: 'CSS',
     abbr: 'CSS',
     displayname: 'CSS',
-    path: 'langs/web/css.json',
+    path: 'langs/css.json',
     defaultPrism: "lang-scss",
     enabled: true
   },
-  {
+  JS: {
     id: 'JS',
     abbr: 'JS',
     displayname: 'JavaScript',
-    path: 'langs/web/js.json',
+    path: 'langs/js.json',
     defaultPrism: "lang-js",
     enabled: true
   },
-  {
+  TS: {
     id: 'TS',
     abbr: 'TS',
     displayname: 'TypeScript',
-    path: 'langs/web/ts.json',
+    path: 'langs/ts.json',
     defaultPrism: "lang-typescript",
     enabled: false
   },
-  {
+  CS: {
     id: 'CS',
     abbr: 'C#',
     displayname: 'C#',
-    path: 'langs/main/cs.json',
+    path: 'langs/cs.json',
     defaultPrism: "lang-csharp",
-    enabled: true
+    enabled: false
   },
-  {
+  CPP: {
     id: 'CPP',
     abbr: 'C++',
     displayname: 'C++',
-    path: 'langs/main/cpp.json',
+    path: 'langs/cpp.json',
     defaultPrism: "lang-cpp",
     enabled: false
   },
-  {
+  JAVA: {
     id: 'JAVA',
     abbr: 'Java',
     displayname: 'Java',
-    path: 'langs/main/java.json',
+    path: 'langs/java.json',
     defaultPrism: "lang-java",
     enabled: false
   },
-  {
+  PY: {
     id: 'PY',
     abbr: 'Python',
     displayname: 'Python',
-    path: 'langs/main/py.json',
+    path: 'langs/py.json',
     defaultPrism: "lang-python",
     enabled: false
   },
-  {
+  ARD: {
     id: 'ARD',
     abbr: 'Arduino',
     displayname: 'Arduino',
-    path: 'langs/main/ard.json',
+    path: 'langs/ard.json',
     defaultPrism: "lang-arduino",
     enabled: false
   },
-  {
+  SH: {
     id: 'SH',
     abbr: 'Bash',
     displayname: 'Bash',
-    path: 'langs/main/sh.json',
+    path: 'langs/sh.json',
     defaultPrism: "lang-bash",
-    enabled: true
+    enabled: false
   },
-  {
+  DP: {
     id: 'DP',
     abbr: 'Design Patterns',
     displayname: 'Design Patterns',
-    path: 'langs/etc/dp.json',
+    path: 'langs/dp.json',
     defaultPrism: "lang-cpp",
     enabled: false
   },
-  {
+  GIT: {
     id: 'GIT',
     abbr: 'GIT',
     displayname: 'GIT',
-    path: 'langs/etc/git.json',
+    path: 'langs/git.json',
     defaultPrism: "lang-git",
     enabled: false
   },
-  {
+  MOBILE: {
     id: 'MOBILE',
     abbr: 'Mobile',
     displayname: 'Mobile Development',
-    path: 'langs/etc/mobile.json',
+    path: 'langs/mobile.json',
     defaultPrism: "lang-java",
     enabled: false
   },
-  {
+  US: {
     id: 'US',
     abbr: 'Useful Sites',
     displayname: 'Useful Sites',
-    path: 'langs/etc/US.json',
+    path: 'langs/US.json',
     defaultPrism: "lang-html",
     enabled: false
   },
-  {
+  JSON: {
     id: 'JSON',
     abbr: 'JSON',
     displayname: 'JSON',
-    path: 'langs/data/json.json',
+    path: 'langs/json.json',
     defaultPrism: "lang-json",
     enabled: false
   },
-  {
+  XML: {
     id: 'XML',
     abbr: 'XML',
     displayname: 'XML',
-    path: 'langs/data/xml.json',
+    path: 'langs/xml.json',
     defaultPrism: "lang-xml",
     enabled: false
   },
-  {
+  WPF: {
     id: 'WPF',
     abbr: 'XAML',
     displayname: 'XAML',
-    path: 'langs/data/wpf.json',
+    path: 'langs/wpf.json',
     defaultPrism: "lang-xml",
     enabled: false
   },
-  {
+  UE4: {
     id: 'UE4',
     abbr: 'UE4 API',
     displayname: 'UE4 API',
-    path: 'langs/API/UE4.json',
+    path: 'langs/UE4.json',
     defaultPrism: "lang-cpp",
     enabled: false
   },
-  {
+  UNITY: {
     id: 'UNITY',
     abbr: 'UNITY API',
     displayname: 'UNITY API',
-    path: 'langs/API/unity.json',
+    path: 'langs/unity.json',
     defaultPrism: "lang-csharp",
     enabled: false
   },
-  {
+  GL: {
     id: 'GL',
     abbr: 'OpenGL',
     displayname: 'OpenGL',
-    path: 'langs/Render/gl.json',
+    path: 'langs/gl.json',
     defaultPrism: "lang-cpp",
     enabled: false
   },
-  {
+  GLSL: {
     id: 'GLSL',
     abbr: 'GLSL',
     displayname: 'Graphics Library Shading Language',
-    path: 'langs/Render/glsl.json',
+    path: 'langs/glsl.json',
     defaultPrism: "lang-glsl",
     enabled: false
   },
-  {
+  DIRECTX: {
     id: 'DIRECTX',
     abbr: 'DIRECTX API',
     displayname: 'DIRECTX API',
-    path: 'langs/Render/DirectX.json',
+    path: 'langs/DirectX.json',
     defaultPrism: "lang-cpp",
     enabled: false
   }
-]
+};
