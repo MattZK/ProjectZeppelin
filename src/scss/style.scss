@@ -98,7 +98,7 @@ body {
         overflow: hidden;
         position: relative;
         padding: 8px 0;
-        ul {
+        &> ul {
           height: calc(100vh - 180px);
           position: absolute;
           top: 0px;
@@ -107,17 +107,29 @@ body {
           right: -15px;
           overflow: auto;
           padding: 16px 0;
-          li {
-            height: 48px;
+          &> li {
             line-height: 48px;
             padding: 0 16px;
             font-weight: 400;
             &.active {
               background: #E0F7FA;
             }
-            &:hover {
-              background: rgba(0,0,0,.05);
+            /*&:hover {
+              background: rgba(0, 0, 0, 0.05);
               cursor: pointer;
+            }*/
+            ul {
+              list-style: none;
+              li {
+                height: 48px;
+                line-height: 48px;
+                padding: 0 16px;
+                font-weight: 400;
+                &:hover {
+                  background: rgba(0, 0, 0, 0.05);
+                  cursor: pointer;
+                }
+              }
             }
           }
         }

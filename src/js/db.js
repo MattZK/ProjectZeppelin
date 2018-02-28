@@ -6,7 +6,19 @@ const version = {
 };
 
 const sections = [
-
+  {
+    name: 'Web Development',
+    contains: [
+      'HTML',
+      'CSS'
+    ]
+  },
+  {
+    name: 'Scripting',
+    contains: [
+      'JS'
+    ]
+  }
 ]
 
 // Object key must be identical to the id!

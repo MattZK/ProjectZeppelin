@@ -20,8 +20,16 @@
     <nav>
       <div class="header">Project Zeppelin</div>
       <div class="items">
-        <ul>
+        <!--<ul>
           <li v-for="module in modules" v-if="module.enabled" v-bind:class="{'active': (page == 'module-' + module.id)}" v-on:click="loadmodule(module); menu.close();">{{ module.displayname }}</li>
+        </ul>-->
+        <ul>
+          <li v-for="section in sections">
+            {{ section.name }}
+            <ul>
+              <li v-for="moduleId in section.contains">{{ modules[moduleId].displayname }}</li>
+            </ul>
+          </li>
         </ul>
       </div>
     </nav>

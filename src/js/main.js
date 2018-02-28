@@ -38,9 +38,9 @@ var app = new Vue({
           app.currentModule.snippets = value;
         });
         app.page = 'module-' + module.id;
+        menu.open();
       }
-    }, 100);
-    
+    }, 1);
   },
   watch: {
     currentModule: () => {
