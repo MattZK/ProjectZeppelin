@@ -16,6 +16,9 @@ var app = new Vue({
         app.currentModule.snippets = value;
       });
       app.page = 'module-' + module.id;
+      window.scroll({
+        top: 0
+      });
     },
     scrollto: (id) => {
       // TODO: Webkit only -> all browser support
