@@ -101,23 +101,21 @@ body {
         &> ul {
           height: calc(100vh - 180px);
           position: absolute;
-          top: 0px;
-          bottom: 0px;
-          left: 0px;
-          right: -15px;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
           overflow: auto;
           padding: 16px 0;
           &> li {
             line-height: 48px;
             padding: 0 16px;
-            font-weight: 400;
-            &.active {
-              background: #E0F7FA;
+            font-weight: 500;
+            cursor: pointer;
+            i {
+              float: right;
+              line-height: 48px !important;
             }
-            /*&:hover {
-              background: rgba(0, 0, 0, 0.05);
-              cursor: pointer;
-            }*/
             ul {
               list-style: none;
               li {
@@ -125,10 +123,22 @@ body {
                 line-height: 48px;
                 padding: 0 16px;
                 font-weight: 400;
+                border-radius: 6px;
+                cursor: pointer;
                 &:hover {
                   background: rgba(0, 0, 0, 0.05);
-                  cursor: pointer;
                 }
+                &.active {
+                  background: #E0F7FA;
+                }
+              }
+            }
+            &.closed {
+              i {
+                transform: rotate(90deg);
+              }
+              ul {
+                display: none;
               }
             }
           }

@@ -25,6 +25,13 @@ var app = new Vue({
       document.getElementById(id).scrollIntoView({ 
         behavior: 'smooth' 
       });
+    },
+    toggleMenuSection: (id) => {
+      if (document.getElementById(id).classList.contains('closed')) {
+        document.getElementById(id).classList.remove('closed');
+      } else {
+        document.getElementById(id).classList.add('closed');
+      }
     }
   },
   mounted: () => {
@@ -38,7 +45,11 @@ var app = new Vue({
           app.currentModule.snippets = value;
         });
         app.page = 'module-' + module.id;
-        menu.open();
+        sections.forEach((item) => {
+          if (item.contains.includes(module.id)) {
+            document.getElementById(item.id).classList.remove('closed');
+          }
+        });
       }
     }, 1);
   },

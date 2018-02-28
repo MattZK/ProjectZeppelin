@@ -24,10 +24,13 @@
           <li v-for="module in modules" v-if="module.enabled" v-bind:class="{'active': (page == 'module-' + module.id)}" v-on:click="loadmodule(module); menu.close();">{{ module.displayname }}</li>
         </ul>-->
         <ul>
-          <li v-for="section in sections">
-            {{ section.name }}
+          <li v-for="section in sections" v-bind:id="section.id" class="closed">
+            <div v-on:click="toggleMenuSection(section.id)">
+              {{ section.name }}
+              <i class="material-icons">keyboard_arrow_down</i>
+            </div>
             <ul>
-              <li v-for="moduleId in section.contains">{{ modules[moduleId].displayname }}</li>
+              <li v-for="moduleId in section.contains" v-if="modules[moduleId].enabled" v-on:click="loadmodule(modules[moduleId]); menu.close();" v-bind:class="{'active': (page == 'module-' + moduleId)}">{{ modules[moduleId].displayname }}</li>
             </ul>
           </li>
         </ul>

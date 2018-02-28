@@ -7,16 +7,39 @@ const version = {
 
 const sections = [
   {
+    id: 'WDEV',
     name: 'Web Development',
     contains: [
       'HTML',
-      'CSS'
+      'CSS',
+      'JS',
+      'TS'
     ]
   },
   {
-    name: 'Scripting',
+    id: 'MLANG',
+    name: 'Main Languages',
     contains: [
-      'JS'
+      'CPP',
+      'CS',
+      'JAVA',
+      'PY'
+    ]
+  },
+  {
+    id: 'DLANG',
+    name: 'Data Languages',
+    contains: [
+      'JSON',
+      'XML'
+    ]
+  },
+  {
+    id: 'APIS',
+    name: 'Language API\'s',
+    contains: [
+      'UE4',
+      'UNITY'
     ]
   }
 ]
