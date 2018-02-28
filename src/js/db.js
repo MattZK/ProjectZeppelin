@@ -68,6 +68,7 @@ const modules = {
     displayname: 'JavaScript',
     path: 'langs/js.json',
     defaultPrism: "lang-js",
+    verified: true,
     enabled: true
   },
   TS: {

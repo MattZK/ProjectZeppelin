@@ -1,105 +1,99 @@
 [
   {
-    "name": "Write to document",
-    "info": "Schrijf \"info\" weg naar jou html document (kleine d)",
-    "content": "document.write(\"text\")"
+    "name": "Write to Document",
+    "info": "Write info to the document.",
+    "content": "document.write(\"text\");"
   },
   {
-    "name": "Log to console",
-    "info": "Schrijf \"info\" weg naar de developers console (F12 in chrome)",
-    "content": "console.log(\"text\")"
+    "name": "Log to Console",
+    "info": "Log info to the developers console (F12 in Chrome).",
+    "content": "console.log(\"text\");"
   },
   {
     "name": "Variables",
-    "info": "Gebruik van variable in js. JS heeft geen static typing zoals C#, er is enkel het type \"var\"",
-    "content": "var eenVariable;\nvar eenAndereVariable = 2;\nvar nogEenAndereVariable = \"aardappel\";\n\neenVariable = \"google\"; // google\neenVariable = eenAndereVariable  2; // 2\neenVariable = nogEenAndereVariable  \" is cool\"; // aardappel is cool"
+    "info": "Variables don't have static typing, they only have the types var, let & const.",
+    "content": "var someVariable;\nvar someOtherVariable = 2;\nvar someOtherOtherVariable = \"applejuice\";\n\nconst someConstantVariable = \"cranberryjuice\"; // Defines a var that won't chage\n\nlet nogEenAndereVariable = \"I am green\"; // ES6, do not use in standard JS!\n\nsomeVariable = \"Foogle\"; // Result: Foogle\nsomeVariable = someOtherVariable; // Result: 2\nsomeVariable = someOtherOtherVariable + \" is orange\"; // Result: applejuice is orange"
   },
   {
     "name": "Arrays",
-    "info": "Arrays zijn datatypes die meerder instances kunnen bewaren van ditzelfde type \n maar in js kunnen dit verschillende types zijn",
-    "content": "var array = [\"Saab\", \"Volvo\", 10];\n//the index of an array always starts at 0 \ndocument.getElementById(\"demo\").innerHTML = cars[0]; // this will return Saab\ndocument.getElementById(\"demo\").innerHTML = cars[1]; // this will return Volvo\ndocument.getElementById(\"demo\").innerHTML = cars[2]; // this will return 10\n"
-    
+    "info": "Arrays are datatypes that hold more than one value. In js these variables can have different types.",
+    "content": "var array = [\"Saab\", \"Volvo\", 10];\n\n// Arrays start at index 0\ncars[0]; // Returns Saab\ncars[1]; // Returns Volvo\ncars[2]; // Returns 10"
   },
   {
     "name": "Alert",
-    "info": "Geeft een popup met informatie",
+    "info": "Shows a popup menu.",
     "content": "alert(\"text\");"
   },
   {
     "name": "Prompt",
-    "info": "Geeft een popup waar de user informatie kan aan geven",
-    "content": "var antwoord = prompt(\"Stel hier een vraag\");"
+    "info": "Prompts the user for data, then returns that data.",
+    "content": "var answer = prompt(\"Ask a question\");"
   },
   {
-    "name": "Get the date",
-    "info": "Geeft de datum terug",
-    "content": "getDate() /* geeft de dag van de maand terug*/ \ngetDay() /* geeft de weekdag terug */\ngetFullYear()() /* geeft de het jaar terug bv: 2018*/\ngetHours()() /* geeft het uur terug van de dag*/\ngetMinutes()() /* geeft de minuten terug */\ngetMonth()() /* geeft de maand terug (0-11) */\ngetSeconds()() /* geeft de seconden terug */\n"
+    "name": "Date",
+    "info": "Date operations",
+    "content": "var date = new Date(year, month, day, hours, minutes, seconds, milliseconds); // Use given date as reference\nvar date = new Date(); // Uses now\n\ndate.getDate(); // Returns day of the month (1 - 31)\ndate.getDay(); // Returns day of the week (1-7)\ndate.getFullYear(); // Returns the current year\ndate.getHours(); // Returns the current hours (0 - 23)\ndate.getMinutes(); // Returns the current minutes (0 - 59)\ndate.getMonth(); // Returns the current month (0-11)\ndate.getSeconds(); // Returns the current seconds (0-59) "
   },
   {
     "name": "Math",
-    "info": "Ingebouwde math functies",
-    "content": "var x = Math.PI; // 3.1415...\nvar y = Math.sqrt(16); // 4\nvar p = Math.pow(4, 2); // 16\nvar z = Math.random(); // random getal tussen 0 en 1\nvar q = Math.round(123.45) // 123 (0.5 wordt omhoog afgerond)"
+    "info": "Math operations",
+    "content": "var x = Math.PI; // Returns 3.1415...\nvar y = Math.sqrt(16); // Returns 4\nvar p = Math.pow(4, 2); // Returns 16\nvar z = Math.random(); // Returns a random number between 0 and 1\nvar q = Math.round(123.45) // Returns 123 (0.5 rounds up)"
   },
   {
-    "name": "Functies",
+    "name": "Functions",
     "info": "",
-    "content": "function naam (voornaam, achternaam) { \n     return voornaam + achternaam \n}"
+    "content": "function name (firstname, lastname) { \n  return firstname + ' ' + lastname;\n}"
   },
   {
-    "name": "Append element",
-    "info": "Voeg informatie toe aan een bestaant element",
-    "content": "function AppendOutput(input){\n     /* We gebruiken = om toe te voegen anders zouden we de volledige inhoud aanpassen */\n      document.getElementById(\"IDname\").innerHTML = input  \"<br>\"; \n }"
+    "name": "Element Selectors",
+    "info": "Element operations",
+    "content": "var element = document.getElementById(\"IdOfElement\");\nelement.style.background = \"yellow\" // Set the elements background to yellow\nelement.innerText = \"hello\"; // Set the elements text to hello\nelement.innerHTML = \"<p>Some text</p>\"; // Set the elements child html to <p>Some text</p>"
   },
   {
-    "name": "getElementById",
-    "info": "Steek een element in een variable",
-    "content": "var element = document.getElementById(\"IDOfElement\");\nelement.style.color = \"yellow\" // set the color of the element to yellow\nelement.innerHTML = \"hello\";//set the html value to hello \n"
-  },
-  {
-    "name": "events",
-    "info": "via events kan men js functies oproepen in html",
-    "content": "//Example html code\n<form onsubmit=\"SetElement(this)\"></form> //on submit is the event\n//to call a function de <insert_event_here>=<insert_jsFunction_here> \nonmouseover // mouse is on the element \nonmouseout // mouse moved out of the element \nmousedown // mouse clicked on the element \nmouseup // mouse released the click on the element \ndblclick // mouse double clicked on the element \nmousemove // mouse moved over the element \nclick // mouse clicked on the element \nkeydown // a keypress happend \nkeyup // a key got released \nsubmit // submit a form \nreset // reset a form to its default value \nfocus // an element gets the focus \nblur // an element loses its focus\nload // an element is loaded \nunload // an element is no longer loaded \nresize // the dimensions of an element have changed \n}"
+    "name": "Events",
+    "info": "Use events to call JS functions in HTML.",
+    "content": "// Example HTML code\n<form onsubmit=\"SetElement(this)\"></form> // onsubmit is the event\n\n// To call a function use the html attributes listed here, use the style event=\"functionname()\"\nonmouseover // Mouse is on the element\nonmouseout // Mouse moved out of the element\nmousedown // Mouse clicked on the element\nmouseup // Mouse released the click on the element\ndblclick // Mouse double clicked on the element\nmousemove // Mouse moved over the element\nclick // Mouse clicked on the element\nkeydown // A keypress happend\nkeyup // A key got released\nsubmit // Submited a form\nreset // Reset a form to its default value\nfocus // An element gets the focus\nblur // An element loses its focus\nload // An element is loaded\nunload // An element is no longer loaded\nresize // The dimensions of an element have changed"
   },
 
   {
     "name": "Logic Operators",
-    "info": "kijken of een conditie waar of niet waar is",
-    "content": "<  //smaller than\n>  //greater than\n<=  //smaller than or equal to\n>=  //greater than or equal to\n!=  //not equal to\n===  //same value and same type\n==  //same value\n!--  //not the same value or same type\nisNaN(x)  //is not a number aka string array ...\nx && y  //and gate between X and Y\nx && y  //and gate between X and Y\nx & y  //and gate between X and Y (bitwise)\nx | y  //and gate between X and Y (bitwise)\n"
+    "info": "Conditions that return a boolean.",
+    "content": "<  // Smaller than\n>  // Greater than\n<=  // Smaller than or equal to\n>=  // Greater than or equal to\n!=  // Not equal to\n===  // Same value and same type\n==  // Same value\n!==  // Not the same value or same type\nisNaN(x)  // Is not a number aka string array ...\nx && y  // And gate between X and Y\nx & y  // AND gate between X and Y (bitwise)\nx || y  // OR gate between X and Y\n"
   },
   {
-    "name": "If statement",
-    "info": "Maakt conditionele logica",
-    "content": "if (condition1) {\n     /* runs if condition1 is true*/\n} else if (condition2) {\n     /* runs if condition2 is true but condition1 is false*/\n} else {\n     /* runs if no other condition was true*/\n}"
+    "name": "If Statement",
+    "info": "Conditional logic.",
+    "content": "if (condition1) {\n  // Runs if condition1 is true\n} else if (condition2) {\n  // Runs if condition2 is true but condition1 is false\n} else {\n  // Runs if no other condition was true\n}"
   },
   {
     "name": "Switch",
-    "info": "Een verkorterde notatie van een if statement (alleen === logical operator is toegestaan)",
-    "content": "switch (new Date().getDay()) {\n    case 0:\n     day = \"Sunday\";\n     break;\n    case 1:\n     day = \"Monday\";\n     break;\n    case 2:\n     day = \"Tuesday\";\n      break;\n    case 3:\n     day = \"Wednesday\";\n      break;\n    case 4:\n     day = \"Thursday\";\n     break;\n    case 5:\n     day = \"Friday\";\n     break;\n    case 6:\n     day = \"Saturday\";\n}"
+    "info": "Short notation for a repeating if statment.",
+    "content": "switch (new Date().getDay()) {\n  case 0:\n   day = \"Sunday\";\n   break;\n  case 1:\n   day = \"Monday\";\n   break;\n  case 2:\n   day = \"Tuesday\";\n    break;\n  case 3:\n   day = \"Wednesday\";\n    break;\n  case 4:\n   day = \"Thursday\";\n   break;\n  case 5:\n   day = \"Friday\";\n   break;\n  case 6:\n    day = \"Saturday\";\n}"
   },
   {
-    "name": "For loop",
-    "info": "een loop die x keer loopt (men kent waarde x)",
-    "content": "for (i = 0; i < 5; i++) { \n      // Dit wordt 5 keer doorlopen;\n}"
+    "name": "For Loop",
+    "info": "A loop that loops its code a set ammount of times.",
+    "content": "for (i = 0; i < 5; i++) { \n  // This runs 5 times ;\n}"
   },
   {
-    "name": "While loop",
-    "info": "een loop die blijft loopen tot een conditie is voldaan",
-    "content": "while (condition) { \n      // blijft loopen tot condition true is;\n}\nwhile (i < 10) { \n     text = \"The number is \"  i;\n     i++;\n}/* While only runs if the condition is true */ \n/* Do while runs at least one time even if the condition is false */ \ndo { \n      // blijft loopen tot condition true is;\n} while (condition)"
+    "name": "While Loop",
+    "info": "A loop that loops until a condition is met.",
+    "content": "while (condition) { \n  // Keeps on looping until condition is true ;\n}\n\ni = 0;\nwhile (i < 10) { \n  text = \"The number is \" + i;\n  i++;\n} \n\n// Do While runs at least one time, even if the condition is false \ndo {\n\n} while (condition)"
   },
   {
     "name": "String methods",
-    "info": "manipulatie van strings",
-    "content": "var str = \"Hello world, welcome to the universe.\";\nstr.length; // this returns the size of a string \nvar n = str.replace(\"Hello\", \"Goodnight\"); // string becomes Goodnight world, welcome to the universe.\nvar text2 = str.toUpperCase(); // every letter is now uppercase  \nvar text2 = str.toLowerCase(); // every letter is now lowercase  \nvar text3 = text2.concat(\" \", str); // used to add 2 string together (like the  operator) \nvar array = str.split(\" \"); //this will convert the string to an array that is split with spaces (each word is an array element) \nstr.split(); //this makes an array of size 1 containing the whole string \nstr.split(\"\"); //this splits the string every char aka the array.length() == str.length()\n"
+    "info": "String manipulation methods.",
+    "content": "var str = \"Hello world!\";\nstr.length; // Returns the amount of chars in the string\nstr.replace(\"Hello\", \"Goodnight\"); // Returns the string but replaces the word Hello with Goodnight\nstr.toUpperCase(); // Every letter is now uppercase\nstr.toLowerCase(); // Every letter is now lowercase\nstr.concat(\" \", \"How is life\"); // Returns the string with the concatenated part\nstr.split(\" \"); // This will convert the string to an array that is split with spaces (each word is an array element)\nstr.split(); // This makes an array of size 1 containing the whole string\nstr.split(\"\"); // This splits the string every char"
   },
   {
     "name": "indexOf",
-    "info": "de index van een substring zoeken",
-    "content": "var str = \"Hello world, welcome to the universe.\";\nvar n = str.indexOf(\"welcome\"); // 13"
+    "info": "Find the index of a substring.",
+    "content": "var str = \"Hello world, welcome to the universe.\";\nvar n = str.indexOf(\"welcome\"); // Returns the start index (13)"
   },
   {
     "name": "Slice",
-    "info": "een string in stukjes hakken",
-    "content": "var str = \"Hello world!\";\nvar res = str.slice(1, 5); // ello"
+    "info": "Slice a part of the string",
+    "content": "var str = \"Hello world!\";\nvar res = str.slice(1, 5); // Returns substring (ello)"
   }
 ]
 

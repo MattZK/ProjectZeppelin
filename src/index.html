@@ -20,9 +20,6 @@
     <nav>
       <div class="header">Project Zeppelin</div>
       <div class="items">
-        <!--<ul>
-          <li v-for="module in modules" v-if="module.enabled" v-bind:class="{'active': (page == 'module-' + module.id)}" v-on:click="loadmodule(module); menu.close();">{{ module.displayname }}</li>
-        </ul>-->
         <ul>
           <li v-for="section in sections" v-bind:id="section.id" class="closed">
             <div v-on:click="toggleMenuSection(section.id)">
