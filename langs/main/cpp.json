@@ -50,7 +50,7 @@
     "content": "int main{\n\n    if(condition1){\n        //Only runs when condition1 == true\n    }else if (condition2){\n    //only runs when condition1 == false && condition2 == true\n    }else{\n        //runs when every condition is false\n    }\n}"
   },
   {
-    "name": "Tenary operator",
+    "name": "Ternary operator",
     "info": "This operator is a short hand notation of an if statement",
     "content": "int a = 0;\ntrue == false ? a = 1 : a = 2; // a = 2 since true == false is false\n\n//tenary operator is like an if statement\ncondition ? statemen1 : statement2;\n\n//comparible if statement\nif(condition){\n    statement1\n}else{\n    statement2\n}"
   },
