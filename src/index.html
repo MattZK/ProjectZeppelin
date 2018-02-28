@@ -35,15 +35,15 @@
   <section v-for="module in modules" class="lang" v-if="page == 'module-' + module.id">
     <div class="tree">
       <ul>
-        <li v-for="snippet in currentModule.snippets">{{ snippet.name }}</li>
+        <li v-for="(snippet, index) in currentModule.snippets" v-on:click="scrollto(module.id + '_' +index)">{{ snippet.name }}</li>
       </ul>
     </div>
     <div>
-      <div v-for="snippet in currentModule.snippets" class="code-item-container">
+      <div v-for="(snippet, index) in currentModule.snippets" class="code-item-container" v-bind:id="module.id + '_' +index">
         <h2>{{ snippet.name }} <span class="itag" v-if="snippet.tag" v-bind:class="snippet.tag.color">{{ snippet.tag.text }}</span></h2>
         <p>{{ snippet.info }}</p>
         <pre><code v-bind:class="currentModule.defaultPrism">{{ snippet.content }}</code></pre>
-      </div>-
+      </div>
     </div>
   </section>
 </div>

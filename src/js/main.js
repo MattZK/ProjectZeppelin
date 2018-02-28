@@ -1,7 +1,6 @@
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!',
     page: 'home',
     currentModule: {
       displayname: 'Project Zeppelin'
@@ -17,6 +16,12 @@ var app = new Vue({
         app.currentModule.snippets = value;
       });
       app.page = 'module-' + module.id;
+    },
+    scrollto: (id) => {
+      // TODO: Webkit only -> all browser support
+      document.getElementById(id).scrollIntoView({ 
+        behavior: 'smooth' 
+      });
     }
   },
   mounted: () => {
