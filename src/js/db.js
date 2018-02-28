@@ -9,10 +9,11 @@ const sections = [
 
 ]
 
+// Object key must be identical to the id!
 const modules = {
   HTML: {
     id: 'HTML',
-    abbr: 'HTLM',
+    abbr: 'HTML',
     displayname: 'HTML',
     path: 'langs/html.json',
     defaultPrism: "lang-html",
