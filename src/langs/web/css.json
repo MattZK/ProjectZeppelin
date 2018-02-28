@@ -6,7 +6,7 @@
       "color": "orange"
     },
     "info": "Use these selectors to target html elements",
-    "content": ".class {} /* select the html element with this class */\n#id {} /* Selects the element with id id */\n* {} /* selects all elements */ \np {} /* selects all <p> tags */ \ndiv, p {} /* selects all <div> and <p> tags */ \ndiv p {} /* selects all <p> tags inside div tags */ \ndiv > p {} /* selects all <p> tags where the parent is a div tag */ \ndiv  p {} /* selects all <p> tags directly after a div tag */\np ~ ul {} /* selects all <ul> tags that are preceded by a <p> tag */ "
+    "content": ".class {} /* select the html element with this class */\n#id {} /* Selects the element with id id */\n* {} /* selects all elements */ \np {} /* selects all <p> tags */ \ndiv, p {} /* selects all <div> and <p> tags */ \ndiv p {} /* selects all <p> tags inside div tags */ \ndiv > p {} /* selects all <p> tags where the parent is a div tag */ \ndiv + p {} /* selects all <p> tags directly after a div tag */\np ~ ul {} /* selects all <ul> tags that are preceded by a <p> tag */ "
   },
   {
     "name": "Pseudo Selectors",
