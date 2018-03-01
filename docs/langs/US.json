@@ -1,0 +1,87 @@
+[
+  {
+    "name": "W3Schools",
+    "info": "Een website die uitlegt hoe je een website maakt aan de had van html,css,js,php,ts,json etc",
+    "content": "https://www.w3schools.com/"
+  },
+  {
+  "name": "UE4 forums",
+  "info": "Een forum website waar men uitleg kan vragen over UE4",
+  "content": "https://forums.unrealengine.com"
+  },
+  {
+  "name": "Stackoverflow",
+  "info": "Een forum website waar men uitleg kan vragen over programeren algemeen",
+  "content": "https://stackoverflow.com/"
+  },
+  {
+  "name": "cppreference",
+  "info": "Een website met algemene uitleg over c++",
+  "content": "http://en.cppreference.com/w/"
+  },
+  {
+  "name": "docs.microsoft",
+  "info": "Een website met algemene uitleg de microsoft api\"s dotnet etc",
+  "content": "https://docs.microsoft.com/en-us/"
+  },
+  {
+  "name": "github",
+  "info": "Repository ebsite gebouwed rond git",
+  "content": "https://github.com/"
+  },
+  {
+  "name": "udemy",
+  "info": "Website waar men dingen kan bijleren over ontzettend veel dingen",
+  "content": "https://www.udemy.com"
+  },
+  {
+  "name": "docs.gl",
+  "info": "Documentatie over opengl specifieke functies",
+  "content": "http://docs.gl/"
+  },
+  {
+  "name": "GLFW",
+  "info": "OpenGL wrapper dat extra gpu functionaliteit biedt",
+  "content": "http://www.glfw.org/"
+  },
+  {
+  "name": "Python docs",
+  "info": "Documentatie over python",
+  "content": "https://www.python.org/doc/"
+  },
+  {
+  "name": "openCV",
+  "info": "Documentatie over OpenCV (open coputer vision)",
+  "content": "https://docs.opencv.org/3.3.1/"
+  },
+  {
+  "name": "Tenserflow",
+  "info": "Documentatie over Tenserflow (google\"s AI library)",
+  "content": "https://www.tensorflow.org/api_docs/"
+  },
+  {
+  "name": "EASTL",
+  "info": "githubs page voor de EA STL (electronic arts Standard Template Library)",
+  "content": "https://github.com/electronicarts/EASTL"
+  },
+  {
+  "name": "UE4 source",
+  "info": "githubs page voor de UE4 source (private members only)",
+  "content": "https://github.com/EpicGames/UnrealEngine"
+  },
+  {
+  "name": "Unity API",
+  "info": "Unity api documentation",
+  "content": "https://docs.unity3d.com/ScriptReference/"
+  },
+  {
+  "name": "Design patterns (Gang of Four)",
+  "info": "Het originele boek van design patterns",
+  "content": "http://www.uml.org.cn/c++/pdf/DesignPatterns.pdf"
+  },
+  {
+  "name": "Git documentation",
+  "info": "De documentatie over git",
+  "content": "https://git-scm.com/documentation"
+  }
+]
