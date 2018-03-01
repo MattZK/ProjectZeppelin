@@ -23,7 +23,15 @@ const sections = [
       'CPP',
       'CS',
       'JAVA',
-      'PY'
+      'ARD'
+    ]
+  },
+  {
+    id: 'SCRPT',
+    name: 'Scripting Languages',
+    contains: [
+      'PY',
+      'SH'
     ]
   },
   {
@@ -39,7 +47,8 @@ const sections = [
     name: 'Language API\'s',
     contains: [
       'UE4',
-      'UNITY'
+      'UNITY',
+      'GLSL'
     ]
   }
 ]
@@ -85,7 +94,7 @@ const modules = {
     displayname: 'C#',
     path: 'langs/cs.json',
     defaultPrism: "lang-csharp",
-    enabled: false
+    enabled: true
   },
   CPP: {
     id: 'CPP',
@@ -93,7 +102,7 @@ const modules = {
     displayname: 'C++',
     path: 'langs/cpp.json',
     defaultPrism: "lang-cpp",
-    enabled: false
+    enabled: true
   },
   JAVA: {
     id: 'JAVA',
@@ -101,7 +110,7 @@ const modules = {
     displayname: 'Java',
     path: 'langs/java.json',
     defaultPrism: "lang-java",
-    enabled: false
+    enabled: true
   },
   PY: {
     id: 'PY',
@@ -109,7 +118,7 @@ const modules = {
     displayname: 'Python',
     path: 'langs/py.json',
     defaultPrism: "lang-python",
-    enabled: false
+    enabled: true
   },
   ARD: {
     id: 'ARD',
@@ -117,7 +126,7 @@ const modules = {
     displayname: 'Arduino',
     path: 'langs/ard.json',
     defaultPrism: "lang-arduino",
-    enabled: false
+    enabled: true
   },
   SH: {
     id: 'SH',
@@ -125,7 +134,7 @@ const modules = {
     displayname: 'Bash',
     path: 'langs/sh.json',
     defaultPrism: "lang-bash",
-    enabled: false
+    enabled: true
   },
   DP: {
     id: 'DP',
@@ -133,7 +142,7 @@ const modules = {
     displayname: 'Design Patterns',
     path: 'langs/dp.json',
     defaultPrism: "lang-cpp",
-    enabled: false
+    enabled: true
   },
   GIT: {
     id: 'GIT',
@@ -141,7 +150,7 @@ const modules = {
     displayname: 'GIT',
     path: 'langs/git.json',
     defaultPrism: "lang-git",
-    enabled: false
+    enabled: true
   },
   MOBILE: {
     id: 'MOBILE',
@@ -189,7 +198,7 @@ const modules = {
     displayname: 'UE4 API',
     path: 'langs/UE4.json',
     defaultPrism: "lang-cpp",
-    enabled: false
+    enabled: true
   },
   UNITY: {
     id: 'UNITY',
@@ -213,7 +222,7 @@ const modules = {
     displayname: 'Graphics Library Shading Language',
     path: 'langs/glsl.json',
     defaultPrism: "lang-glsl",
-    enabled: false
+    enabled: true
   },
   DIRECTX: {
     id: 'DIRECTX',
