@@ -25,7 +25,7 @@
     "content": "static void Main(string[] args){\n\n    if(condition1){\n        //Only runs when condition1 == true\n    }else if (condition2){\n    //only runs when condition1 == false && condition2 == true\n    }else{\n        //runs when every condition is false\n    }\n}"
   },
   {
-    "name": "Ternary operator",
+    "name": "Tenary operator",
     "info": "This operator is a short hand notation of an if statement",
     "content": "int a = 0;\ntrue == false ? a = 1 : a = 2; // a = 2 since true == false is false\n\n//tenary operator is like an if statement\ncondition ? statemen1 : statement2;\n\n//comparible if statement\nif(condition){\n    statement1\n}else{\n    statement2\n}"
   },
@@ -56,12 +56,12 @@
   },
   {
     "name": "Struct",
-    "info": "Structures are a way to organize variables that belong together and are created in the stack",
+    "info": "Structures are a way to organize variables that belong together",
     "content": "public struct CoOrds\n{\n    public int x, y; // public variables\n\n    public CoOrds(int p1, int p2)//struct constructor\n    {\n        x = p1;\n        y = p2;\n    }\n\n    //struct based method\n    public int multiply(int p1, int p2){\n        return p1 + p2;\n    }\n}\n\n\n//create a struct\nCoOrds house = new CoOrds();"
   },
   {
     "name": "Classes",
-    "info": "Whereas structs are mainly used for fast (in memory) and small groups of variables. Classes are used to create more complex objects (instances) that are created on the heap.",
-    "content": "private class CoOrds\n{\n    private int x, y; // private variables\n\n    public CoOrds(int p1, int p2)//class constructor\n    {\n        x = p1;\n        y = p2;\n    }\n\n    //class based method\n    public int Multiply(int p1, int p2){\n        return p1 + p2;\n    }\n}\n\n\n//create a class\nCoOrds house = new CoOrds(3,2);"
+    "info": "Classes are private versions of struct and are usually used to make objects of a specific class",
+    "content": "private class CoOrds\n{\n    private int x, y; // public variables\n\n    private CoOrds(int p1, int p2)//class constructor\n    {\n        x = p1;\n        y = p2;\n    }\n\n    //class based method\n    private int multiply(int p1, int p2){\n        return p1 + p2;\n    }\n}\n\n\n//create a class\nCoOrds house = new CoOrds();"
   }
 ]

@@ -27,6 +27,10 @@ var sections = [{
   id: 'APIS',
   name: 'Language API\'s',
   contains: ['UE4', 'UNITY', 'GLSL']
+}, {
+  id: 'MISC',
+  name: 'Miscellaneous',
+  contains: ['DP', 'GIT']
 }];
 
 // Object key must be identical to the id!
