@@ -1,60 +1,49 @@
-#### NOTE: This repo is pending major changes. As part of those changes this repo will be renamed, however a redirect will be in place.
-***
+## Quick start
 
-# Universal Cheat Sheet
-This repository contains a programming cheat sheet for multiple languages. It is still under heavy development. Not every language is included yet and the ones that are included might not be complete.
+Clone and run the
+[MattZK/ProjectZeppelin](https://github.com/MattZK/ProjectZeppelin.git)
+repository:
 
-## Main Languages
-- C++ (CPP) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/success.png "Solid content available")
-- C# (CS) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/pending.png "Working on this")
-- Java ![alt text](https://mattwill.be/projects/UniversalCheatSheet/pending.png "Working on this")
-- Python (Py) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/success.png "Solid content available")
+```sh
+git clone https://github.com/MattZK/ProjectZeppelin.git
+cd ProjectZeppelin
+npm install
+gulp
+```
 
-#### Common Design Patterns
-- Design patterns [c++] ![alt text](https://mattwill.be/projects/UniversalCheatSheet/success.png "Solid content available")
+To start a development server:
 
-#### Semi
-- Arduino (INO) [MOD-C] ![alt text](https://mattwill.be/projects/UniversalCheatSheet/success.png "Solid content available")
-- Bash (SH) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/success.png "Solid content available")
+```sh
+gulp
+```
 
-#### Data Languages
-- XML ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
-- XAML (WPF) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
-- JSON ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
+To build the project:
 
-### API's
-- UE4 ![alt text](https://mattwill.be/projects/UniversalCheatSheet/pending.png "Working on this")
-- Unity ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
-- OpenGL using the glfw wrapper ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
+```sh
+gulp build
+```
 
-### GIT
-- git (GIT) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/pending.png "Working on this")
+## Requirements
 
-## Mobile
-- Android Studio (Java) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
-- XCode (Swift) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
+* NodeJS v9.x
+* SASS Compiler
+* Gulp
 
-## Web
-- HTML ![alt text](https://mattwill.be/projects/UniversalCheatSheet/success.png "Solid content available")
-- CSS ![alt text](https://mattwill.be/projects/UniversalCheatSheet/warning.png "Depricated, use SCSS instead")
-- SCSS ![alt text](https://mattwill.be/projects/UniversalCheatSheet/success.png "Solid content available")
-- Javascript (JS) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/success.png "Solid content available")
-- Typescript (TS) ![alt text](https://mattwill.be/projects/UniversalCheatSheet/pending.png "Working on this")
+#### NodeJS
+[Download NodeJS](https://nodejs.org/en/)
 
-#### Frameworks
-- Vue.js ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
-- AngularJS 5 ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
+#### SASS
+[Download Ruby](https://rubyinstaller.org/) (Windows Only)
+```sh
+gem install sass
+```
 
-#### Database Query Language
-- mySQL ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
-- mongoDB ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
-- rethinkDB ![alt text](https://mattwill.be/projects/UniversalCheatSheet/error.png "Not included yet")
+#### Gulp
+```sh
+npm install gulp-cli -g
+```
 
-# Usage
-- Select in the navigation bar the language you wish to read about
-- Scroll until you find the subject you wish to read about
+*More info follows*
 
-##TODO
--Explain search functionality when added (search bar)
--Explain how to navigate the menu (with menu I mean the selection of all explanations of a language)
-
+****
+#### NOTE: This repo is still in testing phase, there is no guarantee that code is correct.

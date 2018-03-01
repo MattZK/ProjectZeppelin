@@ -43,7 +43,8 @@
     document.getElementById('result').innerText = '"' + stringify(document.getElementById('string').value) + '"';
   });
   function stringify (input) {
-    return input.replace(/\r?\n/g, "\\n").replace(/"/g, '\\"').replace(/\s\s\s\s+/g, '  ').replace(';//', '; //');
+    //.replace(/\s\s\s\s+/g, '  ')
+    return input.replace(/\r?\n/g, "\\n").replace(/"/g, '\\"').replace(';//', '; //');
   }
 </script>
 </body>

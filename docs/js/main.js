@@ -1,3 +1,7 @@
+'use strict';
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var app = new Vue({
   el: '#app',
   data: {
@@ -7,7 +11,7 @@ var app = new Vue({
     }
   },
   methods: {
-    loadmodule: (module) => {
+    loadmodule: function loadmodule(module) {
       //app.$forceUpdate();
       fetch(module.path).then(function (res) {
         return res.json();
@@ -20,13 +24,13 @@ var app = new Vue({
         top: 0
       });
     },
-    scrollto: (id) => {
+    scrollto: function scrollto(id) {
       // TODO: Webkit only -> all browser support
-      document.getElementById(id).scrollIntoView({ 
-        behavior: 'smooth' 
+      document.getElementById(id).scrollIntoView({
+        behavior: 'smooth'
       });
     },
-    toggleMenuSection: (id) => {
+    toggleMenuSection: function toggleMenuSection(id) {
       if (document.getElementById(id).classList.contains('closed')) {
         document.getElementById(id).classList.remove('closed');
       } else {
@@ -34,10 +38,10 @@ var app = new Vue({
       }
     }
   },
-  mounted: () => {
+  mounted: function mounted() {
     setTimeout(function () {
-      if (typeof(Storage) && localStorage.getItem('currentModuleId')) {
-        let module = modules[localStorage.getItem('currentModuleId')];
+      if ((typeof Storage === 'undefined' ? 'undefined' : _typeof(Storage)) && localStorage.getItem('currentModuleId')) {
+        var module = modules[localStorage.getItem('currentModuleId')];
         fetch(module.path).then(function (res) {
           return res.json();
         }).then(function (value) {
@@ -45,7 +49,7 @@ var app = new Vue({
           app.currentModule.snippets = value;
         });
         app.page = 'module-' + module.id;
-        sections.forEach((item) => {
+        sections.forEach(function (item) {
           if (item.contains.includes(module.id)) {
             document.getElementById(item.id).classList.remove('closed');
           }
@@ -54,8 +58,8 @@ var app = new Vue({
     }, 1);
   },
   watch: {
-    currentModule: () => {
-      if (typeof(Storage)) {
+    currentModule: function currentModule() {
+      if (typeof Storage === 'undefined' ? 'undefined' : _typeof(Storage)) {
         localStorage.setItem('currentModuleId', app.currentModule.id);
       }
       setTimeout(function () {
@@ -63,14 +67,20 @@ var app = new Vue({
       }, 10);
     }
   }
-})
+});
 
-let menu = {
-  init: () => {
-    document.querySelector('aside .dimmer').addEventListener('click', () => { menu.close() });
-    document.querySelector('nav .header').addEventListener('click', () => { menu.close() });
-    document.querySelector('header .menu').addEventListener('click', () => { menu.open() });
-    window.addEventListener('scroll', () => {
+var menu = {
+  init: function init() {
+    document.querySelector('aside .dimmer').addEventListener('click', function () {
+      menu.close();
+    });
+    document.querySelector('nav .header').addEventListener('click', function () {
+      menu.close();
+    });
+    document.querySelector('header .menu').addEventListener('click', function () {
+      menu.open();
+    });
+    window.addEventListener('scroll', function () {
       if (window.scrollY > 2) {
         document.querySelector('header').classList.add('shadow');
       } else {
@@ -78,26 +88,26 @@ let menu = {
       }
     });
   },
-  close: () => {
+  close: function close() {
     document.querySelector('aside .dimmer').style.opacity = 0;
     document.querySelector('aside .dimmer').style.pointerEvents = 'none';
     document.querySelector('aside nav').style.transform = 'translate(-100%, 0)';
-    setTimeout(() => {
+    setTimeout(function () {
       document.querySelector('aside').style.display = 'none';
     }, 200);
     document.body.classList.remove('noscroll');
   },
-  open: () => {
+  open: function open() {
     document.querySelector('aside').style.display = 'block';
-    setTimeout(() => {
+    setTimeout(function () {
       document.querySelector('aside .dimmer').style.opacity = 1;
       document.querySelector('aside .dimmer').style.pointerEvents = 'visible';
       document.querySelector('aside nav').style.transform = 'translate(0, 0)';
     }, 50);
     document.body.classList.add('noscroll');
   }
-}
+};
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', function () {
   menu.init();
 });

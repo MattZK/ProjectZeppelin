@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Entry point",
+    "info": "The location where an arduino program starts",
+    "content": "void setup{\n    //entry point\n}\n\n void loop{\n    //looping\n}"
+  },
+  {
+    "name": "Variables",
+    "info": "Arduino primitieve variabelen",
+    "content":  "void setup{\n    int i =5; //integer\n    float f= 3.5f;\n    double d = 5.0;\n    char c= 'C';\n    string = \"This is a string\";\n}"
+  },
+  {
+    "name": "For Loop",
+    "info": "A for loop can be run x amount of times",
+    "content": "void setup{\n\n    for(int i=0;i<5;i++){\n        //this gets run 5 times\n        std::cout << i << std::endl;\n    }\n}"
+  },
+  {
+    "name": "While",
+    "info": "A loop that keeps running until a condition is true",
+    "content": "void setup{\n\n    int i = 0;\n    while(i<5){\n        //do logic here\n        //this runs 5 times\n        i++;\n    }\n}"
+  },
+  {
+    "name": "If",
+    "info": "A statement for defining logic",
+    "content": "void setup{\n\n    if(condition1){\n        //Only runs when condition1 == true\n    }else if (condition2){\n    //only runs when condition1 == false && condition2 == true\n    }else{\n        //runs when every condition is false\n    }\n}"
+  },
+  {
+    "name": "Tenary operator",
+    "info": "This operator is a short hand notation of an if statement",
+    "content": "int a = 0;\ntrue == false ? a = 1 : a = 2; // a = 2 since true == false is false\n\n//tenary operator is like an if statement\ncondition ? statemen1 : statement2;\n\n//comparible if statement\nif(condition){\n    statement1\n}else{\n    statement2\n}"
+  },
+  {
+    "name": "Logic Operators",
+    "info": "used for boolean expressions",
+    "content": "<  //smaller than\n>  //greater than\n<=  //smaller than or equal to\n>=  //greater than or equal to\n!=  //not equal to\n==  //same value\nx && y  //and gate between X and Y\nx && y  //and gate between X and Y\nx & y  //and gate between X and Y (bitwise)\nx | y  //and gate between X and Y (bitwise)\n~x //first compliment of x"
+  },
+  {
+    "name": "Switch",
+    "info": "Short hand notation for an if statement (only ==)",
+    "content": "void setup{\n\n    switch ('A')\n    {\n        case 'A':\n            std::cout << \"it's A\" << std::endl;\n            break;\n        case 'B':\n            std::cout << \"it's B\" << std::endl;\n            break;\n        default:\n            std::cout << \"It's neither A nor B\" << std::endl;\n            break;\n    }\n}"
+  },
+  {
+    "name": "Functions",
+    "info": "Blocks of code which you can repeat",
+    "content": "void func(string name){\n    Serial.println(name);\n}\n\n/* a and b are passed by value */\nint add(int a, int b){\n    return a+b; //gives this back to the function caller\n}\n\n\n/* a and b are passed by value (see pointers) this function is quicker because we don't copy variables*/\nint addRef(int &a, int &b) {\n    return a + b; //gives this back to the function caller\n}\n\nvoid setup{\n    func(\"tom\"); //prints your name is tom\n\n    add(4,5); // returns 9\n\n    func(add(5,6)); // prints your name is 11\n}"
+  },
+  {
+    "name": "Function return types",
+    "info": "What we can return from functions",
+    "content": "void //returns void aka nothing\nint //returns an integer\ndouble //returns a double\nchar //retunrs a characther\nstring //returns a string\nclass //returns a class instance"
+  },
+  {
+    "name": "Digital signals",
+    "info": "How to read/ write digital signals",
+    "content": "//write a signal\n//The on board led is bount to pin 13\nconst int LED = 13\nvoid setup()\n{\n  pinMode(LED, OUTPUT);          // sets the digital pin 13 as output\n}\n\nvoid loop()\n{\n  digitalWrite(LED, HIGH);       // sets the digital pin 13 on\n  delay(1000);                  // waits for a second\n  digitalWrite(LED, LOW);        // sets the digital pin 13 off\n  delay(1000);                  // waits for a second\n}\n\n//Read a signal\n\nint ledPin = 13;   // LED connected to digital pin 13\nint inPin = 7;     // pushbutton connected to digital pin 7\nint val = 0;       // variable to store the read value\n\nvoid setup()\n{\n  pinMode(ledPin, OUTPUT);      // sets the digital pin 13 as output\n  pinMode(inPin, INPUT);        // sets the digital pin 7 as input\n}\n\nvoid loop()\n{\n  val = digitalRead(inPin);     // read the input pin\n  digitalWrite(ledPin, val);    // sets the LED to the button's value\n}"
+  },
+  {
+    "name": "Analog signals",
+    "info": "How to read/ write analog signals",
+    "content":  "int ledPin = 9;      // LED connected to digital pin 9\nint analogPin = 3;   // potentiometer connected to analog pin 3\nint val = 0;         // variable to store the read value\n\nvoid setup()\n{\n  pinMode(ledPin, OUTPUT);   // sets the pin as output\n}\n\nvoid loop()\n{\n  val = analogRead(analogPin);   // read the input pin (note that this is reading the voltage not the resistance)\n  analogWrite(ledPin, val / 4);  // analogRead values go from 0 to 1023, analogWrite values from 0 to 255\n}"
+  },
+  {
+    "name": "Map",
+    "info": "Mapping a set range to another set range",
+    "content":     "/* Map an analog value to 8 bits (0 to 255) */\nvoid setup() {}\n\nvoid loop()\n{\n  int val = analogRead(0); //from 0 - 1023\n  val = map(val, 0, 1023, 0, 255); // we map the numbers between 0 and  1023 to 0 and 255\n  analogWrite(9, val); // from 0 -255\n}"
+  },
+  {
+    "name": "Timing",
+    "info": "How to use the timing functions with an arduino",
+    "content": "\nvoid setup() {}\n\nvoid loop()\n{\n  delay(1000); //make the thread sleep for 1000 milliseconds;\n  unsigned long time = millis(); //returns the time in milliseconds since the program started\n  //millis overflows after 49 days be awere when using this\n  unsigned long time = micros(); // same as millis but for micro seconds\n  //this will overflow after 70 minutes\n}"
+  },
+  {
+    "name": "Serial library",
+    "info": "How to handle serial data",
+    "content": "\n/* serial println example*/\nint analogValue = 0;    // variable to hold the analog value\n\nvoid setup() {\n  // open the serial port at 9600 bits per second:\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  // read the analog input on pin 0:\n  analogValue = analogRead(0);\n\n  // print it out in many formats:\n  Serial.println(analogValue);       // print as an ASCII-encoded decimal\n  Serial.println(analogValue, DEC);  // print as an ASCII-encoded decimal\n  Serial.println(analogValue, HEX);  // print as an ASCII-encoded hexadecimal\n  Serial.println(analogValue, OCT);  // print as an ASCII-encoded octal\n  Serial.println(analogValue, BIN);  // print as an ASCII-encoded binary\n\n  // delay 10 milliseconds before the next reading:\n  delay(10);\n}\n\n/* Serial read example */\n\nint incomingByte = 0;   // for incoming serial data\n\nvoid setup() {\n        Serial.begin(9600);     // opens serial port, sets data rate to 9600 bps\n}\n\nvoid loop() {\n\n        // send data only when you receive data:\n        if (Serial.available() > 0) {\n                // read the incoming byte:\n                incomingByte = Serial.read();\n\n                // say what you got:\n                Serial.print(\"I received: \");\n                Serial.println(incomingByte, DEC);\n        }\n}\n\n/* Serial write example */\n\nvoid setup(){\n  Serial.begin(9600);\n}\n\nvoid loop(){\n  Serial.write(45); // send a byte with the value 45\n\n   int bytesSent = Serial.write(“hello”); //send the string “hello” and return the length of the string.\n}"
+  },
+  {
+    "name": "Basic i2c example",
+    "info": "How to use basic i2c commands (on the uno i2c is pin 0 and 1)",
+    "content": "#include <Wire.h>\n\nvoid setup() {\n  Wire.begin(); // join i2c bus (address optional for master)\n}\n\nbyte x = 0;\n\nvoid loop() {\n  Wire.beginTransmission(8); // transmit to device #8\n  Wire.write(\"x is \");        // sends five bytes\n  Wire.write(x);              // sends one byte\n  Wire.endTransmission();    // stop transmitting\n\n  x++;\n  delay(500);\n}"
+  }
+]

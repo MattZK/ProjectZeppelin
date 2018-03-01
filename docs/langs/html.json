@@ -1,0 +1,141 @@
+[
+  {
+    "name": "Template",
+    "info": "Always use this template",
+    "tag": {
+      "text": "Template",
+      "color": "red"
+    },
+    "content": "<!doctype html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n  <title>TITLE</title>\n  <link rel=\"stylesheet\" href=\"css/style.css\">\n</head>\n<body>\n  CONTENT\n  <script src=\"js/main.js\"></script>\n</body>\n</html>"
+  },
+  {
+    "name": "External CSS",
+    "tag": {
+      "text": "External",
+      "color": "orange"
+    },
+    "info": "Link an external css file",
+    "content": "<link rel=\"stylesheet\" href=\"css/style.css\">"
+  },
+  {
+    "name": "External Script",
+    "tag": {
+      "text": "External",
+      "color": "orange"
+    },
+    "info": "Link an external js file",
+    "content": "<script src=\"js/main.js\"></script>\n"
+  },
+  {
+    "name": "Element Class",
+    "tag": {
+      "text": "Attribute",
+      "color": "blue"
+    },
+    "info": "A non-unique class for an element, used to target multiple elements in css",
+    "content": "<div class=\"myClass\">Can be used in css and js to select multiple elements</div>"
+  },
+  {
+    "name": "Element Id",
+    "tag": {
+      "text": "Attribute",
+      "color": "blue"
+    },
+    "info": "A unique id for an element",
+    "content": "<div id=\"myId\">Can be used in css and js to select one specific element</div>"
+  },
+  {
+    "name": "Div",
+    "info": "A container for multiple child elements",
+    "content": "<div>Add elements here</div>"
+  },
+  {
+    "name": "Span",
+    "info": "A div like element for inline text",
+    "content": "<p>I am a <span>part</span> of a text</p>"
+  },
+  {
+    "name": "Heading",
+    "info": "Display titles, subtitles...",
+    "content": "<h1>Most important heading</h1>\n<h2>Second most important heading</h2>\n<h3>Third most important heading</h3>\n<h4>Fourth most important heading</h4>\n<h5>Fifth most important heading</h5>\n<h6>Sixt most important heading</h6>"
+  },
+  {
+    "name": "Paragraph",
+    "info": "This tag is ment for longer pieces of text",
+    "content": "<p>Lorem ipsum dolor sit amet, consectetur.</p>"
+  },
+  {
+    "name": "Anchor",
+    "info": "This tag links to an other page",
+    "content": "<a href=\"page2.html\" target=\"_self\">Go to page 2 in the same window</a>\n<a href=\"page2.html\" target=\"_blank\">Go to page 2 in a new window</a>"
+  },
+  {
+    "name": "Unorderd list",
+    "info": "This makes an unordered list, use this when making menus",
+    "content": "<ul>\n  <li>Option</li>\n  <li>Option</li>\n  <li>Option</li>\n</ul>"
+  },
+  {
+    "name": "Orderd list",
+    "info": "This makes an orderd list with auto incrementing numbers",
+    "content": "<ol>\n  <li>Option 1</li>\n  <li>Option 2</li>\n  <li>Option 3</li>\n</ol>"
+  },
+  {
+    "name": "Picture",
+    "info": "Load a picture into an HTML page.",
+    "content": "<img src=\"img/logo.png\" alt=\"description\" />"
+  },
+  {
+    "name": "Header",
+    "info": "This indicates the top of a page",
+    "content": "<header>Top section of the page</header>"
+  },
+  {
+    "name": "Main",
+    "info": "This indicates the main section of a page",
+    "content": "<main>Main section of the page, contains the general content</main>"
+  },
+  {
+    "name": "Footer",
+    "info": "This indicates the foot section of a page",
+    "content": "<footer>Bottom section of a page</footer>"
+  },
+  {
+    "name": "Navigation",
+    "info": "This indicates the navigation of a page",
+    "content": "<nav>Add an unorderd list here for navigation</nav>"
+  },
+  {
+    "name": "Bold",
+    "info": "Prints text bold",
+    "content": "<b>I am bold</b>"
+  },
+  {
+    "name": "Cursive",
+    "info": "Prints text cursive",
+    "content": "<i>I am cursive</i>"
+  },
+  {
+    "name": "Devider",
+    "info": "Draws a horizontal ruler over the width of it's parent element",
+    "content": "<hr/>"
+  },
+  {
+    "name": "Input",
+    "info": "Let's users input text",
+    "content": "<input type=\"text\">\n<!-- Type can also be 'email', 'password', 'radio', 'checkbox', 'button', 'submit', 'reset' and more... -->"
+  },
+  {
+    "name": "Form",
+    "info": "Groups inputs together. When a form is submitted, all inputs within this form will be sent.",
+    "tag": "",
+    "tagColor": "",
+    "content": "<!-- Actions defines the script that handels the form submit (usually a PHP script) -->\n<form action=\"/serverscript.php\" method=\"POST\" onsubmit=\"submitForm()\"> \n  <label for=\"firstnameInput\">Firstname: </label>\n  <input type=\"text\" name=\"firstname\" id=\"firstnameInput\">\n  <label for=\"lastnameInput\">Lastname: </label>\n  <input type=\"text\" name=\"lastname\" id=\"lastnameInput\">\n\n  <input type=\"radio\" name=\"gender\" value=\"male\" checked> Male\n  <input type=\"radio\" name=\"gender\" value=\"female\"> Female\n  <input type=\"radio\" name=\"gender\" value=\"other\"> Other\n\n  <!-- Submit the form -->\n  <input type=\"submit\" value=\"Submit\"/>\n</form>\n\n<!-- Handle the form with js (optional) -->\n<script>\n  function submitForm (e) {\n    // Stop the form from submitting to serverscript.php\n    e.preventDefault();\n    // Handle form data here\n  }\n</script>"
+  },
+  {
+    "name": "Table",
+    "info": "This displays a table.",
+    "tag": "",
+    "tagColor": "",
+    "content":  "<table>\n  <tr>\n    <!-- Table Header -->\n    <th>Company</th>\n    <th>Contact</th>\n    <th>Country</th>\n  </tr>\n  <tr>  \n    <td>Alfreds Futterkiste</td>\n    <td>Maria Anders</td>\n    <td>Germany</td>\n  </tr>\n  <tr>  \n    <td>Centro comercial Moctezuma</td>\n    <td>Francisco Chang</td>\n    <td>Mexico</td>\n  </tr>\n  <tr>  \n    <td>Ernst Handel</td>\n    <td>Roland Mendel</td>\n    <td>Austria</td> \n  </tr>\n</table>\n\n<!-- Style -->\n<style>\n  table {\n    border-collapse: collapse;\n  }\n  td, th {\n    border: 1px solid #dddddd;\n    text-align: left;\n    padding: 8px;\n  }\n  tr:nth-child(even) {\n    background-color: #dddddd;\n  }\n</style>"
+  }
+]

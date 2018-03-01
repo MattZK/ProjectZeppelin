@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Zeppelin</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <a class="material-icons menu">menu</a>
+    <span class="title">{{ currentModule.displayname }}</span>
+    <a class="material-icons search">search</a>
+  </header>
+  <aside>
+    <div class="dimmer"></div>
+    <nav>
+      <div class="header">Project Zeppelin</div>
+      <div class="items">
+        <ul>
+          <li v-for="section in sections" v-bind:id="section.id" class="closed">
+            <div v-on:click="toggleMenuSection(section.id)">
+              {{ section.name }}
+              <i class="material-icons">keyboard_arrow_down</i>
+            </div>
+            <ul>
+              <li v-for="moduleId in section.contains" v-if="modules[moduleId].enabled" v-on:click="loadmodule(modules[moduleId]); menu.close();" v-bind:class="{'active': (page == 'module-' + moduleId)}">{{ modules[moduleId].displayname }}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+  <section class="welcome" v-if="page == 'home'">
+    <img src="img/logo.svg" alt="Project Zeppelin Logo">
+    <h2>Project Zeppelin</h2>
+    <p>The Next Generation of Cheating</p>
+    <i class="material-icons" v-on:click="menu.open();">menu</i>
+  </section>
+  <section v-for="module in modules" class="lang" v-if="page == 'module-' + module.id">
+    <div class="tree">
+      <ul>
+        <li v-for="(snippet, index) in currentModule.snippets" v-on:click="scrollto(module.id + '_' +index)">{{ snippet.name }}</li>
+      </ul>
+    </div>
+    <div>
+      <div v-for="(snippet, index) in currentModule.snippets" class="code-item-container" v-bind:id="module.id + '_' +index">
+        <h2>{{ snippet.name }} <span class="itag" v-if="snippet.tag" v-bind:class="snippet.tag.color">{{ snippet.tag.text }}</span></h2>
+        <p>{{ snippet.info }}</p>
+        <pre><code v-bind:class="currentModule.defaultPrism">{{ snippet.content }}</code></pre>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/prism.js"></script>
+<script src="js/db.js"></script>
+<script src="js/main.js"></script>
+<script>
+</script>
+</body>
+</html>
