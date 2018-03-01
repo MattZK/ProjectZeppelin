@@ -50,6 +50,14 @@ const sections = [
       'UNITY',
       'GLSL'
     ]
+  },
+  {
+    id: 'MISC',
+    name: 'Miscellaneous',
+    contains: [
+      'DP',
+      'GIT'
+    ]
   }
 ]
 
