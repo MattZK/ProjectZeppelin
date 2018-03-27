@@ -10,6 +10,11 @@
     "content":  "static void Main(string[] args){\n    int i =5; //integer\n    float f= 3.5f;\n    double d = 5.0;\n    char c= 'C';\n    string = \"This is a string\";\n}"
   },
   {
+    "name": "Enumerator",
+    "info": "An alias for a set of integers used to make states easier on the programmer",
+    "content": "static void Main(string[] args)\n{\n    enum Leerlingen\n    {\n        //the numbers represent the integer counterpart\n        Tom, //0\n        Matthias, //1\n        Michiel, //2\n        Jonas, //3\n        Ben = 7, //7\n        Thomas //8\n    }\n\n    //initialize enums\n    Leerlingen BestStudent = Leerlingen.Ben; //used as a normal integer\n\n    BestStudent = Leerlingen.Michiel; //we can change the variable like normal\n\n    if(BestStudent == Leerlingen.Thomas){\n        Console.Writeline(\"Thomas is the best student\");\n    }\n}\n"
+  },
+  {
     "name": "For Loop",
     "info": "A for loop can be run x amount of times",
     "content": "static void Main(string[] args){\n\n    for(int i=0;i<5;i++){\n        //this gets run 5 times\n        Console.WriteLine( i );\n    }\n}"
@@ -52,16 +57,31 @@
   {
     "name": "Arrays",
     "info": "How to define multiple objects of the same type in one variable",
-    "content": "//Declaring static arrays\n\ntype[] name; //where type is the objects type and name is the variable name\n\n//example\nint[] myIntArray;\n\n//static arrays can't be changed during runtime (static size)\ndouble[] money = new double[MAX_ARRAY_SIZE];\n\n//arrays are pointers to the memory location and indexing an array is equal to array pointer + (index * sizeof(object));\n//indexing arrays\nmoney[5] = 10.0; // in index 5 aka the 6th location of the array\n\nchar[] vowels= {‘a’, ‘e’, ‘i’, ‘o’, ‘u’}; //array initializer during declaration\n\n//multi dimensional arrays\ntype [,] arrayname = new type[length1,length2]\n\n//example\nint[,] beer= new int[7,4];\n\n//jagged arrays aka multidimensional arrays with different sizes\ndouble[][] FortniteMap = {\n    new double[] {5.00, 7.53, 125.212},\n    new double[] {5.00, 7.53},\n    new double[] {5.00, 7.53,5.00, 7.53,5.00, 7.53,5.00, 7.53},\n    new double[] {10.00},\n}\n\narrayneme.Length; // this returns the size of an array"
+    "content": "//Declaring static arrays\n\ntype[] name; //where type is the objects type and name is the variable name\n\n//example\nint[] myIntArray;\n\n//static arrays can't be changed during runtime (static size)\ndouble[] money = new double[MAX_ARRAY_SIZE];\n\n//arrays are pointers to the memory location and indexing an array is equal to array pointer + (index * sizeof(object));\n//indexing arrays\nmoney[5] = 10.0; // in index 5 aka the 6th location of the array\n\nchar[] vowels= {‘a’, ‘e’, ‘i’, ‘o’, ‘u’}; //array initializer during declaration\n\n//multi dimensional arrays\ntype [,] arrayname = new type[length1,length2]\n\n//example\nint[,] beer= new int[7,4];\n\n//jagged arrays aka multidimensional arrays with different sizes\ndouble[][] FortniteMap = {\n    new double[] {5.00, 7.53, 125.212},\n    new double[] {5.00, 7.53},\n    new double[] {5.00, 7.53,5.00, 7.53,5.00, 7.53,5.00, 7.53},\n    new double[] {10.00},\n}\n\narrayname.Length; // this returns the size of an array"
+  },
+  {
+    "name": "multi-dimensional Arrays",
+    "info": "Multi-dimensional arrays are arrays that contains multiple arrays as data.",
+    "content": "static void Main(string[] args)\n{\n    //normal array\n    int[] points = new int[10]; //generates array\n    \n    // Declare and initialize an array:\n    int[,] theArray = new int[5, 10]; //2 dimensional array ( 5 arrays with each 10 elements)\n    Console.WriteLine($\"The array has {theArray.Rank} dimensions.\"); //return The array has 2 dimensions\n\n    //access the 5th element in the forth array\n    theArray[3, 4] = 4;\n\n    //jagged array\n    int[][] jaggedArray = new int[4][];\n\n    //init second level of arrays\n    jaggedArray[0] = new int[5];\n    jaggedArray[1] = new int[6];\n    jaggedArray[2] = new int[7];\n    jaggedArray[3] = new int[8];\n\n    //access the second element in the first array\n    jaggedArray[0][1] = 77;\n}"
   },
   {
     "name": "Struct",
     "info": "Structures are a way to organize variables that belong together and are created in the stack",
-    "content": "public struct CoOrds\n{\n    public int x, y; // public variables\n\n    public CoOrds(int p1, int p2)//struct constructor\n    {\n        x = p1;\n        y = p2;\n    }\n\n    //struct based method\n    public int multiply(int p1, int p2){\n        return p1 + p2;\n    }\n}\n\n\n//create a struct\nCoOrds house = new CoOrds();"
+    "content": "public struct CoOrds\n{\n    public int x, y; // public variables\n\n    public CoOrds(int p1, int p2)//struct constructor\n    {\n        x = p1;\n        y = p2;\n    }\n\n    //struct based method\n    public int multiply(int p1, int p2){\n        return p1 * p2;\n    }\n}\n\n\n//create a struct\nCoOrds house = new CoOrds();"
   },
   {
     "name": "Classes",
     "info": "Whereas structs are mainly used for fast (in memory) and small groups of variables. Classes are used to create more complex objects (instances) that are created on the heap.",
-    "content": "private class CoOrds\n{\n    private int x, y; // private variables\n\n    public CoOrds(int p1, int p2)//class constructor\n    {\n        x = p1;\n        y = p2;\n    }\n\n    //class based method\n    public int Multiply(int p1, int p2){\n        return p1 + p2;\n    }\n}\n\n\n//create a class\nCoOrds house = new CoOrds(3,2);"
+    "content": "private class Coords\n{\n    private int x, y; // private variables\n\n    public Coords(int p1, int p2)//class constructor\n    {\n        x = p1;\n        y = p2;\n    }\n\n    //properties\n    //auto property\n    public int Speed { get; set; }\n\n    //full property\n    //private vars are usually denoted by the first letter being lower case\n    private int health;\n\n    //the publicly accessable variables are usually denoted by the first letter being upper case\n    public int Health\n    {\n        get { return health; }\n        set { health = value; } //value is the value passed when Health is altered\n    }\n\n    //class based method\n    public int Multiply(int p1, int p2){\n        return p1 * p2;\n    }\n}\n\n\n//create a class\nCoords house = new Coords(3,2);\n\nhouse.Multiply(10,15); //call its methods\n"
+  },
+  {
+    "name": "Inheritance",
+    "info": "Inherits the methods and properties of a parent class",
+    "content": "private class test\n{\n    //default constructor\n    public test() : base() // call super constructor\n    {\n\n    }\n\n    //auto property\n    public int Speed { get; set; }\n\n    //full property\n    private int health;\n\n    public int Health\n    {\n        get { return health; }\n        set { health = value; }\n    }\n\n    //methods\n    public void method()\n    {\n\n    }\n\n    public void method2()\n    {\n        Console.WriteLine(\"hello\");\n    }\n}\n\n//inheritance\nprivate class unit : test //see what I did there\n{\n    public static int AmountOfUnits = 0; //static variable declared on class level not instance level\n    public unit() : base() //base calls the super class constructor\n    {\n        AmountOfUnits++; //shared between all objects of type unit \n    }\n\n    public int TestVar { get; set; }\n\n    public void method2()\n    {\n    Console.WriteLine(\"hi\");\n    }\n    \n}\n\n//declaration\nunit unitTest = new unit();\nunitTest.Speed = 5; //we can use properties of the super class\nunitTest.method(); //we can also call the methods of the super class\nunitTest.TestVar = 3; //and call our own variables\nunitTest.method2();//prints out hi"
+  },
+  {
+    "name": "Interface",
+    "info": "Make a template for subclasses each subclass must use the template.",
+    "content": "//Interfaces are usully prefixed with the kapital I\npublic interface IMustImplement\n{\n    //auto property\n    int Speed { get; set; }\n\n    //full property\n    int Health { get; set; }\n\n    //methods\n    void method();\n    void method2();\n\n}\n\npublic class test : IMustImplement //use the interface\n{\n    //default constructor\n    public test()\n    {\n\n    }\n\n    //auto property\n    public int Speed { get; set; }\n\n    //full property\n    private int health;\n\n    public int Health\n    {\n        get { return health; }\n        set { health = value; }\n    }\n\n    //methods\n    public void method()\n    {\n\n    }\n\n    public void method2()\n    {\n        Console.WriteLine(\"hello\");\n    }\n}"
   }
 ]
